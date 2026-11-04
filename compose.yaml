@@ -1,0 +1,26 @@
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: ridepulse-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: ridepulse
+      POSTGRES_USER: ridepulse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set password in .env}
+
+    ports:
+      - "127.0.0.1:5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ridepulse -d ridepulse"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  postgres_data:

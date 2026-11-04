@@ -1,0 +1,5 @@
+**
+!requirements-worker.txt
+!src/
+!src/worker.py
+!src/gbfs_ingest.py

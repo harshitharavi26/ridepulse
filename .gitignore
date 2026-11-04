@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Data files
+data/raw/
+data/processed/
+
+# macOS
+.DS_Store
+# Local backups
+sql_backups/
+*.bak
+*.dump
+
+# Logs and test artifacts
+*.log
+.pytest_cache/
+.coverage
+
+# Local editor files
+.vscode/
+.idea/
+
+# Credentials and generated artifacts
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+*service-account*.json
+application_default_credentials.json
+.codex/
+.agents/
+tmp/
+output/

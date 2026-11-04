@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements-collector.txt .
+
+RUN pip install --no-cache-dir -r requirements-collector.txt
+
+COPY scripts/collect_gbfs_cloud.py ./scripts/collect_gbfs_cloud.py
+
+CMD ["python", "-u", "scripts/collect_gbfs_cloud.py"]
