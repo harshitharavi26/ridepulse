@@ -13,8 +13,7 @@ implemented against the project proposal.
 
 As of November 4, 2026: 3,860,371 April 2026 Citi Bike trips imported into Cloud
 SQL from 80 batches, zero rejected rows; duplicate delivery verified; 720 hourly
-aggregate rows and 640,056 route aggregate rows. Full results are in
-[verification results](docs/ingestion-verification.json).
+aggregate rows and 640,056 route aggregate rows. Detailed handoff and verification results are shared separately with the team.
 
 ## Local development
 
@@ -40,7 +39,7 @@ python -m unittest discover -s tests -v
 ```
 
 Collector deployment additionally requires requirements-collector.txt. Cloud Run
-configuration is described in [deployment notes](docs/ingestion-deployment.md).
+configuration is shared separately in the team handoff.
 The current Compose stack contains PostgreSQL only; Redis, API, dashboard, and
 Pub/Sub emulator integration remain pending.
 
@@ -54,8 +53,6 @@ Pub/Sub emulator integration remain pending.
 - scripts/create_citibike_batches.py: split historical CSV files into 50,000 rows.
 - sql/: canonical schema, guarded legacy migrations, analysis and aggregate SQL.
 - tests/test_worker.py: ingestion validation and failure-behavior tests.
-- docs/cloud-deployment-status.md: verified deployment and operating state.
-- docs/shivani-handoff.md: resource inventory and ingestion contract.
 
 Cloud SQL is stopped between work sessions, and automatic ingestion is paused.
 Do not enable delivery against a stopped database. GitHub never contains .env,
