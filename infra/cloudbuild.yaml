@@ -1,0 +1,25 @@
+steps:
+  - id: collector
+    name: gcr.io/cloud-builders/docker
+    waitFor: ['-']
+    args: ['build', '-f', 'Dockerfile.collector', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-collector:${_TAG}', '.']
+  - id: api
+    name: gcr.io/cloud-builders/docker
+    waitFor: ['-']
+    args: ['build', '-f', 'Dockerfile.api', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-api:${_TAG}', '.']
+  - id: dashboard
+    name: gcr.io/cloud-builders/docker
+    waitFor: ['-']
+    args: ['build', '-f', 'Dockerfile.dashboard', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-dashboard:${_TAG}', '.']
+  - id: worker
+    name: gcr.io/cloud-builders/docker
+    waitFor: ['-']
+    args: ['build', '-f', 'Dockerfile.worker', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-worker:${_TAG}', '.']
+images:
+  - us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-collector:${_TAG}
+  - us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-api:${_TAG}
+  - us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-dashboard:${_TAG}
+  - us-central1-docker.pkg.dev/$PROJECT_ID/ridepulse-containers/ridepulse-worker:${_TAG}
+substitutions:
+  _TAG: completion-20261114
+timeout: 1200s

@@ -1,0 +1,1314 @@
+[
+  {
+    "insertId": "6af93f05000521ddfb922995",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1293.38,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-13",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:33.659047731Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:33.336349Z"
+  },
+  {
+    "insertId": "6af93f05000520a755e00110",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771488276254-202604-citibike-tripdata-part1-batch-014.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-13"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:33.659047731Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:33.336039Z"
+  },
+  {
+    "insertId": "6af93f040000a74a61666e82",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-13"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:32.323480190Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:32.042826Z"
+  },
+  {
+    "insertId": "6af93f0200085e05a8f7b306",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1293.73,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-11",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:30.659410266Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:30.548357Z"
+  },
+  {
+    "insertId": "6af93f0200085d0705948481",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489311765-202604-citibike-tripdata-part1-batch-012.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-11"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:30.659410266Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:30.548103Z"
+  },
+  {
+    "insertId": "6af93f010003e1bf64b82517",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-11"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:29.326124886Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:29.254399Z"
+  },
+  {
+    "insertId": "6af93f010003d5bc443600dd",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1340.16,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-7",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:29.326124886Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:29.251324Z"
+  },
+  {
+    "insertId": "6af93f010003d4990fed060c",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489264466-202604-citibike-tripdata-part1-batch-008.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-7"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:29.326124886Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:29.251033Z"
+  },
+  {
+    "insertId": "6af93eff000de617f8062402",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-7"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:27.996425798Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:27.910871Z"
+  },
+  {
+    "insertId": "6af93eff000ddb9efed9cd17",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1409.19,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-9",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:27.996425798Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:27.908190Z"
+  },
+  {
+    "insertId": "6af93eff000dda76629a3d05",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489714825-202604-citibike-tripdata-part1-batch-010.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-9"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:27.996425798Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:27.907894Z"
+  },
+  {
+    "insertId": "6af93efe00079c392fe1104a",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-9"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:26.663620171Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:26.498745Z"
+  },
+  {
+    "insertId": "6af93efe0007920b76eb1106",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1354.6,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-1",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:26.663620171Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:26.496139Z"
+  },
+  {
+    "insertId": "6af93efe000790de4d055ec8",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771441682188-202604-citibike-tripdata-part1-batch-002.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-1"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:26.663620171Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:26.495838Z"
+  },
+  {
+    "insertId": "6af93efd00022b93986ac416",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-1"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:25.331619884Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:25.142227Z"
+  },
+  {
+    "insertId": "6af93efd0002224a157b8f48",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1227.96,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-3",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:25.331619884Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:25.139850Z"
+  },
+  {
+    "insertId": "6af93efd000221786d980c77",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489453968-202604-citibike-tripdata-part1-batch-004.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-3"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:25.331619884Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:25.139640Z"
+  },
+  {
+    "insertId": "6af93efb000deacfdad0d43c",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-3"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:23.999769415Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:23.912079Z"
+  },
+  {
+    "insertId": "6af93efb000de031e2923133",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1289.82,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-6",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:23.999769415Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:23.909361Z"
+  },
+  {
+    "insertId": "6af93efb000dde9f802d38cc",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771488363152-202604-citibike-tripdata-part1-batch-007.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-6"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:23.999769415Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:23.908959Z"
+  },
+  {
+    "insertId": "6af93efa0009718df53e68d6",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-6"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:22.668675754Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:22.618893Z"
+  },
+  {
+    "insertId": "6af93efa000967204ea8b52a",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1398.51,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-12",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:22.668675754Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:22.616224Z"
+  },
+  {
+    "insertId": "6af93efa00096616984fd791",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489250881-202604-citibike-tripdata-part1-batch-013.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-12"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:22.668675754Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:22.615958Z"
+  },
+  {
+    "insertId": "6af93ef90003536b10741d38",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-12"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:21.336313741Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:21.217963Z"
+  },
+  {
+    "insertId": "6af93ef9000349c16b2faf80",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1381.43,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-14",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:21.336313741Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:21.215489Z"
+  },
+  {
+    "insertId": "6af93ef90003488048881929",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771486702322-202604-citibike-tripdata-part1-batch-015.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-14"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:21.336313741Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:21.215168Z"
+  },
+  {
+    "insertId": "6af93ef7000cb998588c1b3b",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-14"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:20.002026731Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:19.833944Z"
+  },
+  {
+    "insertId": "6af93ef700005de0dd46283f",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1630.28,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-15",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:19.342742700Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:19.024032Z"
+  },
+  {
+    "insertId": "6af93ef700005cb365ee0707",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771485455551-202604-citibike-tripdata-part1-batch-016.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-15"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:19.342742700Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:19.023731Z"
+  },
+  {
+    "insertId": "6af93ef50006015155a5bd44",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-15"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:17.672608285Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:17.393553Z"
+  },
+  {
+    "insertId": "6af93ef50005f76b917d07d4",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1310.95,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-10",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:17.672608285Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:17.391019Z"
+  },
+  {
+    "insertId": "6af93ef50005f651a69a3d0f",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489174190-202604-citibike-tripdata-part1-batch-011.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-10"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:17.672608285Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:17.390737Z"
+  },
+  {
+    "insertId": "6af93ef400013b55de8cd980",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-10"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:16.340117996Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:16.080725Z"
+  },
+  {
+    "insertId": "6af93ef40001306ec3482474",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1232,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-4",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:16.340117996Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:16.077934Z"
+  },
+  {
+    "insertId": "6af93ef400012f75af7c8332",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771458482708-202604-citibike-tripdata-part1-batch-005.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-4"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:16.340117996Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:16.077685Z"
+  },
+  {
+    "insertId": "6af93ef2000ce86f554678b4",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-4"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:15.007421540Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:14.845935Z"
+  },
+  {
+    "insertId": "6af93ef2000cde3410c0cca2",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1231.93,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-5",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:15.007421540Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:14.843316Z"
+  },
+  {
+    "insertId": "6af93ef2000cdd1853ea8d1f",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771489711283-202604-citibike-tripdata-part1-batch-006.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-5"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:15.007421540Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:14.843032Z"
+  },
+  {
+    "insertId": "6af93ef1000953dc5776377a",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-5"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:13.673630809Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:13.611292Z"
+  },
+  {
+    "insertId": "6af93ef1000948c006c453c6",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1263.68,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-2",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:13.673630809Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:13.608448Z"
+  },
+  {
+    "insertId": "6af93ef1000947b01e878967",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771456223809-202604-citibike-tripdata-part1-batch-003.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-2"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:13.673630809Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:13.608176Z"
+  },
+  {
+    "insertId": "6af93ef0000543330d5b0471",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-2"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:12.677277070Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:12.344883Z"
+  },
+  {
+    "insertId": "6af93ef00005420c7537e074",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1204.57,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-0",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:12.677277070Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:12.344588Z"
+  },
+  {
+    "insertId": "6af93ef00005384f4e02871f",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771465241680-202604-citibike-tripdata-part1-batch-001.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-0"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:12.677277070Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:12.342095Z"
+  },
+  {
+    "insertId": "6af93eef00021a6758b0664f",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-0"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:11.342070358Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:11.137831Z"
+  },
+  {
+    "insertId": "6af93eef00020b31c83c63ba",
+    "jsonPayload": {
+      "city": "nyc",
+      "duplicates_skipped": 0,
+      "http_status": 200,
+      "latency_ms": 1461.47,
+      "message": "task_completed",
+      "result": "committed",
+      "rows_inserted": 10000,
+      "rows_read": 10000,
+      "rows_rejected": 0,
+      "rows_valid": 10000,
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-8",
+      "task_type": "trip_batch"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:11.342070358Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:11.133937Z"
+  },
+  {
+    "insertId": "6af93eef000209d103e50aca",
+    "jsonPayload": {
+      "message": "Committed 10000 trips from raw/citibike/benchmark/rows-10000/1793771460126094-202604-citibike-tripdata-part1-batch-009.csv; 10000 rows examined",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-8"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:11.342070358Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:11.133585Z"
+  },
+  {
+    "insertId": "6af93eed000a4253d5a39f49",
+    "jsonPayload": {
+      "message": "task_started",
+      "task_id": "2ca17a2e7a004928ab0d82f71cbb21b2-8"
+    },
+    "labels": {
+      "instanceId": "00e8a408bd949a23705d70d9d2a491a58a92fcd5a288c7e81c82b7721b322c928911ae257272591ef0627112c1f31eb9f401d7cdb78a2e6083c7a5df6943485d597692306e895411f3ba83fa43913b876b08e8ad3a3d3ee9d0"
+    },
+    "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-11-15T05:11:09.679824364Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "rp-benchmark-65a7ca64",
+        "location": "us-central1",
+        "project_id": "ridepulse-dcs-2026",
+        "revision_name": "rp-benchmark-65a7ca64-00009-wqb",
+        "service_name": "rp-benchmark-65a7ca64"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "timestamp": "2026-11-15T05:11:09.672339Z"
+  }
+]

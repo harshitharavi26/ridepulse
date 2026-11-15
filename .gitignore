@@ -41,3 +41,7 @@ output/
 
 # Local handoff and verification documents
 docs/
+work/
+
+# Retain credential-free scientific benchmark terminal summaries
+!experiments/results/**/*.log

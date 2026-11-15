@@ -4,15 +4,48 @@ import csv
 import json
 import math
 import os
+import logging
+import time
+import uuid
+import aggregates
 
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import psycopg
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, g
 from google.cloud import storage
+from database import connection_settings
+from logging_config import configure_logging, log_context
 
 app = Flask(__name__)
+configure_logging()
+app.logger = logging.getLogger("ridepulse.worker")
+
+
+@app.before_request
+def task_context():
+    envelope = request.get_json(silent=True)
+    message = envelope.get("message", {}) if isinstance(envelope, dict) else {}
+    task_id = message.get("messageId") if isinstance(message, dict) else None
+    g.context_token = log_context.set({"task_id": str(task_id)[:256] if task_id else uuid.uuid4().hex})
+    g.task_started = time.monotonic()
+    app.logger.info("task_started")
+
+
+@app.after_request
+def task_completed(response):
+    payload = response.get_json(silent=True) or {}
+    app.logger.info("task_completed", extra={"json_fields": {
+        "http_status": response.status_code, "result": payload.get("status", "failed"),
+        "task_type": payload.get("task_type", getattr(g,"task_type","unknown")), "city": payload.get("city",getattr(g,"city",None)),
+        "rows_inserted": payload.get("rows_inserted", payload.get("rows_written", 0)),
+        "rows_read": payload.get("rows_read", 0), "rows_valid": payload.get("rows_valid", 0),
+        "duplicates_skipped": payload.get("duplicates_skipped", 0),
+        "rows_rejected": payload.get("rows_rejected",0),
+        "latency_ms": round((time.monotonic() - g.task_started) * 1000, 2)}})
+    log_context.reset(g.context_token)
+    return response
 
 
 def required_environment(*keys):
@@ -57,34 +90,26 @@ def clean_text(value):
     return str(value).strip() or None
 
 
-def optional_float(value):
+def optional_float(value,limit=None):
     if value is None or not value.strip():
         return None
     number = float(value)
-    if not math.isfinite(number):
+    if not math.isfinite(number) or (limit is not None and abs(number)>limit):
         raise ValueError("Invalid coordinate")
     return number
 
 
 def database_connection():
-    required = (
-        "INSTANCE_CONNECTION_NAME",
-        "DB_NAME",
-        "DB_USER",
-        "DB_PASSWORD",
-    )
-    missing = [key for key in required if not os.getenv(key)]
-    if missing:
-        raise RuntimeError(
-            "Missing database configuration: " + ", ".join(missing)
-        )
-    return psycopg.connect(
-        host=f"/cloudsql/{os.environ['INSTANCE_CONNECTION_NAME']}",
-        dbname=os.environ["DB_NAME"],
-        user=os.environ["DB_USER"],
-        password=os.environ["DB_PASSWORD"],
-        connect_timeout=15,
-    )
+    return psycopg.connect(**connection_settings())
+
+
+def storage_blob(task):
+    generation = task.get("generation")
+    if generation is not None:
+        if isinstance(generation, bool) or not str(generation).isdigit() or int(generation) <= 0:
+            raise ValueError("Invalid Storage generation")
+        return storage.Client().bucket(task["bucket"]).blob(task["object"], generation=int(generation))
+    return storage.Client().bucket(task["bucket"]).blob(task["object"])
 
 
 @app.post("/")
@@ -106,6 +131,10 @@ def process_task():
     except (ValueError, UnicodeDecodeError, binascii.Error):
         return reject_task("Invalid message data")
 
+    if isinstance(task,dict):
+        g.task_type=task.get("task_type") if task.get("task_type") in ("trip_batch","station_status","station_information") else "unsupported"
+        g.city=task.get("city") if task.get("city") in ("nyc","boulder") else None
+
     if isinstance(task, dict) and task.get("task_type") in ("station_status", "station_information"):
         from gbfs_ingest import process_gbfs_task
         return process_gbfs_task(task)
@@ -126,7 +155,7 @@ def process_task():
         return reject_task("Invalid storage location")
 
     try:
-        blob = storage.Client().bucket(bucket_name).blob(object_name)
+        blob = storage_blob(task)
 
         with blob.open("r", encoding="utf-8") as source:
             reader = csv.DictReader(source)
@@ -179,10 +208,10 @@ def process_task():
                                     clean_text(row.get("start_station_id")),
                                     clean_text(row.get("end_station_name")),
                                     clean_text(row.get("end_station_id")),
-                                    optional_float(row.get("start_lat")),
-                                    optional_float(row.get("start_lng")),
-                                    optional_float(row.get("end_lat")),
-                                    optional_float(row.get("end_lng")),
+                                    optional_float(row.get("start_lat"),90),
+                                    optional_float(row.get("start_lng"),180),
+                                    optional_float(row.get("end_lat"),90),
+                                    optional_float(row.get("end_lng"),180),
                                     clean_text(row.get("member_casual")),
                                 )
 
@@ -201,13 +230,20 @@ def process_task():
                     if valid_count == 0:
                         raise ValueError("CSV contains no valid trips")
 
-                    cur.execute(
+                    insertion_sql = (
                         "INSERT INTO trips "
                         "SELECT * FROM tmp_trips WHERE TRUE "
                         "ON CONFLICT (ride_id) DO NOTHING"
                     )
-
-                    inserted = cur.rowcount
+                    if os.getenv("RIDEPULSE_MAINTAIN_AGGREGATES", "false").lower() == "true":
+                        aligned = aggregates.lock_current(conn)
+                        cur.execute("CREATE TEMP TABLE inserted_trips ON COMMIT DROP AS WITH new_rows AS (" + insertion_sql + " RETURNING *) SELECT * FROM new_rows")
+                        inserted = cur.rowcount
+                        if aligned and inserted:
+                            aggregates.update_from(conn)
+                    else:
+                        cur.execute(insertion_sql)
+                        inserted = cur.rowcount
 
         # Reaching here means the database transaction committed.
         app.logger.info(

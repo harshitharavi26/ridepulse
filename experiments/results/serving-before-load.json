@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-15T02:33:53.236751+00:00",
+  "api": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+  "requests": [
+    {
+      "path": "/health/live",
+      "params": {},
+      "seconds": 0.21295,
+      "status": 200
+    },
+    {
+      "path": "/health/ready",
+      "params": {},
+      "seconds": 0.141402,
+      "status": 200
+    },
+    {
+      "path": "/v1/cities",
+      "params": {},
+      "seconds": 0.08543,
+      "status": 200,
+      "rows": 2,
+      "cache": null
+    },
+    {
+      "path": "/v1/trips/leaderboard",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01"
+      },
+      "seconds": 0.080814,
+      "status": 200,
+      "rows": 20,
+      "cache": "hit"
+    },
+    {
+      "path": "/v1/trips/leaderboard",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "metric": "dropoffs"
+      },
+      "seconds": 3.928201,
+      "status": 200,
+      "rows": 20,
+      "cache": "miss"
+    },
+    {
+      "path": "/v1/trips/routes",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01"
+      },
+      "seconds": 0.189646,
+      "status": 200,
+      "rows": 20,
+      "cache": "miss"
+    },
+    {
+      "path": "/v1/trips/patterns",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "granularity": "hour"
+      },
+      "seconds": 0.878222,
+      "status": 200,
+      "rows": 24,
+      "cache": "miss"
+    },
+    {
+      "path": "/v1/availability/latest",
+      "params": {
+        "city": "nyc",
+        "limit": 200
+      },
+      "seconds": 6.209801,
+      "status": 200,
+      "rows": 200,
+      "cache": "miss",
+      "fresh_rows": 0,
+      "newest_collected_at": "2026-11-15T01:05:25.185081+00:00"
+    },
+    {
+      "path": "/v1/availability/latest",
+      "params": {
+        "city": "boulder",
+        "limit": 200
+      },
+      "seconds": 0.807517,
+      "status": 200,
+      "rows": 76,
+      "cache": "miss",
+      "fresh_rows": 0,
+      "newest_collected_at": "2026-11-15T01:05:25.693573+00:00"
+    },
+    {
+      "path": "/v1/availability/low",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-11-13",
+        "end_date": "2026-11-14"
+      },
+      "seconds": 4.719191,
+      "status": 200,
+      "rows": 100,
+      "cache": "miss"
+    },
+    {
+      "path": "/v1/availability/low",
+      "params": {
+        "city": "boulder",
+        "start_date": "2026-11-13",
+        "end_date": "2026-11-14"
+      },
+      "seconds": 0.15876,
+      "status": 200,
+      "rows": 76,
+      "cache": "miss"
+    }
+  ],
+  "reconciliation": {
+    "facts": 3860371,
+    "hourly": 3860371,
+    "routes": 3848169,
+    "known_route_facts": 3848169,
+    "station_counts": {
+      "dropoffs": 3860371,
+      "pickups": 3860371
+    },
+    "source_version": 0,
+    "durable_version": 0
+  }
+}

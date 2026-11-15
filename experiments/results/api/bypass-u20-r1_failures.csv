@@ -1,0 +1,6 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,daily,CatchResponseError('HTTP 503'),19,2026-11-15T02:39:18Z,2026-11-15T02:39:43Z
+GET,routes,CatchResponseError('HTTP 503'),17,2026-11-15T02:39:18Z,2026-11-15T02:39:44Z
+GET,hourly,CatchResponseError('HTTP 503'),13,2026-11-15T02:39:18Z,2026-11-15T02:39:45Z
+GET,dropoffs,CatchResponseError('HTTP 503'),22,2026-11-15T02:39:20Z,2026-11-15T02:39:44Z
+GET,pickups,CatchResponseError('HTTP 503'),24,2026-11-15T02:39:18Z,2026-11-15T02:39:46Z

@@ -116,6 +116,38 @@ def request_body():
 
 class WorkerTests(unittest.TestCase):
 
+    def test_station_counts_reject_fractional_and_boolean_values(self):
+        from gbfs_ingest import nonnegative_int
+        for value in (1.9,True,-1,float('inf')):
+            with self.subTest(value=value),self.assertRaises((ValueError,OverflowError)):
+                nonnegative_int(value)
+        self.assertEqual(nonnegative_int(0),0)
+        self.assertEqual(nonnegative_int('3'),3)
+
+    def test_station_boolean_requires_boolean_or_binary_integer(self):
+        from gbfs_ingest import optional_boolean
+        for value in (1.0,'1',2):
+            with self.subTest(value=value),self.assertRaises(ValueError):optional_boolean(value)
+        self.assertTrue(optional_boolean(1))
+        self.assertFalse(optional_boolean(False))
+
+    def test_trip_coordinates_are_bounded(self):
+        from worker import optional_float
+        self.assertEqual(optional_float('40.7',90),40.7)
+        for value,limit in [('91',90),('-181',180),('nan',90)]:
+            with self.subTest(value=value),self.assertRaises(ValueError):optional_float(value,limit)
+
+    def test_invalid_storage_generation_is_permanently_rejected(self):
+        body=request_body()
+        task=json.loads(base64.b64decode(body['message']['data']))
+        task['generation']='-1'
+        body['message']['data']=base64.b64encode(json.dumps(task).encode()).decode()
+        with patch('worker.storage.Client') as client:
+            response=app.test_client().post('/',json=body)
+        self.assertEqual(response.status_code,200)
+        self.assertEqual(response.json['status'],'rejected')
+        client.assert_not_called()
+
     def test_timestamp_timezone(self):
         dt = parse_timestamp("2026-04-01 08:00:00")
         self.assertEqual(dt.astimezone(timezone.utc).hour, 12)

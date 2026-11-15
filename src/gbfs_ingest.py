@@ -2,15 +2,20 @@ import json
 import math
 import re
 import traceback
+import logging
 from datetime import datetime, timezone
 
 from flask import jsonify
 from google.cloud import storage
 
+logger = logging.getLogger("ridepulse.worker")
+
 
 def nonnegative_int(value):
     if value is None or value == "":
         return None
+    if isinstance(value,bool) or (isinstance(value,float) and not value.is_integer()):
+        raise ValueError("Station count must be an integer")
     number = int(value)
     if number < 0 or number > 2147483647:
         raise ValueError("Station count outside PostgreSQL integer range")
@@ -29,7 +34,7 @@ def optional_coordinate(value, limit):
 def optional_boolean(value):
     if value is None:
         return None
-    if value not in (0, 1, True, False):
+    if type(value) not in (int,bool) or value not in (0, 1, True, False):
         raise ValueError("Invalid station boolean")
     return bool(value)
 
@@ -48,7 +53,7 @@ def reported_timestamp(value):
 
 
 def process_gbfs_task(task):
-    from worker import EXPECTED_BUCKET, database_connection, reject_task
+    from worker import EXPECTED_BUCKET, database_connection, reject_task, storage_blob
 
     city = task.get("city")
     task_type = task.get("task_type")
@@ -81,12 +86,7 @@ def process_gbfs_task(task):
             match.group(1), "%Y%m%dT%H%M%S%fZ"
         ).replace(tzinfo=timezone.utc)
 
-        raw = (
-            storage.Client()
-            .bucket(EXPECTED_BUCKET)
-            .blob(object_name)
-            .download_as_bytes()
-        )
+        raw = storage_blob(task).download_as_bytes()
 
         payload = json.loads(raw)
         if not isinstance(payload, dict) or not isinstance(payload.get("data"), dict):
@@ -118,6 +118,7 @@ def process_gbfs_task(task):
                     with cur.copy(
                         f"COPY gbfs_stage ({columns}) FROM STDIN"
                     ) as copy:
+                        seen=set()
                         for station in stations:
                             try:
                                 if not isinstance(station, dict):
@@ -128,6 +129,8 @@ def process_gbfs_task(task):
 
                                 if not station_id:
                                     raise ValueError("Missing station ID")
+                                if station_id in seen:
+                                    raise ValueError("Duplicate station ID within feed")
 
                                 types = station.get(
                                     "num_bikes_available_types"
@@ -164,14 +167,15 @@ def process_gbfs_task(task):
                                         station.get("is_installed")
                                     ),
                                     nonnegative_int(ebikes),
-                                    json.dumps(types)
+                                    json.dumps(types,allow_nan=False)
                                     if types is not None else None,
                                 )
                             except (ValueError, TypeError, KeyError, OverflowError) as error:
                                 rejected_count += 1
                                 if rejected_count <= 5:
-                                    print(f"Rejected GBFS station: {error}", flush=True)
+                                    logger.warning("Rejected GBFS station: %s", error)
                                 continue
+                            seen.add(station_id)
                             copy.write_row(record)
                             valid_count += 1
 
@@ -197,6 +201,7 @@ def process_gbfs_task(task):
                     with cur.copy(
                         f"COPY gbfs_stage ({columns}) FROM STDIN"
                     ) as copy:
+                        seen=set()
                         for station in stations:
                             try:
                                 if not isinstance(station, dict):
@@ -207,6 +212,8 @@ def process_gbfs_task(task):
 
                                 if not station_id:
                                     raise ValueError("Missing station ID")
+                                if station_id in seen:
+                                    raise ValueError("Duplicate station ID within feed")
 
                                 record = (
                                     city,
@@ -222,8 +229,9 @@ def process_gbfs_task(task):
                             except (ValueError, TypeError, KeyError, OverflowError) as error:
                                 rejected_count += 1
                                 if rejected_count <= 5:
-                                    print(f"Rejected GBFS station: {error}", flush=True)
+                                    logger.warning("Rejected GBFS station: %s", error)
                                 continue
+                            seen.add(station_id)
                             copy.write_row(record)
                             valid_count += 1
 
@@ -245,11 +253,8 @@ def process_gbfs_task(task):
                 if valid_count == 0:
                     raise ValueError("GBFS contains no valid stations")
 
-        print(
-            f"Committed GBFS {city}/{task_type}: "
-            f"{len(stations)} read, {written} written",
-            flush=True,
-        )
+        logger.info("gbfs_committed", extra={"json_fields": {"city": city, "task_type": task_type,
+                    "rows_read": len(stations), "rows_written": written}})
 
         return jsonify(
             status="committed",
@@ -262,9 +267,9 @@ def process_gbfs_task(task):
         ), 200
 
     except (ValueError, TypeError, KeyError) as error:
-        print(f"Invalid GBFS input: {error}", flush=True)
+        logger.warning("Invalid GBFS input: %s", error)
         return reject_task("Invalid GBFS input")
 
     except Exception:
-        traceback.print_exc()
+        logger.exception("GBFS ingestion failed")
         return jsonify(error="GBFS ingestion failed"), 500

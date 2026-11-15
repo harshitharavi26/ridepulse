@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-11-08",
+    "objects": 579,
+    "committed": 579,
+    "rejected": 0,
+    "rows_written": 750171
+  },
+  {
+    "date": "2026-11-09",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 747651
+  },
+  {
+    "date": "2026-11-10",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 747597
+  },
+  {
+    "date": "2026-11-11",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 747361
+  },
+  {
+    "date": "2026-11-12",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 747089
+  },
+  {
+    "date": "2026-11-13",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 747477
+  },
+  {
+    "date": "2026-11-14",
+    "objects": 578,
+    "committed": 578,
+    "rejected": 0,
+    "rows_written": 744765
+  },
+  {
+    "date": "2026-11-15",
+    "objects": 20,
+    "committed": 20,
+    "rejected": 0,
+    "rows_written": 5190
+  }
+]

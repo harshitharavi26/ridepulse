@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements-api.txt ./
+RUN pip install --no-cache-dir -r requirements-api.txt
+COPY src/api.py src/analytics.py src/database.py src/query_cache.py src/logging_config.py src/aggregates.py ./
+ENV PORT=8080 PYTHONUNBUFFERED=1
+CMD ["sh", "-c", "exec uvicorn api:app --host 0.0.0.0 --port ${PORT}"]

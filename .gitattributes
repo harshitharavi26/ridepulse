@@ -1,0 +1,3 @@
+# Preserve raw experiment output while allowing its native formatting.
+experiments/results/**/*.csv -text whitespace=cr-at-eol
+experiments/results/**/*.log -text -whitespace

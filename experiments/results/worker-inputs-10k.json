@@ -1,0 +1,234 @@
+{
+  "project": "ridepulse-dcs-2026",
+  "created_at": "2026-11-15T05:04:16.155816+00:00",
+  "derivation": "First 10000 CSV records of each immutable original source batch; headers preserved",
+  "source_manifest": "experiments/results/worker-inputs.json",
+  "provenance": [
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-001.csv",
+      "source_generation": "1793771465241680",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771465241680-202604-citibike-tripdata-part1-batch-001.csv",
+      "sha256": "d494db178923ed893e4772d707621823db20c1c555b7cebee802e416e2379162"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-002.csv",
+      "source_generation": "1793771441682188",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771441682188-202604-citibike-tripdata-part1-batch-002.csv",
+      "sha256": "71f1770846dffe9484dccf75e4b3ace5c16e3da3e26bddbbe42e0c6b450dfcc0"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-003.csv",
+      "source_generation": "1793771456223809",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771456223809-202604-citibike-tripdata-part1-batch-003.csv",
+      "sha256": "d9f4d6a2b8749dd45a14fdee21bb5ea88ac3160ed3deea1d4b34c95175ba1127"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-004.csv",
+      "source_generation": "1793771489453968",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489453968-202604-citibike-tripdata-part1-batch-004.csv",
+      "sha256": "18d008651ddf1030cf2df89a4bc1cd563284ce17a210773113281c705f9624c8"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-005.csv",
+      "source_generation": "1793771458482708",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771458482708-202604-citibike-tripdata-part1-batch-005.csv",
+      "sha256": "7f6bfe7a0d255105233f833bd49cffb1fd5b37b626fe22206c91a2282bd53ee7"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-006.csv",
+      "source_generation": "1793771489711283",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489711283-202604-citibike-tripdata-part1-batch-006.csv",
+      "sha256": "2b344ba500c3670030944f56923f0d7ca32600d502f0db6e48c8823fdf2b7020"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-007.csv",
+      "source_generation": "1793771488363152",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771488363152-202604-citibike-tripdata-part1-batch-007.csv",
+      "sha256": "e240532aca25766d2d62199787ec2853c5c88b73530d68c1492a96c3a01a8f6b"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-008.csv",
+      "source_generation": "1793771489264466",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489264466-202604-citibike-tripdata-part1-batch-008.csv",
+      "sha256": "bf8d93fd47ca061d0289702737db3777993397b42c53268b3f29b72d67b60815"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-009.csv",
+      "source_generation": "1793771460126094",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771460126094-202604-citibike-tripdata-part1-batch-009.csv",
+      "sha256": "61a565ad0148b688e2ffab2773cb49af45a7f6da4d877b609a96ff94078b161c"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-010.csv",
+      "source_generation": "1793771489714825",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489714825-202604-citibike-tripdata-part1-batch-010.csv",
+      "sha256": "d42c711116023a0553f489d4090dedc5213196ad1307d566ff12ca47f1210a66"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-011.csv",
+      "source_generation": "1793771489174190",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489174190-202604-citibike-tripdata-part1-batch-011.csv",
+      "sha256": "97ca8fe55f3a1984e07716a5fa6a5326450e150742f9a581365c5cc2c64e1986"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-012.csv",
+      "source_generation": "1793771489311765",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489311765-202604-citibike-tripdata-part1-batch-012.csv",
+      "sha256": "7d5288251c0241838658802078ccdad59175a12bf56c41e1c46e54a8268cbd1a"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-013.csv",
+      "source_generation": "1793771489250881",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771489250881-202604-citibike-tripdata-part1-batch-013.csv",
+      "sha256": "299daaf3dc2f77aec13a804a697d3b577bc923ad5633ea0d9868baae9e071bfd"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-014.csv",
+      "source_generation": "1793771488276254",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771488276254-202604-citibike-tripdata-part1-batch-014.csv",
+      "sha256": "767714dccd1280b6d44d93a5b606c7fa275b212b869e28772f3a34020d6595f0"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-015.csv",
+      "source_generation": "1793771486702322",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771486702322-202604-citibike-tripdata-part1-batch-015.csv",
+      "sha256": "28a0ccf6296623dc4e4c803ca9f1abf1c006e83256ed69d682ab55009536cc2b"
+    },
+    {
+      "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-016.csv",
+      "source_generation": "1793771485455551",
+      "derived_object": "raw/citibike/benchmark/rows-10000/1793771485455551-202604-citibike-tripdata-part1-batch-016.csv",
+      "sha256": "9a12f163db0109a3da6729a561b58ebf6c0b1b54b5ad716589d0bd60a5ff0209"
+    }
+  ],
+  "tasks": [
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771465241680-202604-citibike-tripdata-part1-batch-001.csv",
+      "generation": "1794719049695454",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771441682188-202604-citibike-tripdata-part1-batch-002.csv",
+      "generation": "1794719048895427",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771456223809-202604-citibike-tripdata-part1-batch-003.csv",
+      "generation": "1794719049305041",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489453968-202604-citibike-tripdata-part1-batch-004.csv",
+      "generation": "1794719049288838",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771458482708-202604-citibike-tripdata-part1-batch-005.csv",
+      "generation": "1794719051653884",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489711283-202604-citibike-tripdata-part1-batch-006.csv",
+      "generation": "1794719052338258",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771488363152-202604-citibike-tripdata-part1-batch-007.csv",
+      "generation": "1794719050668864",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489264466-202604-citibike-tripdata-part1-batch-008.csv",
+      "generation": "1794719051615772",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771460126094-202604-citibike-tripdata-part1-batch-009.csv",
+      "generation": "1794719052669325",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489714825-202604-citibike-tripdata-part1-batch-010.csv",
+      "generation": "1794719053155016",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489174190-202604-citibike-tripdata-part1-batch-011.csv",
+      "generation": "1794719053376348",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489311765-202604-citibike-tripdata-part1-batch-012.csv",
+      "generation": "1794719056285657",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771489250881-202604-citibike-tripdata-part1-batch-013.csv",
+      "generation": "1794719054065349",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771488276254-202604-citibike-tripdata-part1-batch-014.csv",
+      "generation": "1794719054735741",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771486702322-202604-citibike-tripdata-part1-batch-015.csv",
+      "generation": "1794719055487210",
+      "expected_rows": 10000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/benchmark/rows-10000/1793771485455551-202604-citibike-tripdata-part1-batch-016.csv",
+      "generation": "1794719055611302",
+      "expected_rows": 10000
+    }
+  ]
+}

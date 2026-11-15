@@ -1,0 +1,52 @@
+[
+  {
+    "name": "ridepulse_cache_hits",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-api\" AND jsonPayload.message=\"cache_hit\""
+  },
+  {
+    "name": "ridepulse_cache_lookups",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-api\" AND (jsonPayload.message=\"cache_hit\" OR jsonPayload.message=\"cache_result\")"
+  },
+  {
+    "name": "ridepulse_worker_commits",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-worker\" AND jsonPayload.message=\"task_completed\" AND jsonPayload.result=\"committed\""
+  },
+  {
+    "name": "ridepulse_worker_errors",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-worker\" AND jsonPayload.message=\"task_completed\" AND jsonPayload.http_status>=500"
+  },
+  {
+    "name": "ridepulse_api_latency_ms",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-api\" AND jsonPayload.latency_ms>=0",
+    "metricDescriptor": {
+      "metricKind": "DELTA",
+      "valueType": "DISTRIBUTION",
+      "unit": "ms"
+    },
+    "valueExtractor": "EXTRACT(jsonPayload.latency_ms)",
+    "bucketOptions": {
+      "exponentialBuckets": {
+        "numFiniteBuckets": 25,
+        "growthFactor": 1.8,
+        "scale": 1
+      }
+    }
+  },
+  {
+    "name": "ridepulse_sql_latency_ms",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-api\" AND jsonPayload.sql_ms>=0",
+    "metricDescriptor": {
+      "metricKind": "DELTA",
+      "valueType": "DISTRIBUTION",
+      "unit": "ms"
+    },
+    "valueExtractor": "EXTRACT(jsonPayload.sql_ms)",
+    "bucketOptions": {
+      "exponentialBuckets": {
+        "numFiniteBuckets": 25,
+        "growthFactor": 1.8,
+        "scale": 1
+      }
+    }
+  }
+]

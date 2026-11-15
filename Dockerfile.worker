@@ -8,6 +8,9 @@ RUN pip install --no-cache-dir -r requirements-worker.txt
 
 COPY src/worker.py ./worker.py
 COPY src/gbfs_ingest.py ./gbfs_ingest.py
+COPY src/database.py ./database.py
+COPY src/logging_config.py ./logging_config.py
+COPY src/aggregates.py ./aggregates.py
 
 ENV PORT=8080
 ENV PYTHONUNBUFFERED=1

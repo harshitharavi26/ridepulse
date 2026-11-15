@@ -1,0 +1,134 @@
+{
+  "project": "ridepulse-dcs-2026",
+  "created_at": "2026-11-14T23:56:31.531515+00:00",
+  "tasks": [
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-001.csv",
+      "generation": "1793771465241680",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-002.csv",
+      "generation": "1793771441682188",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-003.csv",
+      "generation": "1793771456223809",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-004.csv",
+      "generation": "1793771489453968",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-005.csv",
+      "generation": "1793771458482708",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-006.csv",
+      "generation": "1793771489711283",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-007.csv",
+      "generation": "1793771488363152",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-008.csv",
+      "generation": "1793771489264466",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-009.csv",
+      "generation": "1793771460126094",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-010.csv",
+      "generation": "1793771489714825",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-011.csv",
+      "generation": "1793771489174190",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-012.csv",
+      "generation": "1793771489311765",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-013.csv",
+      "generation": "1793771489250881",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-014.csv",
+      "generation": "1793771488276254",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-015.csv",
+      "generation": "1793771486702322",
+      "expected_rows": 50000
+    },
+    {
+      "task_type": "trip_batch",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-016.csv",
+      "generation": "1793771485455551",
+      "expected_rows": 50000
+    }
+  ]
+}

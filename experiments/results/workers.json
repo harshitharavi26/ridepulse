@@ -1,0 +1,3416 @@
+{
+  "format": 1,
+  "method": "HTTP-driven worker scaling, independent of Pub/Sub dispatch",
+  "project": "ridepulse-dcs-2026",
+  "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-worker:completion-20261114-v6",
+  "settings": {
+    "cpu": 1,
+    "memory_MiB": 512,
+    "concurrency": 1,
+    "schema": "ridepulse_benchmark"
+  },
+  "input_manifest": {
+    "project": "ridepulse-dcs-2026",
+    "created_at": "2026-11-15T05:04:16.155816+00:00",
+    "derivation": "First 10000 CSV records of each immutable original source batch; headers preserved",
+    "source_manifest": "experiments/results/worker-inputs.json",
+    "provenance": [
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-001.csv",
+        "source_generation": "1793771465241680",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771465241680-202604-citibike-tripdata-part1-batch-001.csv",
+        "sha256": "d494db178923ed893e4772d707621823db20c1c555b7cebee802e416e2379162"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-002.csv",
+        "source_generation": "1793771441682188",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771441682188-202604-citibike-tripdata-part1-batch-002.csv",
+        "sha256": "71f1770846dffe9484dccf75e4b3ace5c16e3da3e26bddbbe42e0c6b450dfcc0"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-003.csv",
+        "source_generation": "1793771456223809",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771456223809-202604-citibike-tripdata-part1-batch-003.csv",
+        "sha256": "d9f4d6a2b8749dd45a14fdee21bb5ea88ac3160ed3deea1d4b34c95175ba1127"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-004.csv",
+        "source_generation": "1793771489453968",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489453968-202604-citibike-tripdata-part1-batch-004.csv",
+        "sha256": "18d008651ddf1030cf2df89a4bc1cd563284ce17a210773113281c705f9624c8"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-005.csv",
+        "source_generation": "1793771458482708",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771458482708-202604-citibike-tripdata-part1-batch-005.csv",
+        "sha256": "7f6bfe7a0d255105233f833bd49cffb1fd5b37b626fe22206c91a2282bd53ee7"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-006.csv",
+        "source_generation": "1793771489711283",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489711283-202604-citibike-tripdata-part1-batch-006.csv",
+        "sha256": "2b344ba500c3670030944f56923f0d7ca32600d502f0db6e48c8823fdf2b7020"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-007.csv",
+        "source_generation": "1793771488363152",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771488363152-202604-citibike-tripdata-part1-batch-007.csv",
+        "sha256": "e240532aca25766d2d62199787ec2853c5c88b73530d68c1492a96c3a01a8f6b"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-008.csv",
+        "source_generation": "1793771489264466",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489264466-202604-citibike-tripdata-part1-batch-008.csv",
+        "sha256": "bf8d93fd47ca061d0289702737db3777993397b42c53268b3f29b72d67b60815"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-009.csv",
+        "source_generation": "1793771460126094",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771460126094-202604-citibike-tripdata-part1-batch-009.csv",
+        "sha256": "61a565ad0148b688e2ffab2773cb49af45a7f6da4d877b609a96ff94078b161c"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-010.csv",
+        "source_generation": "1793771489714825",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489714825-202604-citibike-tripdata-part1-batch-010.csv",
+        "sha256": "d42c711116023a0553f489d4090dedc5213196ad1307d566ff12ca47f1210a66"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-011.csv",
+        "source_generation": "1793771489174190",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489174190-202604-citibike-tripdata-part1-batch-011.csv",
+        "sha256": "97ca8fe55f3a1984e07716a5fa6a5326450e150742f9a581365c5cc2c64e1986"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-012.csv",
+        "source_generation": "1793771489311765",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489311765-202604-citibike-tripdata-part1-batch-012.csv",
+        "sha256": "7d5288251c0241838658802078ccdad59175a12bf56c41e1c46e54a8268cbd1a"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-013.csv",
+        "source_generation": "1793771489250881",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771489250881-202604-citibike-tripdata-part1-batch-013.csv",
+        "sha256": "299daaf3dc2f77aec13a804a697d3b577bc923ad5633ea0d9868baae9e071bfd"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-014.csv",
+        "source_generation": "1793771488276254",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771488276254-202604-citibike-tripdata-part1-batch-014.csv",
+        "sha256": "767714dccd1280b6d44d93a5b606c7fa275b212b869e28772f3a34020d6595f0"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-015.csv",
+        "source_generation": "1793771486702322",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771486702322-202604-citibike-tripdata-part1-batch-015.csv",
+        "sha256": "28a0ccf6296623dc4e4c803ca9f1abf1c006e83256ed69d682ab55009536cc2b"
+      },
+      {
+        "source_object": "raw/citibike/2026-04/batches/202604-citibike-tripdata-part1-batch-016.csv",
+        "source_generation": "1793771485455551",
+        "derived_object": "raw/citibike/benchmark/rows-10000/1793771485455551-202604-citibike-tripdata-part1-batch-016.csv",
+        "sha256": "9a12f163db0109a3da6729a561b58ebf6c0b1b54b5ad716589d0bd60a5ff0209"
+      }
+    ],
+    "tasks": [
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771465241680-202604-citibike-tripdata-part1-batch-001.csv",
+        "generation": "1794719049695454",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771441682188-202604-citibike-tripdata-part1-batch-002.csv",
+        "generation": "1794719048895427",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771456223809-202604-citibike-tripdata-part1-batch-003.csv",
+        "generation": "1794719049305041",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489453968-202604-citibike-tripdata-part1-batch-004.csv",
+        "generation": "1794719049288838",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771458482708-202604-citibike-tripdata-part1-batch-005.csv",
+        "generation": "1794719051653884",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489711283-202604-citibike-tripdata-part1-batch-006.csv",
+        "generation": "1794719052338258",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771488363152-202604-citibike-tripdata-part1-batch-007.csv",
+        "generation": "1794719050668864",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489264466-202604-citibike-tripdata-part1-batch-008.csv",
+        "generation": "1794719051615772",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771460126094-202604-citibike-tripdata-part1-batch-009.csv",
+        "generation": "1794719052669325",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489714825-202604-citibike-tripdata-part1-batch-010.csv",
+        "generation": "1794719053155016",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489174190-202604-citibike-tripdata-part1-batch-011.csv",
+        "generation": "1794719053376348",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489311765-202604-citibike-tripdata-part1-batch-012.csv",
+        "generation": "1794719056285657",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771489250881-202604-citibike-tripdata-part1-batch-013.csv",
+        "generation": "1794719054065349",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771488276254-202604-citibike-tripdata-part1-batch-014.csv",
+        "generation": "1794719054735741",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771486702322-202604-citibike-tripdata-part1-batch-015.csv",
+        "generation": "1794719055487210",
+        "expected_rows": 10000
+      },
+      {
+        "task_type": "trip_batch",
+        "city": "nyc",
+        "bucket": "ridepulse-dcs-2026-data-42502534899",
+        "object": "raw/citibike/benchmark/rows-10000/1793771485455551-202604-citibike-tripdata-part1-batch-016.csv",
+        "generation": "1794719055611302",
+        "expected_rows": 10000
+      }
+    ]
+  },
+  "runs": [
+    {
+      "run_id": "0c826737293b4c4bb062fb144c79460d",
+      "revision": "rp-benchmark-65a7ca64-00002-5dv",
+      "started_at": "2026-11-15T05:05:19.527769+00:00",
+      "configured_max_instances": 1,
+      "repeat": 1,
+      "seconds": 27.045835167002224,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 5915.883129954552,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 1,
+      "distinct_instances": 1,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            500,
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            500,
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "1dd468efd872499cac35f763350b27df",
+      "revision": "rp-benchmark-65a7ca64-00003-5dh",
+      "started_at": "2026-11-15T05:06:10.892200+00:00",
+      "configured_max_instances": 2,
+      "repeat": 1,
+      "seconds": 18.69106775000182,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 8560.238619860784,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 2,
+      "distinct_instances": 2,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "c33daf0578b648dea45d90a04157db1e",
+      "revision": "rp-benchmark-65a7ca64-00004-x8z",
+      "started_at": "2026-11-15T05:06:57.838564+00:00",
+      "configured_max_instances": 4,
+      "repeat": 1,
+      "seconds": 18.799906833999557,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 8510.680473726638,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 4,
+      "distinct_instances": 4,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "5607b514b6fb4a82a428418e5c9da538",
+      "revision": "rp-benchmark-65a7ca64-00005-vqp",
+      "started_at": "2026-11-15T05:07:48.401189+00:00",
+      "configured_max_instances": 8,
+      "repeat": 1,
+      "seconds": 16.898599208001542,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 9468.240416296723,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 8,
+      "distinct_instances": 8,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "f6e063565a8a4e8dae0ecc4ca4c8c4c9",
+      "revision": "rp-benchmark-65a7ca64-00006-s9n",
+      "started_at": "2026-11-15T05:08:33.518900+00:00",
+      "configured_max_instances": 2,
+      "repeat": 2,
+      "seconds": 18.743183709000732,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 8536.436631262693,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 2,
+      "distinct_instances": 2,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "94c15209ead94597ae583792dbfcd6f9",
+      "revision": "rp-benchmark-65a7ca64-00007-c2c",
+      "started_at": "2026-11-15T05:09:28.738393+00:00",
+      "configured_max_instances": 4,
+      "repeat": 2,
+      "seconds": 17.656005166001705,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 9062.07256373571,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 4,
+      "distinct_instances": 4,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "fc1fa207e482477bb4aed46736747563",
+      "revision": "rp-benchmark-65a7ca64-00008-2c9",
+      "started_at": "2026-11-15T05:10:17.524161+00:00",
+      "configured_max_instances": 8,
+      "repeat": 2,
+      "seconds": 17.809099583002535,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 8984.171224058298,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 8,
+      "distinct_instances": 8,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "2ca17a2e7a004928ab0d82f71cbb21b2",
+      "revision": "rp-benchmark-65a7ca64-00009-wqb",
+      "started_at": "2026-11-15T05:11:07.692718+00:00",
+      "configured_max_instances": 1,
+      "repeat": 2,
+      "seconds": 25.506483832999947,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 6272.914802666533,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 1,
+      "distinct_instances": 1,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "61b404d76f394c6d8be201465b9d63d9",
+      "revision": "rp-benchmark-65a7ca64-00010-5qm",
+      "started_at": "2026-11-15T05:11:58.035029+00:00",
+      "configured_max_instances": 4,
+      "repeat": 3,
+      "seconds": 17.17825379200076,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 9314.101534261052,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 4,
+      "distinct_instances": 4,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "cc4aa214640446958b980ecf8bb7803e",
+      "revision": "rp-benchmark-65a7ca64-00011-fkn",
+      "started_at": "2026-11-15T05:12:43.631393+00:00",
+      "configured_max_instances": 8,
+      "repeat": 3,
+      "seconds": 16.545833332998882,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 9670.108285262202,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 8,
+      "distinct_instances": 8,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "aa85374cb9c348faaf5e325660fb4788",
+      "revision": "rp-benchmark-65a7ca64-00012-kf6",
+      "started_at": "2026-11-15T05:13:28.732752+00:00",
+      "configured_max_instances": 1,
+      "repeat": 3,
+      "seconds": 26.304655291998642,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 6082.573530194439,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 1,
+      "distinct_instances": 1,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            429,
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            429,
+            429,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "3c56e0f43d3f4f0b899e364ce65baf8b",
+      "revision": "rp-benchmark-65a7ca64-00013-lw6",
+      "started_at": "2026-11-15T05:14:19.540093+00:00",
+      "configured_max_instances": 2,
+      "repeat": 3,
+      "seconds": 16.598059165997256,
+      "source_rows": 160000,
+      "committed_rows": 160000,
+      "rows_per_second": 9639.681266335983,
+      "hourly_total": 160000,
+      "producer_concurrency": 16,
+      "observed_peak_active_instances": 2,
+      "distinct_instances": 2,
+      "task_intervals": 16,
+      "deliveries": [
+        {
+          "index": 0,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 1,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 2,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 3,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 4,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 5,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 6,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 7,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 8,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 9,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 10,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 11,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 12,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 13,
+          "attempt_statuses": [
+            500,
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 14,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        },
+        {
+          "index": 15,
+          "attempt_statuses": [
+            200
+          ],
+          "result": {
+            "city": "nyc",
+            "duplicates_skipped": 0,
+            "rows_inserted": 10000,
+            "rows_read": 10000,
+            "rows_rejected": 0,
+            "rows_valid": 10000,
+            "status": "committed"
+          }
+        }
+      ]
+    }
+  ],
+  "benchmark_data_reset": true
+}

@@ -1,0 +1,645 @@
+{
+  "workers": [
+    {
+      "max_instances": 1,
+      "repeats": 3,
+      "median_seconds": 26.304655291998642,
+      "median_rows_per_second": 6082.573530194439,
+      "min_rows_per_second": 5915.883129954552,
+      "max_rows_per_second": 6272.914802666533,
+      "observed_peak_instances": [
+        1,
+        1,
+        1
+      ],
+      "speedup": 1.0,
+      "efficiency_vs_configured_max": 1.0
+    },
+    {
+      "max_instances": 2,
+      "repeats": 3,
+      "median_seconds": 18.69106775000182,
+      "median_rows_per_second": 8560.238619860784,
+      "min_rows_per_second": 8536.436631262693,
+      "max_rows_per_second": 9639.681266335983,
+      "observed_peak_instances": [
+        2,
+        2,
+        2
+      ],
+      "speedup": 1.4073382882043257,
+      "efficiency_vs_configured_max": 0.7036691441021629
+    },
+    {
+      "max_instances": 4,
+      "repeats": 3,
+      "median_seconds": 17.656005166001705,
+      "median_rows_per_second": 9062.07256373571,
+      "min_rows_per_second": 8510.680473726638,
+      "max_rows_per_second": 9314.101534261052,
+      "observed_peak_instances": [
+        4,
+        4,
+        4
+      ],
+      "speedup": 1.489841843875914,
+      "efficiency_vs_configured_max": 0.3724604609689785
+    },
+    {
+      "max_instances": 8,
+      "repeats": 3,
+      "median_seconds": 16.898599208001542,
+      "median_rows_per_second": 9468.240416296723,
+      "min_rows_per_second": 8984.171224058298,
+      "max_rows_per_second": 9670.108285262202,
+      "observed_peak_instances": [
+        8,
+        8,
+        8
+      ],
+      "speedup": 1.556617502327844,
+      "efficiency_vs_configured_max": 0.1945771877909805
+    }
+  ],
+  "api": [
+    {
+      "mode": "cached",
+      "users": 1,
+      "repeats": 3,
+      "median_rps": 6.18,
+      "median_successful_rps": 6.18,
+      "median_p50_ms": 40.0,
+      "median_p95_ms": 120.0,
+      "median_average_ms": 58.0,
+      "min_p95_ms": 120.0,
+      "max_p95_ms": 120.0,
+      "requests": 551,
+      "failures": 0,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 551
+    },
+    {
+      "mode": "bypass",
+      "users": 1,
+      "repeats": 3,
+      "median_rps": 0.83,
+      "median_successful_rps": 0.83,
+      "median_p50_ms": 960.0,
+      "median_p95_ms": 2700.0,
+      "median_average_ms": 1102.0,
+      "min_p95_ms": 1700.0,
+      "max_p95_ms": 5100.0,
+      "requests": 67,
+      "failures": 0,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 0
+    },
+    {
+      "mode": "cached",
+      "users": 5,
+      "repeats": 3,
+      "median_rps": 28.48,
+      "median_successful_rps": 28.48,
+      "median_p50_ms": 48.0,
+      "median_p95_ms": 160.0,
+      "median_average_ms": 72.0,
+      "min_p95_ms": 150.0,
+      "max_p95_ms": 220.0,
+      "requests": 2575,
+      "failures": 0,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 2575
+    },
+    {
+      "mode": "bypass",
+      "users": 5,
+      "repeats": 3,
+      "median_rps": 0.93,
+      "median_successful_rps": 0.7265625,
+      "median_p50_ms": 5100.0,
+      "median_p95_ms": 6700.0,
+      "median_average_ms": 4980.0,
+      "min_p95_ms": 6400.0,
+      "max_p95_ms": 21000.0,
+      "requests": 87,
+      "failures": 24,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 0
+    },
+    {
+      "mode": "cached",
+      "users": 10,
+      "repeats": 3,
+      "median_rps": 56.36,
+      "median_successful_rps": 56.36000000000001,
+      "median_p50_ms": 57.0,
+      "median_p95_ms": 150.0,
+      "median_average_ms": 75.0,
+      "min_p95_ms": 150.0,
+      "max_p95_ms": 190.0,
+      "requests": 5057,
+      "failures": 0,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 5057
+    },
+    {
+      "mode": "bypass",
+      "users": 10,
+      "repeats": 3,
+      "median_rps": 1.58,
+      "median_successful_rps": 0.36146341463414633,
+      "median_p50_ms": 5100.0,
+      "median_p95_ms": 13000.0,
+      "median_average_ms": 5907.0,
+      "min_p95_ms": 8100.0,
+      "max_p95_ms": 14000.0,
+      "requests": 191,
+      "failures": 151,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 0
+    },
+    {
+      "mode": "cached",
+      "users": 20,
+      "repeats": 3,
+      "median_rps": 104.92,
+      "median_successful_rps": 104.92,
+      "median_p50_ms": 66.0,
+      "median_p95_ms": 220.0,
+      "median_average_ms": 88.0,
+      "min_p95_ms": 170.0,
+      "max_p95_ms": 350.0,
+      "requests": 9159,
+      "failures": 0,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 9159
+    },
+    {
+      "mode": "bypass",
+      "users": 20,
+      "repeats": 3,
+      "median_rps": 3.2,
+      "median_successful_rps": 0.3269444444444445,
+      "median_p50_ms": 5100.0,
+      "median_p95_ms": 11000.0,
+      "median_average_ms": 5745.0,
+      "min_p95_ms": 11000.0,
+      "max_p95_ms": 12000.0,
+      "requests": 355,
+      "failures": 314,
+      "result_mismatches": 0,
+      "version_drift": 0,
+      "cache_hits": 0
+    }
+  ],
+  "api_trials": [
+    {
+      "mode": "bypass",
+      "users": 1,
+      "repeat": 1,
+      "requests": 28,
+      "failures": 0,
+      "rps": 0.94,
+      "successful_rps": 0.9400000000000001,
+      "p50_ms": 860.0,
+      "p95_ms": 1700.0,
+      "average_ms": 966.0,
+      "counters": {
+        "requests": 28,
+        "cache_bypass": 28
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 27
+    },
+    {
+      "mode": "bypass",
+      "users": 1,
+      "repeat": 2,
+      "requests": 12,
+      "failures": 0,
+      "rps": 0.37,
+      "successful_rps": 0.36999999999999994,
+      "p50_ms": 2800.0,
+      "p95_ms": 5100.0,
+      "average_ms": 2607.0,
+      "counters": {
+        "requests": 12,
+        "cache_bypass": 12
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 11
+    },
+    {
+      "mode": "bypass",
+      "users": 1,
+      "repeat": 3,
+      "requests": 27,
+      "failures": 0,
+      "rps": 0.83,
+      "successful_rps": 0.83,
+      "p50_ms": 960.0,
+      "p95_ms": 2700.0,
+      "average_ms": 1102.0,
+      "counters": {
+        "requests": 27,
+        "cache_bypass": 27
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 26
+    },
+    {
+      "mode": "bypass",
+      "users": 10,
+      "repeat": 1,
+      "requests": 54,
+      "failures": 44,
+      "rps": 1.58,
+      "successful_rps": 0.2925925925925926,
+      "p50_ms": 5100.0,
+      "p95_ms": 13000.0,
+      "average_ms": 5907.0,
+      "counters": {
+        "requests": 54,
+        "cache_bypass": 10,
+        "http_errors": 44
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 52
+    },
+    {
+      "mode": "bypass",
+      "users": 10,
+      "repeat": 2,
+      "requests": 55,
+      "failures": 38,
+      "rps": 1.23,
+      "successful_rps": 0.3801818181818182,
+      "p50_ms": 5100.0,
+      "p95_ms": 14000.0,
+      "average_ms": 6181.0,
+      "counters": {
+        "requests": 55,
+        "cache_bypass": 17,
+        "http_errors": 38
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 54
+    },
+    {
+      "mode": "bypass",
+      "users": 10,
+      "repeat": 3,
+      "requests": 82,
+      "failures": 69,
+      "rps": 2.28,
+      "successful_rps": 0.36146341463414633,
+      "p50_ms": 5100.0,
+      "p95_ms": 8100.0,
+      "average_ms": 3876.0,
+      "counters": {
+        "requests": 82,
+        "cache_bypass": 13,
+        "http_errors": 69
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 81
+    },
+    {
+      "mode": "bypass",
+      "users": 20,
+      "repeat": 1,
+      "requests": 113,
+      "failures": 95,
+      "rps": 2.46,
+      "successful_rps": 0.39185840707964603,
+      "p50_ms": 5100.0,
+      "p95_ms": 11000.0,
+      "average_ms": 5793.0,
+      "counters": {
+        "requests": 113,
+        "cache_bypass": 18,
+        "http_errors": 95
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 111
+    },
+    {
+      "mode": "bypass",
+      "users": 20,
+      "repeat": 2,
+      "requests": 134,
+      "failures": 122,
+      "rps": 3.2,
+      "successful_rps": 0.2865671641791045,
+      "p50_ms": 5100.0,
+      "p95_ms": 12000.0,
+      "average_ms": 4788.0,
+      "counters": {
+        "requests": 134,
+        "http_errors": 122,
+        "cache_bypass": 12
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 133
+    },
+    {
+      "mode": "bypass",
+      "users": 20,
+      "repeat": 3,
+      "requests": 108,
+      "failures": 97,
+      "rps": 3.21,
+      "successful_rps": 0.3269444444444445,
+      "p50_ms": 5100.0,
+      "p95_ms": 11000.0,
+      "average_ms": 5745.0,
+      "counters": {
+        "requests": 108,
+        "cache_bypass": 11,
+        "http_errors": 97
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 107
+    },
+    {
+      "mode": "bypass",
+      "users": 5,
+      "repeat": 1,
+      "requests": 33,
+      "failures": 7,
+      "rps": 0.99,
+      "successful_rps": 0.7799999999999999,
+      "p50_ms": 4800.0,
+      "p95_ms": 6400.0,
+      "average_ms": 4723.0,
+      "counters": {
+        "requests": 33,
+        "cache_bypass": 26,
+        "http_errors": 7
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 32
+    },
+    {
+      "mode": "bypass",
+      "users": 5,
+      "repeat": 2,
+      "requests": 22,
+      "failures": 10,
+      "rps": 0.57,
+      "successful_rps": 0.3109090909090909,
+      "p50_ms": 5200.0,
+      "p95_ms": 21000.0,
+      "average_ms": 7771.0,
+      "counters": {
+        "requests": 22,
+        "cache_bypass": 12,
+        "http_errors": 10
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 21
+    },
+    {
+      "mode": "bypass",
+      "users": 5,
+      "repeat": 3,
+      "requests": 32,
+      "failures": 7,
+      "rps": 0.93,
+      "successful_rps": 0.7265625,
+      "p50_ms": 5100.0,
+      "p95_ms": 6700.0,
+      "average_ms": 4980.0,
+      "counters": {
+        "requests": 32,
+        "cache_bypass": 25,
+        "http_errors": 7
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 31
+    },
+    {
+      "mode": "cached",
+      "users": 1,
+      "repeat": 1,
+      "requests": 184,
+      "failures": 0,
+      "rps": 6.18,
+      "successful_rps": 6.18,
+      "p50_ms": 43.0,
+      "p95_ms": 120.0,
+      "average_ms": 58.0,
+      "counters": {
+        "requests": 184,
+        "cache_hit": 184
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 180
+    },
+    {
+      "mode": "cached",
+      "users": 1,
+      "repeat": 2,
+      "requests": 185,
+      "failures": 0,
+      "rps": 6.2,
+      "successful_rps": 6.2,
+      "p50_ms": 40.0,
+      "p95_ms": 120.0,
+      "average_ms": 58.0,
+      "counters": {
+        "requests": 185,
+        "cache_hit": 185
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 180
+    },
+    {
+      "mode": "cached",
+      "users": 1,
+      "repeat": 3,
+      "requests": 182,
+      "failures": 0,
+      "rps": 6.09,
+      "successful_rps": 6.089999999999999,
+      "p50_ms": 40.0,
+      "p95_ms": 120.0,
+      "average_ms": 58.0,
+      "counters": {
+        "requests": 182,
+        "cache_hit": 182
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 177
+    },
+    {
+      "mode": "cached",
+      "users": 10,
+      "repeat": 1,
+      "requests": 1670,
+      "failures": 0,
+      "rps": 55.81,
+      "successful_rps": 55.809999999999995,
+      "p50_ms": 63.0,
+      "p95_ms": 150.0,
+      "average_ms": 77.0,
+      "counters": {
+        "requests": 1670,
+        "cache_hit": 1670
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 1623
+    },
+    {
+      "mode": "cached",
+      "users": 10,
+      "repeat": 2,
+      "requests": 1685,
+      "failures": 0,
+      "rps": 56.36,
+      "successful_rps": 56.36000000000001,
+      "p50_ms": 57.0,
+      "p95_ms": 150.0,
+      "average_ms": 75.0,
+      "counters": {
+        "requests": 1685,
+        "cache_hit": 1685
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 1637
+    },
+    {
+      "mode": "cached",
+      "users": 10,
+      "repeat": 3,
+      "requests": 1702,
+      "failures": 0,
+      "rps": 56.91,
+      "successful_rps": 56.91,
+      "p50_ms": 50.0,
+      "p95_ms": 190.0,
+      "average_ms": 74.0,
+      "counters": {
+        "requests": 1702,
+        "cache_hit": 1702
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 1654
+    },
+    {
+      "mode": "cached",
+      "users": 20,
+      "repeat": 1,
+      "requests": 3280,
+      "failures": 0,
+      "rps": 109.33,
+      "successful_rps": 109.33000000000001,
+      "p50_ms": 66.0,
+      "p95_ms": 170.0,
+      "average_ms": 80.0,
+      "counters": {
+        "requests": 3280,
+        "cache_hit": 3280
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 3192
+    },
+    {
+      "mode": "cached",
+      "users": 20,
+      "repeat": 2,
+      "requests": 2743,
+      "failures": 0,
+      "rps": 91.47,
+      "successful_rps": 91.47,
+      "p50_ms": 84.0,
+      "p95_ms": 350.0,
+      "average_ms": 117.0,
+      "counters": {
+        "requests": 2743,
+        "cache_hit": 2743
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 2650
+    },
+    {
+      "mode": "cached",
+      "users": 20,
+      "repeat": 3,
+      "requests": 3136,
+      "failures": 0,
+      "rps": 104.92,
+      "successful_rps": 104.92,
+      "p50_ms": 61.0,
+      "p95_ms": 220.0,
+      "average_ms": 88.0,
+      "counters": {
+        "requests": 3136,
+        "cache_hit": 3136
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 3048
+    },
+    {
+      "mode": "cached",
+      "users": 5,
+      "repeat": 1,
+      "requests": 850,
+      "failures": 0,
+      "rps": 28.48,
+      "successful_rps": 28.48,
+      "p50_ms": 50.0,
+      "p95_ms": 160.0,
+      "average_ms": 72.0,
+      "counters": {
+        "requests": 850,
+        "cache_hit": 850
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 830
+    },
+    {
+      "mode": "cached",
+      "users": 5,
+      "repeat": 2,
+      "requests": 883,
+      "failures": 0,
+      "rps": 29.48,
+      "successful_rps": 29.48,
+      "p50_ms": 47.0,
+      "p95_ms": 150.0,
+      "average_ms": 66.0,
+      "counters": {
+        "requests": 883,
+        "cache_hit": 883
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 858
+    },
+    {
+      "mode": "cached",
+      "users": 5,
+      "repeat": 3,
+      "requests": 842,
+      "failures": 0,
+      "rps": 28.21,
+      "successful_rps": 28.21,
+      "p50_ms": 48.0,
+      "p95_ms": 220.0,
+      "average_ms": 76.0,
+      "counters": {
+        "requests": 842,
+        "cache_hit": 842
+      },
+      "metric_source": "final Locust console summary",
+      "periodic_csv_request_count": 818
+    }
+  ]
+}

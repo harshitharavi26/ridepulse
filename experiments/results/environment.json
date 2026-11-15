@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-11-15T05:12:12.916603+00:00",
+  "project": "ridepulse-dcs-2026",
+  "account": "shpa6505@colorado.edu",
+  "services": {
+    "ridepulse-api": {
+      "revision": "ridepulse-api-00007-mcg",
+      "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-api:completion-20261114-v6",
+      "image_digest": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-api@sha256:2cb7e6c67f1d61acd19e1b784c1e03d3c701ed0948a19b61b51de9958695894c",
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "512Mi"
+        }
+      },
+      "concurrency": 8,
+      "timeout_seconds": 60,
+      "min_instances": "0",
+      "max_instances": "10",
+      "settings": {
+        "DB_POOL_SIZE": "1",
+        "DB_STATEMENT_TIMEOUT_MS": "20000"
+      }
+    },
+    "ridepulse-worker": {
+      "revision": "ridepulse-worker-00014-kxv",
+      "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-worker:completion-20261114-v6",
+      "image_digest": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-worker@sha256:bcd98b1221d5e642f0d92bb637ba11877a51a4694f3cde88f575b9a0c39bfc5c",
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "512Mi"
+        }
+      },
+      "concurrency": 1,
+      "timeout_seconds": 300,
+      "min_instances": "0",
+      "max_instances": "8",
+      "settings": {
+        "RIDEPULSE_MAINTAIN_AGGREGATES": "true"
+      }
+    },
+    "ridepulse-dashboard": {
+      "revision": "ridepulse-dashboard-00005-fxg",
+      "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-dashboard:completion-20261114-v6",
+      "image_digest": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-dashboard@sha256:3d1c645fda3db9bbadc0969037c958b35eb3da921bab428dc14297936879bf78",
+      "resources": {
+        "limits": {
+          "cpu": "1",
+          "memory": "512Mi"
+        }
+      },
+      "concurrency": 10,
+      "timeout_seconds": 300,
+      "min_instances": "0",
+      "max_instances": "2",
+      "settings": {}
+    }
+  },
+  "sql": {
+    "version": "POSTGRES_16",
+    "tier": "db-g1-small",
+    "disk_gb": "15",
+    "disk_autoresize": true,
+    "activation_policy": "ALWAYS"
+  },
+  "redis": {
+    "tier": "BASIC",
+    "memorySizeGb": 1,
+    "redisVersion": "REDIS_7_0",
+    "state": "READY"
+  }
+}

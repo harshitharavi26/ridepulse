@@ -1,0 +1,1202 @@
+[
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:47.029239Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:46.187876Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:46.166006Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:45.457070Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:45.390619Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:44.142562Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:43.720821Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:41.857920Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:38.562957Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:38.486569Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:36.757510Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:36.674339Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:36.651889Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:36.630465Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:35.330102Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:33.467717Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:33.268157Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:31.665123Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:30.117622Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:29.377215Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:28.315662Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:28.119481Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:28.086091Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:28.077184Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:26.423137Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:24.935886Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:24.208235Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:23.153645Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:22.984419Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:22.983090Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:22.968877Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:18.034818Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.899049Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.756967Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.756806Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.755221Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.754726Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:17.754397Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:07.886488Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:41:06.719300Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:57.610538Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:56.536368Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:52.467756Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:51.402785Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:47.235911Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:46.205119Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:38.401884Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:40:38.263030Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:46.654054Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:45.748894Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.854741Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.699242Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.418780Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.324498Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.170740Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:44.169508Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.909428Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.906662Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.886175Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.884027Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.883366Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.883234Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.849929Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.834703Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:43.828387Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:39.660156Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.927239Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.927231Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.801908Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.798993Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.768126Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.696745Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.694365Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.675674Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.674651Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.650283Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:38.648694Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:36.694901Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:36.560658Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:36.484157Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:35.447193Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.803033Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.693519Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.693396Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.689912Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.586756Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.578994Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.546397Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.543735Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.543531Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.515687Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.509036Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:33.494728Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:31.447007Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:31.234664Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:30.430229Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:30.339389Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:29.607646Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:28.669696Z"
+  },
+  {
+    "jsonPayload": {
+      "error_type": "PoolTimeout",
+      "message": "database_unavailable"
+    },
+    "resource": {
+      "labels": {
+        "revision_name": "rp-api-bypass-1a27e4f6-00001-dwh"
+      }
+    },
+    "timestamp": "2026-11-15T02:39:28.510816Z"
+  }
+]

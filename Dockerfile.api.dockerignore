@@ -1,0 +1,9 @@
+**
+!requirements-api.txt
+!src/
+!src/api.py
+!src/analytics.py
+!src/database.py
+!src/query_cache.py
+!src/logging_config.py
+!src/aggregates.py

@@ -1,0 +1,364 @@
+{
+  "format": 1,
+  "started_at": "2026-11-14T23:43:46.147475+00:00",
+  "service": "rp-verify-465ee10e",
+  "before": [
+    "3860371",
+    "2602",
+    "2026-11-14 08:01:48.421612+00:00"
+  ],
+  "source_task": {
+    "task_type": "station_information",
+    "city": "boulder",
+    "bucket": "ridepulse-dcs-2026-data-42502534899",
+    "object": "raw/gbfs/boulder/20261114T080148421612Z_station_information.json",
+    "generation": "1794643308617073",
+    "status": "committed",
+    "result": {
+      "city": "boulder",
+      "rows_read": 76,
+      "rows_rejected": 0,
+      "rows_valid": 76,
+      "rows_written": 76,
+      "status": "committed",
+      "task_type": "station_information"
+    },
+    "processed_at": "2026-11-14T23:26:21.214499+00:00"
+  },
+  "events": [
+    {
+      "event": "waiting_for_invoker_iam_propagation",
+      "at": "2026-11-14T23:43:58.376209+00:00"
+    },
+    {
+      "event": "paused_main_path_preconditions_verified",
+      "at": "2026-11-14T23:45:30.181985+00:00",
+      "original": {
+        "ackDeadlineSeconds": 300,
+        "deadLetterPolicy": {
+          "deadLetterTopic": "projects/ridepulse-dcs-2026/topics/ridepulse-dead-letter",
+          "maxDeliveryAttempts": 5
+        },
+        "expirationPolicy": {
+          "ttl": "2678400s"
+        },
+        "messageRetentionDuration": "604800s",
+        "name": "projects/ridepulse-dcs-2026/subscriptions/ridepulse-worker-push",
+        "pushConfig": {},
+        "retryPolicy": {
+          "maximumBackoff": "600s",
+          "minimumBackoff": "30s"
+        },
+        "state": "ACTIVE",
+        "topic": "projects/ridepulse-dcs-2026/topics/ridepulse-tasks"
+      }
+    },
+    {
+      "event": "verification_resources_ready",
+      "at": "2026-11-14T23:45:31.754735+00:00",
+      "url": "https://rp-verify-465ee10e-qkkoqlp5ra-uc.a.run.app"
+    },
+    {
+      "event": "infrastructure_failure_observed",
+      "at": "2026-11-14T23:45:55.759541+00:00",
+      "message_id": "23382331966257070",
+      "failures": 2
+    },
+    {
+      "event": "same_message_recovered",
+      "at": "2026-11-14T23:46:48.195155+00:00",
+      "message_id": "23382331966257070",
+      "logs": [
+        {
+          "insertId": "6af8f2d200026d17e047fc10",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 200,
+            "latency_ms": 817.97,
+            "message": "task_completed",
+            "result": "committed",
+            "rows_inserted": 76,
+            "rows_read": 76,
+            "rows_rejected": 0,
+            "rows_valid": 76,
+            "task_id": "23382331966257070",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bd039f7ff1d07d75137d78447a172028aa60df210a0ef157542fb0b6638798e6be230e4ae167690341258cb927a253e563750ff7452bcfd01c1da32ebbdd79238922ba5526b4587d0f9975ba4dcf299b5290e215"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:46:26.345505712Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00002-n85",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:46:26.158999Z"
+        }
+      ]
+    },
+    {
+      "event": "duplicate_replay_committed",
+      "at": "2026-11-14T23:47:00.247058+00:00",
+      "message_id": "23383731471690132",
+      "logs": [
+        {
+          "insertId": "6af8f2e9000745326fd82082",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 200,
+            "latency_ms": 167.26,
+            "message": "task_completed",
+            "result": "committed",
+            "rows_inserted": 76,
+            "rows_read": 76,
+            "rows_rejected": 0,
+            "rows_valid": 76,
+            "task_id": "23383731471690132",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bd039f7ff1d07d75137d78447a172028aa60df210a0ef157542fb0b6638798e6be230e4ae167690341258cb927a253e563750ff7452bcfd01c1da32ebbdd79238922ba5526b4587d0f9975ba4dcf299b5290e215"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:46:49.652022995Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00002-n85",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:46:49.476466Z"
+        }
+      ]
+    },
+    {
+      "event": "dead_letter_forwarded",
+      "at": "2026-11-14T23:48:42.788372+00:00",
+      "message_id": "22618692222016412",
+      "forwarded": [
+        {
+          "ackId": "QgMPBCEhPjA-R0VeQAICPAsOWRJpXFV8DQBbG1BWOCZ3WxIBbUVTfl9bGlxpCA9yAVYPECN3YX9qSCIBGqyFrbhtOSxqXlp1BFEPHXd0YHFjXRYICm3frZiXxcTLREZJP7jbypVLQZbcg-IzZjc9KxJLLD5-PC8JQVdTF0wsABlMEiEZDydRAF8GICMiaj0FTEFBWAAiAB5PEigZDjY",
+          "ackStatus": "SUCCESS",
+          "message": {
+            "attributes": {
+              "CloudPubSubDeadLetterSourceDeliveryCount": "5",
+              "CloudPubSubDeadLetterSourceSubscription": "ridepulse-worker-push",
+              "CloudPubSubDeadLetterSourceSubscriptionProject": "ridepulse-dcs-2026",
+              "CloudPubSubDeadLetterSourceTopicPublishTime": "2026-11-14T23:47:10.111+00:00"
+            },
+            "data": "eyJ0YXNrX3R5cGUiOiAic3RhdGlvbl9pbmZvcm1hdGlvbiIsICJjaXR5IjogImJvdWxkZXIiLCAiYnVja2V0IjogInJpZGVwdWxzZS1kY3MtMjAyNi1kYXRhLTQyNTAyNTM0ODk5IiwgIm9iamVjdCI6ICJyYXcvZ2Jmcy9ib3VsZGVyLzIwMjYxMTE0VDA4MDE0ODQyMTYxMlpfc3RhdGlvbl9pbmZvcm1hdGlvbi5qc29uIiwgImdlbmVyYXRpb24iOiAiMTc5NDY0MzMwODYxNzA3MyIsICJ2ZXJpZmljYXRpb25faWQiOiAicnAtdmVyaWZ5LTQ2NWVlMTBlIn0=",
+            "messageId": "22603024591497598",
+            "publishTime": "2026-11-14T23:48:32.544Z"
+          }
+        }
+      ],
+      "attempt_logs": [
+        {
+          "insertId": "6af8f33f000806c6f1d79351",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 500,
+            "latency_ms": 121.41,
+            "message": "task_completed",
+            "result": "failed",
+            "rows_inserted": 0,
+            "rows_read": 0,
+            "rows_rejected": 0,
+            "rows_valid": 0,
+            "task_id": "22618692222016412",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bdbbfacbab0e5148148b6db9f22802d870f0d2af531f27623196ebdaa1d6a37704a6a39ba382dd7f78434e4ce1412cf7b556adb854bef1dfd0d6fa7d5106b0b78dfa2fb469a8d24595b71f4f630fe13da9e3e0"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:48:15.746354309Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00003-zmz",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:48:15.526022Z"
+        },
+        {
+          "insertId": "6af8f32f0007abe4317f4c91",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 500,
+            "latency_ms": 145.03,
+            "message": "task_completed",
+            "result": "failed",
+            "rows_inserted": 0,
+            "rows_read": 0,
+            "rows_rejected": 0,
+            "rows_valid": 0,
+            "task_id": "22618692222016412",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bdbbfacbab0e5148148b6db9f22802d870f0d2af531f27623196ebdaa1d6a37704a6a39ba382dd7f78434e4ce1412cf7b556adb854bef1dfd0d6fa7d5106b0b78dfa2fb469a8d24595b71f4f630fe13da9e3e0"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:47:59.698191355Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00003-zmz",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:47:59.502756Z"
+        },
+        {
+          "insertId": "6af8f31c000890f4570cf56c",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 500,
+            "latency_ms": 148.01,
+            "message": "task_completed",
+            "result": "failed",
+            "rows_inserted": 0,
+            "rows_read": 0,
+            "rows_rejected": 0,
+            "rows_valid": 0,
+            "task_id": "22618692222016412",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bdbbfacbab0e5148148b6db9f22802d870f0d2af531f27623196ebdaa1d6a37704a6a39ba382dd7f78434e4ce1412cf7b556adb854bef1dfd0d6fa7d5106b0b78dfa2fb469a8d24595b71f4f630fe13da9e3e0"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:47:40.752580340Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00003-zmz",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:47:40.561396Z"
+        },
+        {
+          "insertId": "6af8f30e00082febdf7cdbb5",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 500,
+            "latency_ms": 128.95,
+            "message": "task_completed",
+            "result": "failed",
+            "rows_inserted": 0,
+            "rows_read": 0,
+            "rows_rejected": 0,
+            "rows_valid": 0,
+            "task_id": "22618692222016412",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bdbbfacbab0e5148148b6db9f22802d870f0d2af531f27623196ebdaa1d6a37704a6a39ba382dd7f78434e4ce1412cf7b556adb854bef1dfd0d6fa7d5106b0b78dfa2fb469a8d24595b71f4f630fe13da9e3e0"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:47:26.755365420Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00003-zmz",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:47:26.536555Z"
+        },
+        {
+          "insertId": "6af8f302000b8cf58376a3ee",
+          "jsonPayload": {
+            "city": "boulder",
+            "duplicates_skipped": 0,
+            "http_status": 500,
+            "latency_ms": 567.09,
+            "message": "task_completed",
+            "result": "failed",
+            "rows_inserted": 0,
+            "rows_read": 0,
+            "rows_rejected": 0,
+            "rows_valid": 0,
+            "task_id": "22618692222016412",
+            "task_type": "station_information"
+          },
+          "labels": {
+            "instanceId": "00e8a408bdbbfacbab0e5148148b6db9f22802d870f0d2af531f27623196ebdaa1d6a37704a6a39ba382dd7f78434e4ce1412cf7b556adb854bef1dfd0d6fa7d5106b0b78dfa2fb469a8d24595b71f4f630fe13da9e3e0"
+          },
+          "logName": "projects/ridepulse-dcs-2026/logs/run.googleapis.com%2Fstderr",
+          "receiveTimestamp": "2026-11-14T23:47:14.924109904Z",
+          "resource": {
+            "labels": {
+              "configuration_name": "rp-verify-465ee10e",
+              "location": "us-central1",
+              "project_id": "ridepulse-dcs-2026",
+              "revision_name": "rp-verify-465ee10e-00003-zmz",
+              "service_name": "rp-verify-465ee10e"
+            },
+            "type": "cloud_run_revision"
+          },
+          "severity": "INFO",
+          "timestamp": "2026-11-14T23:47:14.756981Z"
+        }
+      ]
+    },
+    {
+      "event": "verification_passed",
+      "at": "2026-11-14T23:48:43.842601+00:00"
+    },
+    {
+      "event": "main_path_restored",
+      "at": "2026-11-14T23:48:45.386613+00:00"
+    },
+    {
+      "event": "temporary_resources_cleaned",
+      "at": "2026-11-14T23:48:49.619476+00:00",
+      "errors": []
+    }
+  ],
+  "after": [
+    "3860371",
+    "2602",
+    "2026-11-14 08:01:48.421612+00:00"
+  ],
+  "public_data_unchanged": true,
+  "cleanup_errors": []
+}

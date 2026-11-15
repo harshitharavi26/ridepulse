@@ -1,0 +1,38 @@
+{
+  "verified_at": "2026-11-15T05:27:46.550281+00:00",
+  "sql_state": "STOPPED",
+  "activation_policy": "NEVER",
+  "redis": "absent",
+  "last_sql_operation": {
+    "name": "ea350010-e2cf-41a4-bd44-53bd00000032",
+    "status": "DONE",
+    "type": "UPDATE"
+  },
+  "push_config": {},
+  "collector_flags": {
+    "ridepulse-status-collector": {
+      "GBFS_PUBLISH_TASKS": "false"
+    },
+    "ridepulse-metadata-collector": {
+      "GBFS_PUBLISH_TASKS": "false"
+    }
+  },
+  "cloud_run_minimums": {
+    "ridepulse-api": {
+      "revision_min": "0",
+      "service_min": "0",
+      "revision": "ridepulse-api-00008-hd9"
+    },
+    "ridepulse-worker": {
+      "revision_min": "0",
+      "service_min": "0",
+      "revision": "ridepulse-worker-00015-2t7"
+    },
+    "ridepulse-dashboard": {
+      "revision_min": "0",
+      "service_min": "0",
+      "revision": "ridepulse-dashboard-00005-fxg"
+    }
+  },
+  "raw_archival_schedules_retained": true
+}

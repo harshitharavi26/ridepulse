@@ -60,7 +60,7 @@ def collect_city(city, discovery_url):
         blob = bucket.blob(object_name)
         blob.upload_from_string(
             json.dumps(payload),
-            content_type="application/json"
+            content_type="application/json", if_generation_match=0
         )
 
         print(
@@ -75,6 +75,7 @@ def collect_city(city, discovery_url):
                 "city": city,
                 "bucket": BUCKET_NAME,
                 "object": object_name,
+                "generation": str(blob.generation),
             }
 
             publisher = pubsub_v1.PublisherClient()

@@ -1,0 +1,14 @@
+*
+!src/
+!src/*.py
+!scripts/
+!scripts/*.py
+!requirements-*.txt
+!Dockerfile.*
+!infra/
+!infra/cloudbuild.yaml
+**/__pycache__/**
+**/*.pyc
+.env*
+docs/**
+work/**

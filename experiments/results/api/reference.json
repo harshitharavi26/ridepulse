@@ -1,0 +1,157 @@
+{
+  "project": "ridepulse-dcs-2026",
+  "created_at": "2026-11-15T02:35:20.912182+00:00",
+  "queries": [
+    {
+      "name": "pickups",
+      "path": "/v1/trips/leaderboard",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "metric": "pickups"
+      },
+      "data_sha256": "324d5594bfb8889a5bb17e34549b1b2da4b9cb31a1464d51e03c3a44f5deab18",
+      "dataset_versions": [
+        {
+          "domain": "trips",
+          "version": 0,
+          "committed_at": "2026-11-14T23:51:29.811952+00:00"
+        }
+      ]
+    },
+    {
+      "name": "dropoffs",
+      "path": "/v1/trips/leaderboard",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "metric": "dropoffs"
+      },
+      "data_sha256": "191bc8a0efd42c0944fa9adab62de9a2e1984fa09051bc1a5ec04a579aac14f2",
+      "dataset_versions": [
+        {
+          "domain": "trips",
+          "version": 0,
+          "committed_at": "2026-11-14T23:51:29.811952+00:00"
+        }
+      ]
+    },
+    {
+      "name": "routes",
+      "path": "/v1/trips/routes",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01"
+      },
+      "data_sha256": "bf8f2da701a848843d2f4614561eef4c7ebd2b3ae1343290d02f337c65d05464",
+      "dataset_versions": [
+        {
+          "domain": "trips",
+          "version": 0,
+          "committed_at": "2026-11-14T23:51:29.811952+00:00"
+        }
+      ]
+    },
+    {
+      "name": "hourly",
+      "path": "/v1/trips/patterns",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "granularity": "hour"
+      },
+      "data_sha256": "7caaac34217eccb27c83cd03455bf86c9c6de28325c34ae2a121dbbe46547ca5",
+      "dataset_versions": [
+        {
+          "domain": "trips",
+          "version": 0,
+          "committed_at": "2026-11-14T23:51:29.811952+00:00"
+        }
+      ]
+    },
+    {
+      "name": "daily",
+      "path": "/v1/trips/patterns",
+      "params": {
+        "city": "nyc",
+        "start_date": "2026-04-01",
+        "end_date": "2026-05-01",
+        "granularity": "day"
+      },
+      "data_sha256": "2e4292f0734105fa52a9d74e2f2878e3b506f767aed18a22e3debb7de2c3bc98",
+      "dataset_versions": [
+        {
+          "domain": "trips",
+          "version": 0,
+          "committed_at": "2026-11-14T23:51:29.811952+00:00"
+        }
+      ]
+    }
+  ],
+  "cold_observations": [
+    {
+      "name": "pickups",
+      "base": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.086003,
+      "cache": "hit"
+    },
+    {
+      "name": "pickups",
+      "base": "https://rp-api-bypass-1a27e4f6-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 1.282037,
+      "cache": "bypass"
+    },
+    {
+      "name": "dropoffs",
+      "base": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.095436,
+      "cache": "hit"
+    },
+    {
+      "name": "dropoffs",
+      "base": "https://rp-api-bypass-1a27e4f6-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 2.162523,
+      "cache": "bypass"
+    },
+    {
+      "name": "routes",
+      "base": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.089329,
+      "cache": "hit"
+    },
+    {
+      "name": "routes",
+      "base": "https://rp-api-bypass-1a27e4f6-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.768327,
+      "cache": "bypass"
+    },
+    {
+      "name": "hourly",
+      "base": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.094869,
+      "cache": "hit"
+    },
+    {
+      "name": "hourly",
+      "base": "https://rp-api-bypass-1a27e4f6-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.967006,
+      "cache": "bypass"
+    },
+    {
+      "name": "daily",
+      "base": "https://ridepulse-api-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.829178,
+      "cache": "miss"
+    },
+    {
+      "name": "daily",
+      "base": "https://rp-api-bypass-1a27e4f6-qkkoqlp5ra-uc.a.run.app",
+      "seconds": 0.811622,
+      "cache": "bypass"
+    }
+  ]
+}

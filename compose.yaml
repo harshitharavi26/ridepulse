@@ -15,12 +15,74 @@ services:
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./sql/001_create_tables.sql:/docker-entrypoint-initdb.d/001_create_tables.sql:ro
+      - ./sql/008_dataset_versions.sql:/docker-entrypoint-initdb.d/008_dataset_versions.sql:ro
+      - ./sql/010_serving_aggregates.sql:/docker-entrypoint-initdb.d/010_serving_aggregates.sql:ro
 
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ridepulse -d ridepulse"]
       interval: 5s
       timeout: 5s
       retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      DB_HOST: postgres
+      DB_NAME: ridepulse
+      DB_USER: ridepulse
+      DB_PASSWORD: ${POSTGRES_PASSWORD:?Set password in .env}
+      DB_POOL_SIZE: 4
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru", "--save", "", "--appendonly", "no"]
+    ports:
+      - "127.0.0.1:56379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    environment:
+      API_BASE_URL: http://api:8080
+    ports:
+      - "127.0.0.1:8501:8080"
+    depends_on:
+      - api
+
+  test-postgres:
+    image: postgres:16
+    profiles: [test]
+    environment:
+      POSTGRES_DB: ridepulse_test
+      POSTGRES_USER: ridepulse_test
+      POSTGRES_PASSWORD: local_test_only
+    ports:
+      - "127.0.0.1:55433:5432"
+    # Isolated disposable data; never touches the main postgres_data volume.
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ridepulse_test -d ridepulse_test"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
 
 volumes:
   postgres_data:

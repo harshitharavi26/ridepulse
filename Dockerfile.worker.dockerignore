@@ -3,3 +3,6 @@
 !src/
 !src/worker.py
 !src/gbfs_ingest.py
+!src/database.py
+!src/logging_config.py
+!src/aggregates.py

@@ -1,0 +1,6 @@
+{
+  "tests": 61,
+  "result": "OK",
+  "command": "python -m unittest discover -s tests -v",
+  "integration_dependencies": "Real isolated PostgreSQL16 onlocalhost55433 and Redis7 database15 onlocalhost56379; no cloud data used"
+}

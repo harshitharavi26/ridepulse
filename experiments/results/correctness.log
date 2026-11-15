@@ -1,0 +1,433 @@
+/Users/shivanipatel/Desktop/Datacenter/ridepulse/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_external_correction_invalidates_until_refresh (test_aggregates.AggregateIntegration.test_external_correction_invalidates_until_refresh) ... ok
+test_failed_refresh_preserves_previous_aggregate_snapshot (test_aggregates.AggregateIntegration.test_failed_refresh_preserves_previous_aggregate_snapshot) ... ok
+test_incremental_insert_and_duplicate_keep_totals_aligned (test_aggregates.AggregateIntegration.test_incremental_insert_and_duplicate_keep_totals_aligned) ... ok
+test_refresh_matches_facts_including_dst_unknowns_and_filters (test_aggregates.AggregateIntegration.test_refresh_matches_facts_including_dst_unknowns_and_filters) ... ok
+test_city_local_dst_boundaries (test_api.ApiContracts.test_city_local_dst_boundaries) ... ok
+test_database_errors_are_sanitized_and_retryable (test_api.ApiContracts.test_database_errors_are_sanitized_and_retryable) ... {"severity": "WARNING", "message": "database_unavailable", "request_id": "1a2e5bac37b744b392a24fd3bccf4f87", "error_type": "OperationalError"}
+{"severity": "INFO", "message": "request_completed", "request_id": "1a2e5bac37b744b392a24fd3bccf4f87", "method": "GET", "path": "/health/ready", "status": 503, "latency_ms": 1.88}
+{"severity": "INFO", "message": "request_completed", "request_id": "9f99368ffbce4291acc2be02ab397099", "method": "GET", "path": "/health/live", "status": 200, "latency_ms": 0.39}
+ok
+test_invalid_inputs_and_unsupported_city (test_api.ApiContracts.test_invalid_inputs_and_unsupported_city) ... {"severity": "INFO", "message": "request_completed", "request_id": "16e9a1b79c964db1a517901b1c27464e", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 2.31}
+{"severity": "INFO", "message": "request_completed", "request_id": "c52daf1c0b0d47cc8c68b353a182b91b", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.85}
+{"severity": "INFO", "message": "request_completed", "request_id": "50e5ca801e5d48cab3b65732893e16b1", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.56}
+{"severity": "INFO", "message": "request_completed", "request_id": "9d08d222a7fb422b82162ade7e235923", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.48}
+{"severity": "INFO", "message": "request_completed", "request_id": "f0f9f2970e984b69b510e0ea0c4d3fd0", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.33}
+{"severity": "INFO", "message": "request_completed", "request_id": "4364bc5e36d741399e6b30e4d898de40", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.32}
+{"severity": "INFO", "message": "request_completed", "request_id": "9517c6357a004c07851a98e394e0e2ba", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.55}
+{"severity": "INFO", "message": "request_completed", "request_id": "b4ebd2e102954adbb5659d5a652c266a", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.46}
+{"severity": "INFO", "message": "request_completed", "request_id": "24ecdee5469a4a08bcf8cf83983a0e8f", "method": "GET", "path": "/v1/trips/leaderboard", "status": 422, "latency_ms": 0.35}
+ok
+test_liveness_and_openapi_without_database (test_api.ApiContracts.test_liveness_and_openapi_without_database) ... {"severity": "INFO", "message": "request_completed", "request_id": "27d126c271db4062bb979e3be9e45d88", "method": "GET", "path": "/health/live", "status": 200, "latency_ms": 0.27}
+{"severity": "INFO", "message": "request_completed", "request_id": "04979c37b22f4d7f9c56f0b6da32d0f2", "method": "GET", "path": "/openapi.json", "status": 200, "latency_ms": 3.15}
+{"severity": "INFO", "message": "request_completed", "request_id": "5bfae0cd80064a2cb6cfa7aff03d8cf7", "method": "GET", "path": "/health/live", "status": 200, "latency_ms": 0.23}
+ok
+test_range_limits (test_api.ApiContracts.test_range_limits) ... ok
+test_dropoffs_filter_on_arrival (test_api_integration.ApiIntegration.test_dropoffs_filter_on_arrival) ... {"severity": "INFO", "message": "sql_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "sql_ms": 0.61}
+{"severity": "INFO", "message": "sql_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "sql_ms": 0.41}
+{"severity": "INFO", "message": "sql_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "sql_ms": 0.61}
+{"severity": "INFO", "message": "sql_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "sql_ms": 0.64}
+{"severity": "INFO", "message": "sql_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "sql_ms": 0.28}
+{"severity": "INFO", "message": "request_completed", "request_id": "8a9ebb8d6df34c7ca5a091b2a191e0c3", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 7.64}
+ok
+test_fall_dst_both_repeated_hours_count (test_api_integration.ApiIntegration.test_fall_dst_both_repeated_hours_count) ... {"severity": "INFO", "message": "sql_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "sql_ms": 0.57}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "sql_ms": 0.3}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "sql_ms": 0.34}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "sql_ms": 0.32}
+{"severity": "INFO", "message": "request_completed", "request_id": "3dd7bf1151b744bea772063184d7b1cc", "method": "GET", "path": "/v1/trips/patterns", "status": 200, "latency_ms": 2.91}
+ok
+test_health_and_read_only_pool (test_api_integration.ApiIntegration.test_health_and_read_only_pool) ... {"severity": "INFO", "message": "sql_completed", "request_id": "5396a92ce7034545b7757dca37bd91ca", "sql_ms": 0.48}
+{"severity": "INFO", "message": "sql_completed", "request_id": "5396a92ce7034545b7757dca37bd91ca", "sql_ms": 0.26}
+{"severity": "INFO", "message": "request_completed", "request_id": "5396a92ce7034545b7757dca37bd91ca", "method": "GET", "path": "/health/ready", "status": 200, "latency_ms": 1.13}
+{"severity": "INFO", "message": "sql_completed", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "sql_ms": 0.34}
+ok
+test_historical_station_list_survives_missing_metadata (test_api_integration.ApiIntegration.test_historical_station_list_survives_missing_metadata) ... {"severity": "INFO", "message": "sql_completed", "request_id": "76a2e23e73da4a2184a58d417ebd976e", "sql_ms": 0.47}
+{"severity": "INFO", "message": "sql_completed", "request_id": "76a2e23e73da4a2184a58d417ebd976e", "sql_ms": 0.42}
+{"severity": "INFO", "message": "request_completed", "request_id": "76a2e23e73da4a2184a58d417ebd976e", "method": "GET", "path": "/v1/stations", "status": 200, "latency_ms": 1.44}
+ok
+test_latest_pagination_keeps_stations_without_metadata (test_api_integration.ApiIntegration.test_latest_pagination_keeps_stations_without_metadata) ... {"severity": "INFO", "message": "sql_completed", "request_id": "42fe5f904c2b4f9aab80d449af59d3ca", "sql_ms": 0.48}
+{"severity": "INFO", "message": "sql_completed", "request_id": "42fe5f904c2b4f9aab80d449af59d3ca", "sql_ms": 0.77}
+{"severity": "INFO", "message": "request_completed", "request_id": "42fe5f904c2b4f9aab80d449af59d3ca", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 1.88}
+{"severity": "INFO", "message": "sql_completed", "request_id": "89dc46d762af4c89b97856d26da4198f", "sql_ms": 0.39}
+{"severity": "INFO", "message": "sql_completed", "request_id": "89dc46d762af4c89b97856d26da4198f", "sql_ms": 0.49}
+{"severity": "INFO", "message": "request_completed", "request_id": "89dc46d762af4c89b97856d26da4198f", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 1.35}
+ok
+test_latest_per_station_and_upstream_freshness (test_api_integration.ApiIntegration.test_latest_per_station_and_upstream_freshness) ... {"severity": "INFO", "message": "sql_completed", "request_id": "c20e698d884943a78f8c72f909587af4", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "c20e698d884943a78f8c72f909587af4", "sql_ms": 0.55}
+{"severity": "INFO", "message": "request_completed", "request_id": "c20e698d884943a78f8c72f909587af4", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 1.54}
+{"severity": "INFO", "message": "sql_completed", "request_id": "17daa2d065e843bb88ba9183085d47b1", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "17daa2d065e843bb88ba9183085d47b1", "sql_ms": 0.48}
+{"severity": "INFO", "message": "request_completed", "request_id": "17daa2d065e843bb88ba9183085d47b1", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 1.56}
+ok
+test_low_samples_exclude_unknown_counts_and_closed_stations (test_api_integration.ApiIntegration.test_low_samples_exclude_unknown_counts_and_closed_stations) ... {"severity": "INFO", "message": "sql_completed", "request_id": "f09323e28b8f4f339ae4488d25a8146b", "sql_ms": 0.76}
+{"severity": "INFO", "message": "sql_completed", "request_id": "f09323e28b8f4f339ae4488d25a8146b", "sql_ms": 0.58}
+{"severity": "INFO", "message": "request_completed", "request_id": "f09323e28b8f4f339ae4488d25a8146b", "method": "GET", "path": "/v1/availability/low", "status": 200, "latency_ms": 2.03}
+ok
+test_pagination_is_stable (test_api_integration.ApiIntegration.test_pagination_is_stable) ... {"severity": "INFO", "message": "sql_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "sql_ms": 0.25}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "sql_ms": 0.28}
+{"severity": "INFO", "message": "request_completed", "request_id": "e8496d390a1340578f3fbc1f793d080a", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.38}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "sql_ms": 0.41}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "sql_ms": 0.26}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "sql_ms": 1.26}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "sql_ms": 0.34}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "sql_ms": 0.28}
+{"severity": "INFO", "message": "request_completed", "request_id": "0228f035e0b3460fa0d703ecab981a02", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 3.16}
+ok
+test_patterns_and_zero_fill (test_api_integration.ApiIntegration.test_patterns_and_zero_fill) ... {"severity": "INFO", "message": "sql_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "sql_ms": 0.45}
+{"severity": "INFO", "message": "sql_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "sql_ms": 0.2}
+{"severity": "INFO", "message": "sql_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "sql_ms": 0.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "sql_ms": 0.34}
+{"severity": "INFO", "message": "sql_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "sql_ms": 0.37}
+{"severity": "INFO", "message": "request_completed", "request_id": "71cfe3f0c2d7452da493242f054c1ac9", "method": "GET", "path": "/v1/trips/patterns", "status": 200, "latency_ms": 2.28}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "sql_ms": 0.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "sql_ms": 0.31}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "sql_ms": 0.38}
+{"severity": "INFO", "message": "sql_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "sql_ms": 0.28}
+{"severity": "INFO", "message": "request_completed", "request_id": "e10d2e9ffe464175987cb1b4fcabf37d", "method": "GET", "path": "/v1/trips/patterns", "status": 200, "latency_ms": 2.49}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "sql_ms": 0.24}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "sql_ms": 0.27}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "sql_ms": 0.35}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "sql_ms": 0.26}
+{"severity": "INFO", "message": "request_completed", "request_id": "2bc290fc3a5a408baa3d4d9083936e52", "method": "GET", "path": "/v1/trips/patterns", "status": 200, "latency_ms": 2.25}
+ok
+test_pickups_and_end_exclusive_midnight (test_api_integration.ApiIntegration.test_pickups_and_end_exclusive_midnight) ... {"severity": "INFO", "message": "sql_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "sql_ms": 0.46}
+{"severity": "INFO", "message": "sql_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "sql_ms": 0.45}
+{"severity": "INFO", "message": "sql_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "sql_ms": 0.52}
+{"severity": "INFO", "message": "request_completed", "request_id": "61f24269c1c042bd8fe91cf12d5f549a", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.82}
+ok
+test_routes_dates_pairs_and_filters (test_api_integration.ApiIntegration.test_routes_dates_pairs_and_filters) ... {"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.21}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.27}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.22}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "sql_ms": 0.34}
+{"severity": "INFO", "message": "request_completed", "request_id": "a68851eb64c840459ece6df1b1cf064c", "method": "GET", "path": "/v1/trips/routes", "status": 200, "latency_ms": 2.69}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.52}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.36}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.33}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "d8ba022289684fcabecd07342da96402", "sql_ms": 0.27}
+{"severity": "INFO", "message": "request_completed", "request_id": "d8ba022289684fcabecd07342da96402", "method": "GET", "path": "/v1/trips/routes", "status": 200, "latency_ms": 3.12}
+ok
+test_station_filter_and_injection_string (test_api_integration.ApiIntegration.test_station_filter_and_injection_string) ... {"severity": "INFO", "message": "sql_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "sql_ms": 0.26}
+{"severity": "INFO", "message": "sql_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "sql_ms": 0.28}
+{"severity": "INFO", "message": "sql_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "sql_ms": 0.31}
+{"severity": "INFO", "message": "sql_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "sql_ms": 0.24}
+{"severity": "INFO", "message": "request_completed", "request_id": "c65708af006d4c008936931e0e3fe762", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "sql_ms": 0.47}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "sql_ms": 0.2}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "sql_ms": 0.24}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "sql_ms": 0.83}
+{"severity": "INFO", "message": "sql_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "sql_ms": 0.25}
+{"severity": "INFO", "message": "request_completed", "request_id": "2266b0aff8784e188cd3010b700ac071", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.57}
+ok
+test_schema_option_is_preserved_alongside_read_only_and_timeout (test_api_integration.ApiSchemaIsolation.test_schema_option_is_preserved_alongside_read_only_and_timeout) ... {"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.75}
+{"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.46}
+{"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.42}
+{"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.6}
+{"severity": "INFO", "message": "sql_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "sql_ms": 0.3}
+{"severity": "INFO", "message": "cache_result", "request_id": "4c3963f793f54095b77ad5812e928e1f", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "4c3963f793f54095b77ad5812e928e1f", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 11.16}
+{"severity": "INFO", "message": "sql_completed", "request_id": "dd02a9069f50494cb56dec3a4faddea6", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "dd02a9069f50494cb56dec3a4faddea6", "sql_ms": 0.32}
+{"severity": "INFO", "message": "cache_hit", "request_id": "dd02a9069f50494cb56dec3a4faddea6", "endpoint": "leaderboard"}
+{"severity": "INFO", "message": "request_completed", "request_id": "dd02a9069f50494cb56dec3a4faddea6", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 1.66}
+{"severity": "INFO", "message": "sql_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "sql_ms": 0.64}
+{"severity": "INFO", "message": "sql_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "sql_ms": 0.37}
+{"severity": "INFO", "message": "sql_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "sql_ms": 0.57}
+{"severity": "INFO", "message": "sql_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "sql_ms": 0.37}
+{"severity": "INFO", "message": "cache_result", "request_id": "baeecd931fca4db29195223a41eacc81", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "baeecd931fca4db29195223a41eacc81", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 10.66}
+{"severity": "INFO", "message": "sql_completed", "sql_ms": 0.56}
+{"severity": "INFO", "message": "sql_completed", "sql_ms": 0.21}
+ok
+test_bypass_mode_preserves_versions_without_using_redis (test_cache_integration.CacheIntegration.test_bypass_mode_preserves_versions_without_using_redis) ... {"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.64}
+{"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.52}
+{"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.69}
+{"severity": "INFO", "message": "sql_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "sql_ms": 0.34}
+{"severity": "INFO", "message": "cache_result", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "32390bfdf2b54c72a296a7c0b462bcb7", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 10.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.36}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.3}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.88}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "sql_ms": 0.28}
+{"severity": "INFO", "message": "request_completed", "request_id": "adc33263de9a40b6a5071706d35f1fb0", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 3.29}
+ok
+test_corrupt_cache_falls_back (test_cache_integration.CacheIntegration.test_corrupt_cache_falls_back) ... {"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.4}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.83}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.34}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.52}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "sql_ms": 0.3}
+{"severity": "INFO", "message": "cache_result", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "1f910983f6e24b25a98b427bb39d3f6f", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 9.89}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.35}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.27}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.21}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.23}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.24}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "sql_ms": 0.3}
+{"severity": "INFO", "message": "cache_result", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "endpoint": "leaderboard", "result": "fallback"}
+{"severity": "INFO", "message": "request_completed", "request_id": "9b97929068cd451c9abdb9dbd52026fd", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.34}
+ok
+test_delete_invalidates_and_separate_filters_have_separate_keys (test_cache_integration.CacheIntegration.test_delete_invalidates_and_separate_filters_have_separate_keys) ... {"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.4}
+{"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.58}
+{"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.3}
+{"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.29}
+{"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "sql_ms": 0.36}
+{"severity": "INFO", "message": "cache_result", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "52f2627b8ad549de94a9c3d34bbbbd71", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 10.19}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.53}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.31}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.24}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.36}
+{"severity": "INFO", "message": "sql_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "sql_ms": 0.29}
+{"severity": "INFO", "message": "cache_result", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "a319ea405ea54cbd8cfd895faaa4abae", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 3.49}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.45}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.33}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.22}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.28}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.36}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "sql_ms": 0.26}
+{"severity": "INFO", "message": "cache_result", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "ddf8ca2f8b994e60812e2db6ea2042e5", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 3.32}
+ok
+test_duplicate_and_identical_update_do_not_advance_version (test_cache_integration.CacheIntegration.test_duplicate_and_identical_update_do_not_advance_version) ... {"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.32}
+{"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.37}
+{"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.51}
+{"severity": "INFO", "message": "sql_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "sql_ms": 0.32}
+{"severity": "INFO", "message": "cache_result", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "eb9dc6650ee045bcb94a5e9fb5a1d39b", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 11.53}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ae7737d5a0bf48eba0e283e920841123", "sql_ms": 0.4}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ae7737d5a0bf48eba0e283e920841123", "sql_ms": 0.31}
+{"severity": "INFO", "message": "cache_hit", "request_id": "ae7737d5a0bf48eba0e283e920841123", "endpoint": "leaderboard"}
+{"severity": "INFO", "message": "request_completed", "request_id": "ae7737d5a0bf48eba0e283e920841123", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 1.95}
+ok
+test_freshness_recomputed_on_cache_hit (test_cache_integration.CacheIntegration.test_freshness_recomputed_on_cache_hit) ... {"severity": "INFO", "message": "sql_completed", "request_id": "adb6d49c2ae341e99e780e2b6ead7d43", "sql_ms": 0.49}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adb6d49c2ae341e99e780e2b6ead7d43", "sql_ms": 0.62}
+{"severity": "INFO", "message": "sql_completed", "request_id": "adb6d49c2ae341e99e780e2b6ead7d43", "sql_ms": 0.7}
+{"severity": "INFO", "message": "cache_result", "request_id": "adb6d49c2ae341e99e780e2b6ead7d43", "endpoint": "availability", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "adb6d49c2ae341e99e780e2b6ead7d43", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 8.79}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1d7c35be00044201a5ea8298c03bfcad", "sql_ms": 0.46}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1d7c35be00044201a5ea8298c03bfcad", "sql_ms": 0.34}
+{"severity": "INFO", "message": "cache_hit", "request_id": "1d7c35be00044201a5ea8298c03bfcad", "endpoint": "availability"}
+{"severity": "INFO", "message": "request_completed", "request_id": "1d7c35be00044201a5ea8298c03bfcad", "method": "GET", "path": "/v1/availability/latest", "status": 200, "latency_ms": 1.68}
+ok
+test_hit_and_invalidation_after_new_commit (test_cache_integration.CacheIntegration.test_hit_and_invalidation_after_new_commit) ... {"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.47}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.65}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.36}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.37}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.9}
+{"severity": "INFO", "message": "sql_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "sql_ms": 0.34}
+{"severity": "INFO", "message": "cache_result", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "1f1a23fee21a4c01a8659a337a34ac5c", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 10.15}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0ea2fe75b5d84cc09f95b6ce0cc33a10", "sql_ms": 0.78}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0ea2fe75b5d84cc09f95b6ce0cc33a10", "sql_ms": 0.39}
+{"severity": "INFO", "message": "cache_hit", "request_id": "0ea2fe75b5d84cc09f95b6ce0cc33a10", "endpoint": "leaderboard"}
+{"severity": "INFO", "message": "request_completed", "request_id": "0ea2fe75b5d84cc09f95b6ce0cc33a10", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 2.08}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.49}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.31}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.23}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.28}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.31}
+{"severity": "INFO", "message": "sql_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "sql_ms": 0.31}
+{"severity": "INFO", "message": "cache_result", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "0967dedf7f064da3b15349dd0e71a02f", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 3.31}
+ok
+test_metadata_replay_does_not_advance_version (test_cache_integration.CacheIntegration.test_metadata_replay_does_not_advance_version) ... ok
+test_redis_failure_falls_back_to_database (test_cache_integration.CacheIntegration.test_redis_failure_falls_back_to_database) ... {"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.41}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.59}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.92}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.44}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.54}
+{"severity": "INFO", "message": "sql_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "sql_ms": 0.36}
+{"severity": "INFO", "message": "cache_result", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "endpoint": "leaderboard", "result": "fallback"}
+{"severity": "INFO", "message": "request_completed", "request_id": "3ea673d38ddd4ba3aba60cd4d7e7fca2", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 7.8}
+ok
+test_redis_unavailable_is_degraded_readiness (test_cache_integration.CacheIntegration.test_redis_unavailable_is_degraded_readiness) ... {"severity": "INFO", "message": "sql_completed", "request_id": "9e9e306b02754bc4a66c265e9505509b", "sql_ms": 0.47}
+{"severity": "INFO", "message": "sql_completed", "request_id": "9e9e306b02754bc4a66c265e9505509b", "sql_ms": 0.26}
+{"severity": "INFO", "message": "request_completed", "request_id": "9e9e306b02754bc4a66c265e9505509b", "method": "GET", "path": "/health/ready", "status": 200, "latency_ms": 5.11}
+ok
+test_rollback_does_not_advance_version_or_invalidate (test_cache_integration.CacheIntegration.test_rollback_does_not_advance_version_or_invalidate) ... {"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.46}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.55}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.27}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.34}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.5}
+{"severity": "INFO", "message": "sql_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "sql_ms": 0.29}
+{"severity": "INFO", "message": "cache_result", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "endpoint": "leaderboard", "result": "miss"}
+{"severity": "INFO", "message": "request_completed", "request_id": "ed5c8d8fc53e49c8acb71cf0e461e43d", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 9.94}
+{"severity": "INFO", "message": "sql_completed", "request_id": "deb8b10f5f4d4afaaf74c3a15a45ee59", "sql_ms": 0.49}
+{"severity": "INFO", "message": "sql_completed", "request_id": "deb8b10f5f4d4afaaf74c3a15a45ee59", "sql_ms": 0.33}
+{"severity": "INFO", "message": "cache_hit", "request_id": "deb8b10f5f4d4afaaf74c3a15a45ee59", "endpoint": "leaderboard"}
+{"severity": "INFO", "message": "request_completed", "request_id": "deb8b10f5f4d4afaaf74c3a15a45ee59", "method": "GET", "path": "/v1/trips/leaderboard", "status": 200, "latency_ms": 1.76}
+ok
+test_availability_shows_stale_readings (test_dashboard.DashboardTests.test_availability_shows_stale_readings) ... 2026-11-14 22:16:07.891 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-14 22:16:08.527 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+ok
+test_boulder_is_not_presented_as_historical_trips (test_dashboard.DashboardTests.test_boulder_is_not_presented_as_historical_trips) ... 2026-11-14 22:16:08.535 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_database_unavailable_has_readable_error (test_dashboard.DashboardTests.test_database_unavailable_has_readable_error) ... 2026-11-14 22:16:08.613 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_empty_history_has_explanation (test_dashboard.DashboardTests.test_empty_history_has_explanation) ... 2026-11-14 22:16:08.683 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_missing_instance_evidence_is_not_invented (test_experiment_activity.ActivityTests.test_missing_instance_evidence_is_not_invented) ... ok
+test_overlapping_tasks_and_reused_instances (test_experiment_activity.ActivityTests.test_overlapping_tasks_and_reused_instances) ... ok
+test_failed_policy_change_is_not_success (test_session.SessionPolicyTests.test_failed_policy_change_is_not_success) ... Waiting for SQL activation policy NEVER
+ok
+test_stopped_sql_can_remain_runnable (test_session.SessionPolicyTests.test_stopped_sql_can_remain_runnable) ... Waiting for SQL activation policy NEVER
+ok
+test_bad_message_is_acknowledged (test_worker.WorkerTests.test_bad_message_is_acknowledged) ... {"severity": "INFO", "message": "task_started", "task_id": "21f3f2a498484e108044552e78e9a764"}
+{"severity": "WARNING", "message": "Rejected task: Invalid message data", "task_id": "21f3f2a498484e108044552e78e9a764"}
+{"severity": "INFO", "message": "task_completed", "task_id": "21f3f2a498484e108044552e78e9a764", "http_status": 200, "result": "rejected", "task_type": "unknown", "city": null, "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.13}
+ok
+test_blank_station_id (test_worker.WorkerTests.test_blank_station_id) ... ok
+test_entry_points_fail_clearly_without_cloud_environment (test_worker.WorkerTests.test_entry_points_fail_clearly_without_cloud_environment) ... ok
+test_gbfs_configuration_and_database_failures_remain_retryable (test_worker.WorkerTests.test_gbfs_configuration_and_database_failures_remain_retryable) ... {"severity": "INFO", "message": "task_started", "task_id": "9ba3326672164b19bac87b5ca7c874e1"}
+{"severity": "ERROR", "message": "GBFS ingestion failed", "task_id": "9ba3326672164b19bac87b5ca7c874e1", "exception": "Traceback (most recent call last):\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/src/gbfs_ingest.py\", line 102, in process_gbfs_task\n    with database_connection() as conn:\n         ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1139, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1143, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1198, in _execute_mock_call\n    raise effect\nRuntimeError: Missing database configuration"}
+{"severity": "INFO", "message": "task_completed", "task_id": "9ba3326672164b19bac87b5ca7c874e1", "http_status": 500, "result": "failed", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 1.19}
+{"severity": "INFO", "message": "task_started", "task_id": "413a3f59ed7b48d5bb44f7f58ff66739"}
+{"severity": "ERROR", "message": "GBFS ingestion failed", "task_id": "413a3f59ed7b48d5bb44f7f58ff66739", "exception": "Traceback (most recent call last):\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/src/gbfs_ingest.py\", line 102, in process_gbfs_task\n    with database_connection() as conn:\n         ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1139, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1143, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1198, in _execute_mock_call\n    raise effect\nConnectionError: Database unavailable"}
+{"severity": "INFO", "message": "task_completed", "task_id": "413a3f59ed7b48d5bb44f7f58ff66739", "http_status": 500, "result": "failed", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.23}
+ok
+test_gbfs_invalid_files_are_acknowledged (test_worker.WorkerTests.test_gbfs_invalid_files_are_acknowledged) ... {"severity": "INFO", "message": "task_started", "task_id": "ad262bc2258343f09e0ef902a7dcbcdd"}
+{"severity": "WARNING", "message": "Invalid GBFS input: Invalid GBFS payload", "task_id": "ad262bc2258343f09e0ef902a7dcbcdd"}
+{"severity": "WARNING", "message": "Rejected task: Invalid GBFS input", "task_id": "ad262bc2258343f09e0ef902a7dcbcdd"}
+{"severity": "INFO", "message": "task_completed", "task_id": "ad262bc2258343f09e0ef902a7dcbcdd", "http_status": 200, "result": "rejected", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.28}
+{"severity": "INFO", "message": "task_started", "task_id": "42afdeb7a2b34a8b88cde78fce8b0f64"}
+{"severity": "WARNING", "message": "Invalid GBFS input: Invalid GBFS payload", "task_id": "42afdeb7a2b34a8b88cde78fce8b0f64"}
+{"severity": "WARNING", "message": "Rejected task: Invalid GBFS input", "task_id": "42afdeb7a2b34a8b88cde78fce8b0f64"}
+{"severity": "INFO", "message": "task_completed", "task_id": "42afdeb7a2b34a8b88cde78fce8b0f64", "http_status": 200, "result": "rejected", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.11}
+{"severity": "INFO", "message": "task_started", "task_id": "9fe07b0fac144e09b7df3a3593e240d2"}
+{"severity": "WARNING", "message": "Invalid GBFS input: Empty or invalid stations list", "task_id": "9fe07b0fac144e09b7df3a3593e240d2"}
+{"severity": "WARNING", "message": "Rejected task: Invalid GBFS input", "task_id": "9fe07b0fac144e09b7df3a3593e240d2"}
+{"severity": "INFO", "message": "task_completed", "task_id": "9fe07b0fac144e09b7df3a3593e240d2", "http_status": 200, "result": "rejected", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.13}
+{"severity": "INFO", "message": "task_started", "task_id": "0c3479da55fe4a50ba944106daee92f0"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Station count outside PostgreSQL integer range", "task_id": "0c3479da55fe4a50ba944106daee92f0"}
+{"severity": "WARNING", "message": "Invalid GBFS input: GBFS contains no valid stations", "task_id": "0c3479da55fe4a50ba944106daee92f0"}
+{"severity": "WARNING", "message": "Rejected task: Invalid GBFS input", "task_id": "0c3479da55fe4a50ba944106daee92f0"}
+{"severity": "INFO", "message": "task_completed", "task_id": "0c3479da55fe4a50ba944106daee92f0", "http_status": 200, "result": "rejected", "task_type": "station_status", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.12}
+ok
+test_gbfs_skips_invalid_stations_in_both_feeds (test_worker.WorkerTests.test_gbfs_skips_invalid_stations_in_both_feeds) ... {"severity": "INFO", "message": "task_started", "task_id": "a5075fb0b98f46578ac81a1de26641d9"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Station count outside PostgreSQL integer range", "task_id": "a5075fb0b98f46578ac81a1de26641d9"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Missing station ID", "task_id": "a5075fb0b98f46578ac81a1de26641d9"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Invalid station record", "task_id": "a5075fb0b98f46578ac81a1de26641d9"}
+{"severity": "INFO", "message": "gbfs_committed", "task_id": "a5075fb0b98f46578ac81a1de26641d9", "city": "nyc", "task_type": "station_status", "rows_read": 4, "rows_written": 1}
+{"severity": "INFO", "message": "task_completed", "task_id": "a5075fb0b98f46578ac81a1de26641d9", "http_status": 200, "result": "committed", "task_type": "station_status", "city": "nyc", "rows_inserted": 1, "rows_read": 4, "rows_valid": 1, "duplicates_skipped": 0, "rows_rejected": 3, "latency_ms": 0.13}
+{"severity": "INFO", "message": "task_started", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Station count outside PostgreSQL integer range", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Missing station ID", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Invalid station record", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c"}
+{"severity": "INFO", "message": "gbfs_committed", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c", "city": "nyc", "task_type": "station_information", "rows_read": 4, "rows_written": 1}
+{"severity": "INFO", "message": "task_completed", "task_id": "6c02c92de0ba4edcaf7970b73dcd127c", "http_status": 200, "result": "committed", "task_type": "station_information", "city": "nyc", "rows_inserted": 1, "rows_read": 4, "rows_valid": 1, "duplicates_skipped": 0, "rows_rejected": 3, "latency_ms": 0.19}
+ok
+test_invalid_storage_generation_is_permanently_rejected (test_worker.WorkerTests.test_invalid_storage_generation_is_permanently_rejected) ... {"severity": "INFO", "message": "task_started", "task_id": "12ca3c5c342f42f3a8fbe282f7931f65"}
+{"severity": "WARNING", "message": "Invalid trip data: Invalid Storage generation", "task_id": "12ca3c5c342f42f3a8fbe282f7931f65"}
+{"severity": "WARNING", "message": "Rejected task: Invalid trip data", "task_id": "12ca3c5c342f42f3a8fbe282f7931f65"}
+{"severity": "INFO", "message": "task_completed", "task_id": "12ca3c5c342f42f3a8fbe282f7931f65", "http_status": 200, "result": "rejected", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.06}
+ok
+test_missing_database_configuration (test_worker.WorkerTests.test_missing_database_configuration) ... {"severity": "INFO", "message": "task_started", "task_id": "a59cdc5240124a3687079c253a0900c5"}
+{"severity": "ERROR", "message": "Trip ingestion failed", "task_id": "a59cdc5240124a3687079c253a0900c5", "exception": "Traceback (most recent call last):\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/src/worker.py\", line 171, in process_task\n    with database_connection() as conn:\n         ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1139, in __call__\n    return self._mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1143, in _mock_call\n    return self._execute_mock_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py\", line 1198, in _execute_mock_call\n    raise effect\nRuntimeError: Missing configuration"}
+{"severity": "INFO", "message": "task_completed", "task_id": "a59cdc5240124a3687079c253a0900c5", "http_status": 500, "result": "failed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.31}
+ok
+test_mixed_valid_and_invalid_rows (test_worker.WorkerTests.test_mixed_valid_and_invalid_rows) ... {"severity": "INFO", "message": "task_started", "task_id": "5d30a1413fe149cd82c7b07ae53cef46"}
+{"severity": "WARNING", "message": "Rejected CSV row 2: Invalid trip duration", "task_id": "5d30a1413fe149cd82c7b07ae53cef46"}
+{"severity": "INFO", "message": "Committed 2 trips from raw/citibike/test.csv; 3 rows examined", "task_id": "5d30a1413fe149cd82c7b07ae53cef46"}
+{"severity": "INFO", "message": "task_completed", "task_id": "5d30a1413fe149cd82c7b07ae53cef46", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 2, "rows_read": 3, "rows_valid": 2, "duplicates_skipped": 0, "rows_rejected": 1, "latency_ms": 0.17}
+ok
+test_permanent_trip_rejections_are_acknowledged (test_worker.WorkerTests.test_permanent_trip_rejections_are_acknowledged) ... {"severity": "INFO", "message": "task_started", "task_id": "29f95117fe604eb1bc1b22d40a65bec6"}
+{"severity": "WARNING", "message": "Rejected task: Missing CSV columns", "task_id": "29f95117fe604eb1bc1b22d40a65bec6"}
+{"severity": "INFO", "message": "task_completed", "task_id": "29f95117fe604eb1bc1b22d40a65bec6", "http_status": 200, "result": "rejected", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.12}
+{"severity": "INFO", "message": "task_started", "task_id": "f4ea48a63d0740c7a7012049b3071744"}
+{"severity": "WARNING", "message": "Invalid trip data: CSV contains no valid trips", "task_id": "f4ea48a63d0740c7a7012049b3071744"}
+{"severity": "WARNING", "message": "Rejected task: Invalid trip data", "task_id": "f4ea48a63d0740c7a7012049b3071744"}
+{"severity": "INFO", "message": "task_completed", "task_id": "f4ea48a63d0740c7a7012049b3071744", "http_status": 200, "result": "rejected", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 0.13}
+ok
+test_station_boolean_requires_boolean_or_binary_integer (test_worker.WorkerTests.test_station_boolean_requires_boolean_or_binary_integer) ... ok
+test_station_counts_reject_fractional_and_boolean_values (test_worker.WorkerTests.test_station_counts_reject_fractional_and_boolean_values) ... ok
+test_timestamp_timezone (test_worker.WorkerTests.test_timestamp_timezone) ... ok
+test_trip_coordinates_are_bounded (test_worker.WorkerTests.test_trip_coordinates_are_bounded) ... ok
+test_worker_requires_cloud_configuration (test_worker.WorkerTests.test_worker_requires_cloud_configuration) ... ok
+test_commit_then_lost_response_replay_is_safe (test_worker_integration.WorkerIntegration.test_commit_then_lost_response_replay_is_safe) ... {"severity": "INFO", "message": "task_started", "task_id": "d5c38a7eb8a3411b8b71f27331d9de38"}
+{"severity": "ERROR", "message": "Trip ingestion failed", "task_id": "d5c38a7eb8a3411b8b71f27331d9de38", "exception": "Traceback (most recent call last):\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/src/worker.py\", line 160, in process_task\n    with blob.open(\"r\", encoding=\"utf-8\") as source:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/tests/test_worker_integration.py\", line 114, in __exit__\n    raise ConnectionError(\"Simulated failure after database commit\")\nConnectionError: Simulated failure after database commit"}
+{"severity": "INFO", "message": "task_completed", "task_id": "d5c38a7eb8a3411b8b71f27331d9de38", "http_status": 500, "result": "failed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 9.25}
+{"severity": "INFO", "message": "task_started", "task_id": "0a1c2f7e565247babf8ec91afcbc5c33"}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "0a1c2f7e565247babf8ec91afcbc5c33"}
+{"severity": "INFO", "message": "task_completed", "task_id": "0a1c2f7e565247babf8ec91afcbc5c33", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 6.81}
+ok
+test_concurrent_deliveries_insert_once (test_worker_integration.WorkerIntegration.test_concurrent_deliveries_insert_once) ... {"severity": "INFO", "message": "task_started", "task_id": "ba07f016deaa472cbb5ce2ca55691b81"}
+{"severity": "INFO", "message": "task_started", "task_id": "21086dd224a74f3ca20092b70de48761"}
+{"severity": "INFO", "message": "task_started", "task_id": "47e1c39330f44f6593428d69ef701b5d"}
+{"severity": "INFO", "message": "task_started", "task_id": "5b41194778d544eab710300568bf3d0a"}
+{"severity": "INFO", "message": "Committed 3 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "47e1c39330f44f6593428d69ef701b5d"}
+{"severity": "INFO", "message": "task_completed", "task_id": "47e1c39330f44f6593428d69ef701b5d", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 3, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 13.6}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "ba07f016deaa472cbb5ce2ca55691b81"}
+{"severity": "INFO", "message": "task_completed", "task_id": "ba07f016deaa472cbb5ce2ca55691b81", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 15.1}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "21086dd224a74f3ca20092b70de48761"}
+{"severity": "INFO", "message": "task_completed", "task_id": "21086dd224a74f3ca20092b70de48761", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 15.25}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "5b41194778d544eab710300568bf3d0a"}
+{"severity": "INFO", "message": "task_completed", "task_id": "5b41194778d544eab710300568bf3d0a", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 15.17}
+ok
+test_copy_and_duplicate_delivery (test_worker_integration.WorkerIntegration.test_copy_and_duplicate_delivery) ... {"severity": "INFO", "message": "task_started", "task_id": "766ac5bcb82b4a768ca0f0727e77bed1"}
+{"severity": "INFO", "message": "Committed 3 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "766ac5bcb82b4a768ca0f0727e77bed1"}
+{"severity": "INFO", "message": "task_completed", "task_id": "766ac5bcb82b4a768ca0f0727e77bed1", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 3, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 6.55}
+{"severity": "INFO", "message": "task_started", "task_id": "134df9120f814bfeac8c7992fb15172b"}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "134df9120f814bfeac8c7992fb15172b"}
+{"severity": "INFO", "message": "task_completed", "task_id": "134df9120f814bfeac8c7992fb15172b", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 6.94}
+ok
+test_database_failure_rolls_back_and_retry_recovers (test_worker_integration.WorkerIntegration.test_database_failure_rolls_back_and_retry_recovers) ... {"severity": "INFO", "message": "task_started", "task_id": "154b493fea1f46ebbef897b861df945b"}
+{"severity": "ERROR", "message": "Trip ingestion failed", "task_id": "154b493fea1f46ebbef897b861df945b", "exception": "Traceback (most recent call last):\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/src/worker.py\", line 245, in process_task\n    cur.execute(insertion_sql)\n  File \"/Users/shivanipatel/Desktop/Datacenter/ridepulse/.venv/lib/python3.12/site-packages/psycopg/cursor.py\", line 117, in execute\n    raise ex.with_traceback(None)\npsycopg.errors.RaiseException: controlled fixture failure\nCONTEXT:  PL/pgSQL function integration_failure() line 2 at RAISE"}
+{"severity": "INFO", "message": "task_completed", "task_id": "154b493fea1f46ebbef897b861df945b", "http_status": 500, "result": "failed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 0, "rows_valid": 0, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 6.62}
+{"severity": "INFO", "message": "task_started", "task_id": "064f335c225744c682d7bffabbe4f477"}
+{"severity": "INFO", "message": "Committed 3 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "064f335c225744c682d7bffabbe4f477"}
+{"severity": "INFO", "message": "task_completed", "task_id": "064f335c225744c682d7bffabbe4f477", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 3, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 6.44}
+ok
+test_duplicate_metadata_ids_do_not_fail_the_whole_transaction (test_worker_integration.WorkerIntegration.test_duplicate_metadata_ids_do_not_fail_the_whole_transaction) ... {"severity": "INFO", "message": "task_started", "task_id": "1ce3e5ac365b45f0931cb46b9ce5e882"}
+{"severity": "WARNING", "message": "Rejected GBFS station: Duplicate station ID within feed", "task_id": "1ce3e5ac365b45f0931cb46b9ce5e882"}
+{"severity": "INFO", "message": "gbfs_committed", "task_id": "1ce3e5ac365b45f0931cb46b9ce5e882", "city": "boulder", "task_type": "station_information", "rows_read": 2, "rows_written": 1}
+{"severity": "INFO", "message": "task_completed", "task_id": "1ce3e5ac365b45f0931cb46b9ce5e882", "http_status": 200, "result": "committed", "task_type": "station_information", "city": "boulder", "rows_inserted": 1, "rows_read": 2, "rows_valid": 1, "duplicates_skipped": 0, "rows_rejected": 1, "latency_ms": 7.21}
+ok
+test_transactional_aggregates_under_concurrent_duplicates (test_worker_integration.WorkerIntegration.test_transactional_aggregates_under_concurrent_duplicates) ... {"severity": "INFO", "message": "task_started", "task_id": "355a2e714f0d422eb20f726c0361ce45"}
+{"severity": "INFO", "message": "task_started", "task_id": "6463835f59bb44718819bbf717e9fc27"}
+{"severity": "INFO", "message": "task_started", "task_id": "115b526d039f47a8a473dd3bd21a9c55"}
+{"severity": "INFO", "message": "task_started", "task_id": "8472583fdfcd46edadf41616c92c93fc"}
+{"severity": "INFO", "message": "Committed 3 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "355a2e714f0d422eb20f726c0361ce45"}
+{"severity": "INFO", "message": "task_completed", "task_id": "355a2e714f0d422eb20f726c0361ce45", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 3, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 0, "rows_rejected": 0, "latency_ms": 14.73}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "6463835f59bb44718819bbf717e9fc27"}
+{"severity": "INFO", "message": "task_completed", "task_id": "6463835f59bb44718819bbf717e9fc27", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 16.4}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "8472583fdfcd46edadf41616c92c93fc"}
+{"severity": "INFO", "message": "task_completed", "task_id": "8472583fdfcd46edadf41616c92c93fc", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 17.99}
+{"severity": "INFO", "message": "Committed 0 trips from raw/citibike/integration.csv; 3 rows examined", "task_id": "115b526d039f47a8a473dd3bd21a9c55"}
+{"severity": "INFO", "message": "task_completed", "task_id": "115b526d039f47a8a473dd3bd21a9c55", "http_status": 200, "result": "committed", "task_type": "trip_batch", "city": "nyc", "rows_inserted": 0, "rows_read": 3, "rows_valid": 3, "duplicates_skipped": 3, "rows_rejected": 0, "latency_ms": 20.01}
+ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 2.050s
+
+OK

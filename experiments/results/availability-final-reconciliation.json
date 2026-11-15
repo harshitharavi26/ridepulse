@@ -1,0 +1,2383 @@
+{
+  "format": 1,
+  "project": "ridepulse-dcs-2026",
+  "planned_at": "2026-11-15T05:16:57.910503+00:00",
+  "tasks": [
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T051534310568Z_station_status.json",
+      "generation": "1794719734976395",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:05.629519+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T051533862166Z_station_status.json",
+      "generation": "1794719734170166",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.212620+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T051029914548Z_station_status.json",
+      "generation": "1794719430032163",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:02.034866+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T051028544838Z_station_status.json",
+      "generation": "1794719428810667",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.100356+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T050530663117Z_station_status.json",
+      "generation": "1794719131475255",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:02.422018+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T050530122034Z_station_status.json",
+      "generation": "1794719130412342",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.097983+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T050026640866Z_station_status.json",
+      "generation": "1794718826836771",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.483627+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T050026164925Z_station_status.json",
+      "generation": "1794718826460779",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.657614+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T045519917447Z_station_status.json",
+      "generation": "1794718520667247",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.085867+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T045519454236Z_station_status.json",
+      "generation": "1794718519730748",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:04.984012+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T045026702052Z_station_status.json",
+      "generation": "1794718226819962",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:05.051126+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T045026310611Z_station_status.json",
+      "generation": "1794718226581169",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:05.599215+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T044527622412Z_station_status.json",
+      "generation": "1794717928482469",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:05.598372+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T044527142212Z_station_status.json",
+      "generation": "1794717927440173",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.136875+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T044032397270Z_station_status.json",
+      "generation": "1794717632517190",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.034032+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T044031861276Z_station_status.json",
+      "generation": "1794717632246283",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.168626+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T043532901745Z_station_status.json",
+      "generation": "1794717333730046",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.371762+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T043532455066Z_station_status.json",
+      "generation": "1794717332758002",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.667344+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T043037773893Z_station_status.json",
+      "generation": "1794717038648223",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.570351+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T043037278440Z_station_status.json",
+      "generation": "1794717037587654",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.942567+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T042532913810Z_station_status.json",
+      "generation": "1794716733761584",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:06.938393+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T042532461627Z_station_status.json",
+      "generation": "1794716732735761",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.186302+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T042038523712Z_station_status.json",
+      "generation": "1794716438684031",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.456459+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T042038016373Z_station_status.json",
+      "generation": "1794716438301520",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.609805+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T041528999262Z_station_status.json",
+      "generation": "1794716129865886",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.476119+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T041528533830Z_station_status.json",
+      "generation": "1794716128833659",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.722015+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T041031486256Z_station_status.json",
+      "generation": "1794715832450343",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:07.830068+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T041031052408Z_station_status.json",
+      "generation": "1794715831304378",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.329994+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T040529037933Z_station_status.json",
+      "generation": "1794715529979545",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.032880+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T040528561974Z_station_status.json",
+      "generation": "1794715528867313",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.281793+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T040039086968Z_station_status.json",
+      "generation": "1794715239203316",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.295659+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T040038562413Z_station_status.json",
+      "generation": "1794715238913386",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.659005+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T035525730675Z_station_status.json",
+      "generation": "1794714926604758",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.659686+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T035525328138Z_station_status.json",
+      "generation": "1794714925610317",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.797811+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T035020273199Z_station_status.json",
+      "generation": "1794714620405572",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.703085+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T035019767402Z_station_status.json",
+      "generation": "1794714620097142",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.244244+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T034518288676Z_station_status.json",
+      "generation": "1794714319232194",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:08.988328+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T034517814679Z_station_status.json",
+      "generation": "1794714318140858",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.276546+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T034018854230Z_station_status.json",
+      "generation": "1794714018966239",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.184386+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T034018356673Z_station_status.json",
+      "generation": "1794714018661526",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.615175+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T033518251502Z_station_status.json",
+      "generation": "1794713719105310",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.561579+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T033517773496Z_station_status.json",
+      "generation": "1794713718117749",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.752786+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T033015743815Z_station_status.json",
+      "generation": "1794713415891299",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:09.708601+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T033015238754Z_station_status.json",
+      "generation": "1794713415562047",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.139145+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T032520887477Z_station_status.json",
+      "generation": "1794713121004821",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.229658+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T032520455884Z_station_status.json",
+      "generation": "1794713120749736",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.246409+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T032021688737Z_station_status.json",
+      "generation": "1794712821807940",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.071050+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T032021240388Z_station_status.json",
+      "generation": "1794712821536009",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.638516+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T031522430708Z_station_status.json",
+      "generation": "1794712523483944",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.622054+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T031521964490Z_station_status.json",
+      "generation": "1794712522257428",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.769377+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T031157874114Z_station_status.json",
+      "generation": "1794712317990155",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:10.568288+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T031157360827Z_station_status.json",
+      "generation": "1794712317663425",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.332877+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T030518186328Z_station_status.json",
+      "generation": "1794711919025869",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.333742+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T030517684572Z_station_status.json",
+      "generation": "1794711917973770",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.333224+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T030018753142Z_station_status.json",
+      "generation": "1794711618886150",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.333429+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T030018278606Z_station_status.json",
+      "generation": "1794711618556333",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.929908+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T025521606416Z_station_status.json",
+      "generation": "1794711321736633",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.801458+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T025521193628Z_station_status.json",
+      "generation": "1794711321473259",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.896824+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T025154717166Z_station_status.json",
+      "generation": "1794711114847362",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:11.697887+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T025154258145Z_station_status.json",
+      "generation": "1794711114546436",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.328405+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T024520112139Z_station_status.json",
+      "generation": "1794710721058702",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.153478+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T024519682652Z_station_status.json",
+      "generation": "1794710719954842",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.388023+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T024158088374Z_station_status.json",
+      "generation": "1794710519063392",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.327947+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T024157634850Z_station_status.json",
+      "generation": "1794710517925503",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.718393+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T023652689611Z_station_status.json",
+      "generation": "1794710212832517",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.714716+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T023652227503Z_station_status.json",
+      "generation": "1794710212509065",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.856857+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T023152870127Z_station_status.json",
+      "generation": "1794709912999875",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:12.853741+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T023152464745Z_station_status.json",
+      "generation": "1794709912752539",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.393913+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T022521572064Z_station_status.json",
+      "generation": "1794709522440089",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.131321+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T022521015248Z_station_status.json",
+      "generation": "1794709521358052",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.393255+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T022024276735Z_station_status.json",
+      "generation": "1794709224408263",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.222630+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T022023827433Z_station_status.json",
+      "generation": "1794709224096021",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.655953+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T021517702110Z_station_status.json",
+      "generation": "1794708918556135",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.609277+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T021517252797Z_station_status.json",
+      "generation": "1794708917552925",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.897775+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T021159806151Z_station_status.json",
+      "generation": "1794708719916217",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:13.762367+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T021159435722Z_station_status.json",
+      "generation": "1794708719692611",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.124336+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T020524097226Z_station_status.json",
+      "generation": "1794708324904467",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.047071+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T020523312054Z_station_status.json",
+      "generation": "1794708323919773",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.423582+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T020022877885Z_station_status.json",
+      "generation": "1794708023014609",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.331273+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T020022371427Z_station_status.json",
+      "generation": "1794708022653544",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.542377+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T015521673026Z_station_status.json",
+      "generation": "1794707722449928",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.498858+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T015521226341Z_station_status.json",
+      "generation": "1794707721524260",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.959417+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T015026553056Z_station_status.json",
+      "generation": "1794707426683169",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.815620+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T015026080058Z_station_status.json",
+      "generation": "1794707426382949",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.006602+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T014527558238Z_station_status.json",
+      "generation": "1794707127685679",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:14.949259+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T014527088720Z_station_status.json",
+      "generation": "1794707127391439",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.473336+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T014021263856Z_station_status.json",
+      "generation": "1794706821400343",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.298349+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T014020821491Z_station_status.json",
+      "generation": "1794706821096829",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.523511+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T013524601824Z_station_status.json",
+      "generation": "1794706525434041",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.578992+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T013524084278Z_station_status.json",
+      "generation": "1794706524407552",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.997165+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T013021408024Z_station_status.json",
+      "generation": "1794706221540348",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:18.442688+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T013020922464Z_station_status.json",
+      "generation": "1794706221216249",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:16.348577+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T012524121303Z_station_status.json",
+      "generation": "1794705924906408",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:15.997866+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T012523114046Z_station_status.json",
+      "generation": "1794705923926721",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:16.554097+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T012024088072Z_station_status.json",
+      "generation": "1794705624214140",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:16.538887+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T012023592412Z_station_status.json",
+      "generation": "1794705623911800",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:17.104113+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T011524480832Z_station_status.json",
+      "generation": "1794705325429086",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.001854+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T011523983964Z_station_status.json",
+      "generation": "1794705324291125",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:17.144337+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T011026757736Z_station_status.json",
+      "generation": "1794705026911007",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 76,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:17.476427+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T011026316800Z_station_status.json",
+      "generation": "1794705026600499",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 2519,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:17.753215+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T010525693573Z_station_status.json",
+      "generation": "1794704725794507",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:17.926006+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T010525185081Z_station_status.json",
+      "generation": "1794704725432906",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:18.426928+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T010158423339Z_station_status.json",
+      "generation": "1794704518544148",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:18.420401+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T010157845955Z_station_status.json",
+      "generation": "1794704518156223",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.142492+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T005527624793Z_station_status.json",
+      "generation": "1794704127747446",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:18.929331+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T005527041903Z_station_status.json",
+      "generation": "1794704127321950",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.142039+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T005203793438Z_station_status.json",
+      "generation": "1794703923909634",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.240130+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T005203292590Z_station_status.json",
+      "generation": "1794703923574350",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.564134+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T004525707467Z_station_status.json",
+      "generation": "1794703526384794",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.557372+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T004524683457Z_station_status.json",
+      "generation": "1794703525467227",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.672775+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T004024393338Z_station_status.json",
+      "generation": "1794703224527512",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.668339+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T004023641067Z_station_status.json",
+      "generation": "1794703224061740",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.194996+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T003526647772Z_station_status.json",
+      "generation": "1794702926780550",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:19.985733+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T003526094197Z_station_status.json",
+      "generation": "1794702926381907",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.195639+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T003026376156Z_station_status.json",
+      "generation": "1794702626518389",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.059089+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T003025816585Z_station_status.json",
+      "generation": "1794702626084138",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.384336+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T002527793568Z_station_status.json",
+      "generation": "1794702328696330",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.466761+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T002527168995Z_station_status.json",
+      "generation": "1794702327480749",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.716493+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T002027292005Z_station_status.json",
+      "generation": "1794702027408948",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.527433+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T002026701478Z_station_status.json",
+      "generation": "1794702026997899",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.801212+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T001527501037Z_station_status.json",
+      "generation": "1794701728423187",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:20.807808+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T001526872842Z_station_status.json",
+      "generation": "1794701727140495",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.070437+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T001026489930Z_station_status.json",
+      "generation": "1794701426600032",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.043148+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T001025920731Z_station_status.json",
+      "generation": "1794701426169475",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.316489+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T000847327416Z_station_status.json",
+      "generation": "1794701327433268",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.133423+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T000846750578Z_station_status.json",
+      "generation": "1794701327015562",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.625481+00:00"
+    },
+    {
+      "task_type": "station_information",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T000846387848Z_station_information.json",
+      "generation": "1794701326576898",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_information"
+      },
+      "processed_at": "2026-11-15T05:17:21.473271+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T000846385770Z_station_status.json",
+      "generation": "1794701326513964",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.591498+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T000845782830Z_station_status.json",
+      "generation": "1794701326068537",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.781534+00:00"
+    },
+    {
+      "task_type": "station_information",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T000845732309Z_station_information.json",
+      "generation": "1794701326045755",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_information"
+      },
+      "processed_at": "2026-11-15T05:17:21.903466+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "boulder",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/boulder/20261115T000143533116Z_station_status.json",
+      "generation": "1794700903648629",
+      "status": "committed",
+      "result": {
+        "city": "boulder",
+        "rows_read": 76,
+        "rows_rejected": 0,
+        "rows_valid": 76,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:21.965007+00:00"
+    },
+    {
+      "task_type": "station_status",
+      "city": "nyc",
+      "bucket": "ridepulse-dcs-2026-data-42502534899",
+      "object": "raw/gbfs/nyc/20261115T000143083833Z_station_status.json",
+      "generation": "1794700903351330",
+      "status": "committed",
+      "result": {
+        "city": "nyc",
+        "rows_read": 2519,
+        "rows_rejected": 0,
+        "rows_valid": 2519,
+        "rows_written": 0,
+        "status": "committed",
+        "task_type": "station_status"
+      },
+      "processed_at": "2026-11-15T05:17:22.157031+00:00"
+    }
+  ]
+}

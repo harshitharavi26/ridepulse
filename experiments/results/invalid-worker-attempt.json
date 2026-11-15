@@ -1,0 +1,7 @@
+{
+  "run_id": "db0ddf8427a84031b47b8f9a76a6dc6f",
+  "service": "rp-benchmark-0e96731f",
+  "included_in_results": false,
+  "reason": "Interrupted client dispatch followed by expired identity-token failures; no valid completed trial measurement. All16 source batches committed but a reliable client makespan was not obtained. Temporary service deleted before isolated schema reset and fresh trials.",
+  "mitigation": "Bounded20-minute trial dispatch budget, refresh identity after401, reject suspension-distorted timing, caffeinate during worker trials."
+}
