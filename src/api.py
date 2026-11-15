@@ -196,7 +196,7 @@ def availability(request: Request, conn: Connection, city: City, station_id: Sta
 
 
 @app.get("/v1/availability/low")
-@cached(["availability"], 60)
+@cached(["availability", "metadata"], 60)
 def low_availability(request: Request, conn: Connection, city: City, start_date: date, end_date: date,
                      station_id: StationId = None, metric: Literal["bikes", "docks"] = "bikes",
                      threshold: Annotated[int, Query(ge=0, le=100)] = 2,

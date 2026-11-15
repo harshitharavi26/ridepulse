@@ -2,3 +2,4 @@
 !requirements-dashboard.txt
 !src/
 !src/dashboard.py
+!src/dashboard_views.py

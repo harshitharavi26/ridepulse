@@ -179,3 +179,12 @@ check the repository Actions tab for its remote execution status.
 If `TEST_DATABASE_URL` is omitted, integration tests are explicitly skipped.
 Stop the test container with `docker compose --profile test stop test-postgres`.
 The next container start initializes fresh tmpfs data.
+
+## Dashboard presentation
+
+Station rankings use horizontal categorical bars. Pattern axes use local hour,
+weekday names or date, with Trips as the measure. Default tables emphasize station
+names and counts; the sidebar's Show station IDs and details option exposes IDs,
+UTC timestamps and operating flags. Developer toolbar controls use Streamlit viewer
+mode. Low-availability results include an optional metadata station_name; its cache
+also depends on the metadata version, so renamed labels are invalidated correctly.

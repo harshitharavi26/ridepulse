@@ -4,11 +4,12 @@ from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 import pandas as pd
-import plotly.express as px
 import requests
 import streamlit as st
 from google.auth.exceptions import GoogleAuthError
+from dashboard_views import make_chart,table_view
 
+st.set_option("client.toolbarMode", "viewer")
 st.set_page_config(page_title="RidePulse", page_icon="🚲", layout="wide")
 API = os.getenv("API_BASE_URL", "http://localhost:8080").rstrip("/")
 
@@ -35,21 +36,20 @@ def fetch(path, **params):
         return None
 
 
-def chart(rows, x, y, title):
+def chart(rows,x,y,title,granularity=None):
     if not rows:
         st.info("No observations match these filters.")
         return
-    frame=pd.DataFrame(rows)
-    if x=="station_id":
-        frame['station']=frame['station_name'].fillna('Unnamed')+' · '+frame['station_id'].astype(str)
-        figure=px.bar(frame.iloc[::-1],x=y,y='station',orientation='h',title=title,
-                      color_discrete_sequence=["#0f766e"],height=620)
-        figure.update_yaxes(type='category',title=None)
-        figure.update_xaxes(title='Trips')
-    else:
-        figure=px.bar(frame,x=x,y=y,title=title,color_discrete_sequence=["#0f766e"])
-    figure.update_layout(template='plotly_white')
-    st.plotly_chart(figure,use_container_width=True)
+    st.plotly_chart(make_chart(rows,x,y,title,granularity),use_container_width=True)
+
+
+def table(rows,kind):
+    frame=table_view(rows,kind,show_details)
+    config={name:st.column_config.TextColumn(name,width="medium") for name in ('Station','From','To') if name in frame}
+    for name in ('Trips','Bikes','Docks','Low readings','Known eligible readings'):
+        if name in frame:config[name]=st.column_config.NumberColumn(name,width="small",format="%d")
+    if 'Low readings (%)' in frame:config['Low readings (%)']=st.column_config.NumberColumn('Low readings (%)',format='%.1f',width='small')
+    st.dataframe(frame,column_config=config,use_container_width=True,hide_index=True)
 
 
 def local_date(value, timezone):
@@ -60,6 +60,7 @@ st.title("RidePulse")
 st.caption("Explore NYC bike-share trips and observed station availability in NYC and Boulder.")
 city = st.sidebar.selectbox("City", ["nyc", "boulder"], format_func=lambda v: {"nyc": "New York City", "boulder": "Boulder"}[v])
 view = st.sidebar.radio("Explore", ["Trip history", "Station availability"])
+show_details=st.sidebar.checkbox("Show station IDs and details",value=False)
 if st.sidebar.button("Refresh data"):
     st.rerun()
 
@@ -89,32 +90,28 @@ if view == "Trip history":
         params["station_id"] = station
     st.caption("Pickup dates use departure times; drop-off dates use arrival times. Station IDs from trip history can differ from live-feed IDs.")
     top = fetch("/v1/trips/leaderboard", **params, limit=20)
-    left, right = st.columns(2)
-    with left:
-        if top:
-            chart(top["data"], "station_id", "trip_count", f"Top {metric}")
-            st.dataframe(top["data"], use_container_width=True, hide_index=True)
-    with right:
-        granularity = st.selectbox("Pattern", ["hour", "weekday", "day"])
-        trend = fetch("/v1/trips/patterns", **params, granularity=granularity)
-        if trend:
-            st.metric("Trips in selection",f"{sum(row['trip_count'] for row in trend['data']):,}")
-            chart(trend["data"], "bucket", "trip_count", f"{metric.title()} by local {granularity}")
-            if granularity == "weekday":
-                st.caption("Weekdays: Monday=1 through Sunday=7.")
+    if top:
+        chart(top["data"],"station_id","trip_count",f"Top {metric}")
+        with st.expander("Ranked station table"):
+            table(top["data"],"leaderboard")
+    granularity=st.selectbox("Pattern",["hour","weekday","day"])
+    trend=fetch("/v1/trips/patterns",**params,granularity=granularity)
+    if trend:
+        st.metric("Trips in selection",f"{sum(row['trip_count'] for row in trend['data']):,}")
+        chart(trend["data"],"bucket","trip_count",f"{metric.title()} by local {granularity}",granularity)
     st.subheader("Common routes")
     route_params = {k: v for k, v in params.items() if k not in ("metric", "station_id")}
     if station:
         route_params["start_station_id"] = station
     routes = fetch("/v1/trips/routes", **route_params, limit=20)
     if routes:
-        st.dataframe(routes["data"], use_container_width=True, hide_index=True)
+        table(routes["data"],"routes")
         st.caption("Routes use departure dates and exclude trips with an unknown endpoint. The station filter selects the route origin.")
     with st.expander("Find trip station IDs"):
         if st.button("Load station directory"):
             directory = fetch("/v1/stations", city=city, source="trips", limit=200)
             if directory:
-                st.dataframe(directory["data"], hide_index=True, use_container_width=True)
+                table(directory["data"],"directory")
                 st.caption("First 200 IDs. The API supports pagination for the full directory.")
 else:
     timezone = "America/New_York" if city == "nyc" else "America/Denver"
@@ -139,7 +136,8 @@ else:
             if stale:
                 st.warning("Some readings are stale. Check collected_at and last_reported before treating counts as current.")
             df = pd.DataFrame(rows)
-            st.dataframe(df[["station_id", "station_name", "bikes_available", "docks_available", "is_stale", "collected_at", "last_reported", "is_renting", "is_returning"]], hide_index=True, use_container_width=True)
+            table(rows,"availability")
+            st.caption("Station names are shown by default. Enable Show station IDs and details for identifiers, UTC timestamps and operating flags.")
             coords = df.dropna(subset=["latitude", "longitude"])
             if not coords.empty:
                 st.map(coords.rename(columns={"latitude": "lat", "longitude": "lon"})[["lat", "lon"]])
@@ -155,7 +153,7 @@ else:
     low = fetch("/v1/availability/low", **low_params)
     if low:
         if low["data"]:
-            st.dataframe(low["data"], hide_index=True, use_container_width=True)
+            table(low["data"],"low")
         else:
             st.info("No observations are stored for this local date and station selection.")
         st.caption("Fractions count observed known readings at installed stations enabled for renting/returning. Missing samples are not zero bikes or continuous shortage periods.")

@@ -57,6 +57,22 @@ class CacheIntegration(unittest.TestCase):
         with psycopg.connect(DSN) as conn:
             return conn.execute("SELECT version FROM dataset_versions WHERE city='nyc' AND domain=%s", [domain]).fetchone()[0]
 
+    def test_low_availability_name_change_invalidates_cached_labels(self):
+        with psycopg.connect(DSN) as conn:
+            conn.execute("INSERT INTO stations(city,station_id,station_name) VALUES ('nyc','cache-live','Old name') ON CONFLICT(city,station_id) DO UPDATE SET station_name='Old name'")
+            conn.execute("""INSERT INTO station_snapshots(city,station_id,collected_at,bikes_available,is_installed,is_renting)
+                VALUES ('nyc','cache-live','2027-01-01T12:00Z',0,true,true)""")
+        params=dict(city='nyc',station_id='cache-live',start_date='2027-01-01',end_date='2027-01-02')
+        first=self.client.get('/v1/availability/low',params=params).json()
+        self.assertEqual(first['data'][0]['station_name'],'Old name')
+        self.assertEqual(self.client.get('/v1/availability/low',params=params).json()['meta']['cache'],'hit')
+        with psycopg.connect(DSN) as conn:
+            conn.execute("UPDATE stations SET station_name='Renamed station' WHERE city='nyc' AND station_id='cache-live'")
+        changed=self.client.get('/v1/availability/low',params=params).json()
+        self.assertEqual(changed['meta']['cache'],'miss')
+        self.assertEqual(changed['data'][0]['station_name'],'Renamed station')
+        self.assertEqual(changed['data'][0]['observed_samples'],first['data'][0]['observed_samples'])
+
     def test_hit_and_invalidation_after_new_commit(self):
         self.assertEqual(self.query()["meta"]["cache"], "miss")
         self.assertEqual(self.query()["meta"]["cache"], "hit")

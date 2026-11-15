@@ -11,7 +11,20 @@ the loopback SQL Auth Proxy, then run:
 
 Wait for the collector executions and confirm recent database/API observation
 timestamps. A Scheduler trigger is not the capture time: job startup can take
-minutes. Start the authenticated dashboard proxy described in RUNBOOK.md and
+minutes. Once collection finishes, run the preflight below. It checks fresh
+readings in both cities and warms the historical query cache, including common
+routes, before the audience opens the dashboard:
+
+```sh
+.venv/bin/python scripts/verify_serving.py --require-fresh
+```
+
+The API's `REDIS_URL` is set by `session.py start` after Redis is ready. Its IP can
+change when the disposable cache is recreated. A paused session intentionally has
+no running cache/database and stale stored readings; replaying old data does not
+make upstream observations current.
+
+Start the authenticated dashboard proxy described in RUNBOOK.md and
 open http://localhost:8502. Private services require authorized project access.
 
 ## Five-minute walkthrough
@@ -22,10 +35,12 @@ open http://localhost:8502. Private services require authorized project access.
    exclusive end boundary; the dashboard converts the inclusive date picker.
 2. **Arrival versus departure:** switch to dropoffs. Date boundaries now apply
    to arrival times, so trips crossing midnight can enter a different selection.
-   Use a station ID from the displayed trip ranking to filter history. Route
+   Hover a station bar or enable **Show station IDs and details** to find an ID
+   for filtering history. Route
    filtering uses the origin, which is stated next to the table.
 3. **Station availability:** select NYC, then Boulder. Show station counts,
-   collection/upstream timestamps, stale warnings and the map. The map locates
+   freshness warnings and the map. Enable **Show station IDs and details** to see
+   collection/upstream timestamps. The map locates
    stations; a point does not guarantee a fresh reading.
 4. **Observed shortages:** choose a replayed date, such as November 13, 2026, and
    a low-bike threshold. Explain known/eligible versus missing samples. A low

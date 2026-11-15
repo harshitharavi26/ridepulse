@@ -87,3 +87,12 @@ The selected between-session policy stops Cloud SQL, removes disposable Redis
 and pauses automatic ingestion using `scripts/session.py stop --delete-cache`.
 Do not enable delivery against a stopped database. GitHub never contains .env,
 passwords, service-account keys, downloaded datasets, or database dumps.
+
+## Demo presentation update
+
+The dashboard now uses full-width categorical station bars, friendly time axes
+and compact name-first tables. Show station IDs and details exposes identifiers
+and timestamps when needed. Viewer mode hides developer controls. Low-availability
+results include metadata-backed station names with cache invalidation after renames.
+The updated local suite passes 67 tests; the retained performance evaluation describes
+the earlier measured runtime. DEMO.md includes the pre-demo cache/freshness check.

@@ -240,16 +240,21 @@ def low_availability(conn, city, window, station_id, metric, threshold, limit, o
         conditions += sql.SQL(" AND station_id = %s")
         params.append(station_id)
     query = sql.SQL("""
-        SELECT station_id, COUNT(*) AS observed_samples,
-          COUNT({column}) FILTER (WHERE eligible) AS eligible_samples,
-          COUNT(*) FILTER (WHERE eligible AND {column} <= %s) AS low_samples,
-          MIN(collected_at) AS first_observed_at, MAX(collected_at) AS last_observed_at
-        FROM (
-          SELECT *, is_installed IS TRUE AND {enabled} IS TRUE AS eligible
-          FROM station_snapshots WHERE {conditions}
-        ) observations GROUP BY station_id ORDER BY station_id LIMIT %s OFFSET %s
+        WITH summary AS (
+          SELECT station_id, COUNT(*) AS observed_samples,
+            COUNT({column}) FILTER (WHERE eligible) AS eligible_samples,
+            COUNT(*) FILTER (WHERE eligible AND {column} <= %s) AS low_samples,
+            MIN(collected_at) AS first_observed_at, MAX(collected_at) AS last_observed_at
+          FROM (
+            SELECT *, is_installed IS TRUE AND {enabled} IS TRUE AS eligible
+            FROM station_snapshots WHERE {conditions}
+          ) observations GROUP BY station_id ORDER BY station_id LIMIT %s OFFSET %s
+        )
+        SELECT summary.*,s.station_name FROM summary
+        LEFT JOIN stations s ON s.city=%s AND s.station_id=summary.station_id
+        ORDER BY summary.station_id
     """).format(column=column, enabled=sql.Identifier("is_renting" if metric == "bikes" else "is_returning"), conditions=conditions)
-    rows = conn.execute(query, [threshold, *params, limit + 1, offset]).fetchall()
+    rows = conn.execute(query, [threshold, *params, limit + 1, offset,city.value]).fetchall()
     for row in rows:
         row["low_sample_fraction"] = row["low_samples"] / row["eligible_samples"] if row["eligible_samples"] else None
     return rows

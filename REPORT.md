@@ -266,3 +266,13 @@ cache recreation and private dashboard access; **DEMO.md** provides the walkthro
 The current billing association was not changed. Shivani approved the commit
 message `feat: complete RidePulse analytics, pipeline, and evaluation` and publication
 to main. The retained measurements describe the verified implementation before publication.
+
+## Subsequent demo polish
+
+After the retained performance evaluation, the presentation was refined with
+full-width station charts, friendly axes, compact default tables, optional
+identifier/timestamp detail and viewer toolbar mode. Shortage results now include
+metadata station names, and their cache invalidates on metadata changes. The
+updated local correctness suite passes 67 tests. The historical performance plots
+remain the original measured results; they have not been relabeled as new benchmarks.
+SQL and Redis stay paused until the explicitly started demo session.
