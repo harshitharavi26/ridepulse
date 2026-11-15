@@ -68,7 +68,7 @@ services:
 
   test-postgres:
     image: postgres:16
-    profiles: [test]
+    profiles: [test, queue]
     environment:
       POSTGRES_DB: ridepulse_test
       POSTGRES_USER: ridepulse_test
@@ -83,6 +83,42 @@ services:
       interval: 2s
       timeout: 2s
       retries: 20
+
+  pubsub:
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli:emulators
+    profiles: [queue]
+    command: ["gcloud", "beta", "emulators", "pubsub", "start", "--project=ridepulse-local", "--host-port=0.0.0.0:8085"]
+    ports:
+      - "127.0.0.1:8085:8085"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8085/v1/projects/ridepulse-local/topics"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+
+  local-worker:
+    profiles: [queue]
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    environment:
+      GOOGLE_CLOUD_PROJECT: ridepulse-local
+      RIDEPULSE_BUCKET: ridepulse-local
+      RIDEPULSE_LOCAL_OBJECT_ROOT: /fixtures
+      DB_HOST: test-postgres
+      DB_NAME: ridepulse_test
+      DB_USER: ridepulse_test
+      DB_PASSWORD: local_test_only
+      DB_SCHEMA: queue_fixture
+    volumes:
+      - ./tests/fixtures/objects:/fixtures:ro
+    ports:
+      - "127.0.0.1:8086:8080"
+    depends_on:
+      test-postgres:
+        condition: service_healthy
+      pubsub:
+        condition: service_healthy
 
 volumes:
   postgres_data:

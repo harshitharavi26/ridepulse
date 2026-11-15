@@ -157,6 +157,37 @@ class ApiIntegration(unittest.TestCase):
         self.assertEqual(row["low_samples"], 1)
         self.assertEqual(row["low_sample_fraction"], 0.5)
 
+    def test_routes_hide_round_trips_before_pagination(self):
+        with psycopg.connect(DSN) as conn:
+            conn.execute("INSERT INTO trips(ride_id,started_at,ended_at,start_station_id,end_station_id) VALUES('round-test','2026-04-01T12:00Z','2026-04-01T12:10Z','A','A')")
+        try:
+            rows=self.request('/v1/trips/routes',hide_round_trips=True)['data']
+            self.assertEqual(sum(r['trip_count'] for r in rows),3)
+            self.assertTrue(all(r['start_station_id']!=r['end_station_id'] for r in rows))
+            self.assertTrue(any(r['start_station_id']==r['end_station_id'] for r in self.request('/v1/trips/routes')['data']))
+        finally:
+            with psycopg.connect(DSN) as conn:conn.execute("DELETE FROM trips WHERE ride_id='round-test'")
+
+    def test_low_ranking_happens_before_pagination_unknowns_last(self):
+        with psycopg.connect(DSN) as conn:
+            conn.execute("""INSERT INTO station_snapshots(city,station_id,collected_at,bikes_available,is_installed,is_renting)
+                VALUES ('boulder','z-worst','2026-04-01T12:00Z',0,true,true),
+                       ('boulder','a-good','2026-04-01T12:00Z',10,true,true),
+                       ('boulder','unknown','2026-04-01T12:00Z',NULL,true,true)""")
+        try:
+            rows=self.request('/v1/availability/low',city='boulder')['data']
+            self.assertEqual([r['station_id'] for r in rows],['z-worst','low','a-good','unknown'])
+            self.assertEqual(self.request('/v1/availability/low',city='boulder',limit=1)['data'][0]['station_id'],'z-worst')
+        finally:
+            with psycopg.connect(DSN) as conn:conn.execute("DELETE FROM station_snapshots WHERE station_id IN ('z-worst','a-good','unknown')")
+
+    def test_coverage_is_city_local_and_respects_station_filter(self):
+        result=self.request('/v1/availability/coverage',city='boulder',station_id='low')
+        self.assertEqual(result['meta']['latest_local_date'],'2026-04-01')
+        self.assertIsNone(self.request('/v1/availability/coverage',city='boulder',station_id='missing')['meta']['latest_local_date'])
+        response=self.client.get('/health/live')
+        self.assertGreaterEqual(float(response.headers['X-Response-Time-Ms']),0)
+
 
 @unittest.skipUnless(DSN,"Set TEST_DATABASE_URL for API schema isolation")
 class ApiSchemaIsolation(unittest.TestCase):

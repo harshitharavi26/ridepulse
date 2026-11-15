@@ -1,0 +1,7 @@
+{
+  "queue": "real Pub/Sub emulator push",
+  "rows": 2,
+  "duplicate_replay": "passed",
+  "version_unchanged": true,
+  "scope": "local queue_fixture only; local files replace GCS"
+}

@@ -167,3 +167,9 @@ metadata, deliberately fails a separate worker's database configuration, observe
 same-message recovery and forwarding, and restores production subscription
 settings. It never injects synthetic public trips. Do not purge inspection/dev
 queues blindly. Only temporary test resources created by the harness are removed.
+
+## Monitoring and selected budget exception
+
+`python scripts/setup_monitoring.py` idempotently upserts seven log metrics, the university email channel, two alert policies and the existing dashboard. Requires Logs Configuration Writer and Monitoring permissions. Definitions are in `infra/monitoring/`; deployment receipts are retained separately. Series are prospective; no data while paused is not proof of a cache fault. API per-endpoint p95 >1,000 ms and worker retryable error ratio >5% must persist for five minutes before alerting. The cache ratio denominator is logged cache hit/result attempts, excluding disabled/unversioned requests.
+
+Shivani chose to skip the proposal's budget alert. The API is enabled and `infra/monitoring/budget.json` contains the reviewed USD 10 monthly project-only notification plan, but no budget was created. `scripts/setup_budget.py` is an optional owner-side setup tool; budget notifications do not cap spending. Do not rerun it as part of ordinary start/stop.

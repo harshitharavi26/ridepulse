@@ -17,6 +17,8 @@ def api_response(url, **kwargs):
                              "collected_at": "2026-04-01T12:00Z", "last_reported": None,
                              "is_renting": True, "is_returning": True,
                              "latitude": None, "longitude": None}]}
+    elif url.endswith("/v1/availability/coverage"):
+        payload = {"data": [],"meta":{"latest_local_date":"2026-04-01"}}
     else:
         payload = {"data": []}
     response = Mock(status_code=200)
@@ -51,3 +53,10 @@ class DashboardTests(unittest.TestCase):
             at = AppTest.from_file(SCRIPT, default_timeout=15).run()
         self.assertEqual(len(at.exception), 0)
         self.assertTrue(any("database may be paused" in item.value for item in at.error))
+
+    def test_low_date_defaults_to_stored_date_not_wall_clock(self):
+        with patch("requests.get", side_effect=api_response):
+            at = AppTest.from_file(SCRIPT, default_timeout=15).run()
+            at.sidebar.radio[0].set_value("Station availability").run()
+        self.assertEqual(len(at.exception),0)
+        self.assertEqual(at.date_input[0].value.isoformat(),"2026-04-01")

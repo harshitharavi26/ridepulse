@@ -1,0 +1,119 @@
+{
+  "currency": "USD",
+  "region": "us-central1",
+  "rates": {
+    "run_vcpu_second": 2.4e-05,
+    "run_gib_second": 2.5e-06,
+    "run_request": 4.0000000000000003e-07,
+    "sql_g1_small_hour": 0.035,
+    "redis_basic_gib_hour": 0.049
+  },
+  "pricing_checked_local_date": "2026-11-14",
+  "method": "Sum logged task_completed latency seconds \u00d7 (1 vCPU \u00d7 CPU rate + 0.5 GiB \u00d7 memory rate), plus logged requests. Includes logged retries. Handler-time estimate, not billable duration or invoice.",
+  "runs": [
+    {
+      "run_id": "0c826737293b4c4bb062fb144c79460d",
+      "maximum_workers": 1,
+      "repeat": 1,
+      "logged_handler_seconds": 20.186,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.000516
+    },
+    {
+      "run_id": "1dd468efd872499cac35f763350b27df",
+      "maximum_workers": 2,
+      "repeat": 1,
+      "logged_handler_seconds": 28.28934,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.000721
+    },
+    {
+      "run_id": "c33daf0578b648dea45d90a04157db1e",
+      "maximum_workers": 4,
+      "repeat": 1,
+      "logged_handler_seconds": 51.04952,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.001295
+    },
+    {
+      "run_id": "5607b514b6fb4a82a428418e5c9da538",
+      "maximum_workers": 8,
+      "repeat": 1,
+      "logged_handler_seconds": 81.30429,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.002059
+    },
+    {
+      "run_id": "f6e063565a8a4e8dae0ecc4ca4c8c4c9",
+      "maximum_workers": 2,
+      "repeat": 2,
+      "logged_handler_seconds": 27.08736,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.00069
+    },
+    {
+      "run_id": "94c15209ead94597ae583792dbfcd6f9",
+      "maximum_workers": 4,
+      "repeat": 2,
+      "logged_handler_seconds": 46.87176,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.00119
+    },
+    {
+      "run_id": "fc1fa207e482477bb4aed46736747563",
+      "maximum_workers": 8,
+      "repeat": 2,
+      "logged_handler_seconds": 89.10097,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.002256
+    },
+    {
+      "run_id": "2ca17a2e7a004928ab0d82f71cbb21b2",
+      "maximum_workers": 1,
+      "repeat": 2,
+      "logged_handler_seconds": 21.32366,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.000545
+    },
+    {
+      "run_id": "61b404d76f394c6d8be201465b9d63d9",
+      "maximum_workers": 4,
+      "repeat": 3,
+      "logged_handler_seconds": 48.31603,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.001226
+    },
+    {
+      "run_id": "cc4aa214640446958b980ecf8bb7803e",
+      "maximum_workers": 8,
+      "repeat": 3,
+      "logged_handler_seconds": 74.69685000000001,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.001892
+    },
+    {
+      "run_id": "aa85374cb9c348faaf5e325660fb4788",
+      "maximum_workers": 1,
+      "repeat": 3,
+      "logged_handler_seconds": 21.69256,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.000554
+    },
+    {
+      "run_id": "3c56e0f43d3f4f0b899e364ce65baf8b",
+      "maximum_workers": 2,
+      "repeat": 3,
+      "logged_handler_seconds": 25.33671,
+      "logged_requests": 16,
+      "handler_compute_usd": 0.000646
+    }
+  ],
+  "total_handler_compute_usd": 0.01359,
+  "one_hour_demo_sql_and_redis_usd": 0.084,
+  "all_month_730h_sql_and_redis_usd": 61.32,
+  "sources": [
+    "https://cloud.google.com/run/pricing",
+    "https://cloud.google.com/sql/pricing",
+    "https://cloud.google.com/memorystore/docs/redis/pricing"
+  ]
+}

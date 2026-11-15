@@ -98,3 +98,14 @@ class AggregateIntegration(unittest.TestCase):
         with self.connect(True) as conn:
             self.assertTrue(aggregates.available(conn,City.nyc))
             self.assertEqual(sum(r['trip_count'] for r in analytics.patterns(conn,City.nyc,date_range(City.nyc,date(2026,11,1),date(2026,11,2)),Metric.pickups,None,Granularity.hour,date(2026,11,1),date(2026,11,2))),3)
+
+    def test_round_trip_filter_matches_fact_and_aggregate_paths(self):
+        with self.connect() as conn:
+            conn.execute("INSERT INTO trips(ride_id,started_at,ended_at,start_station_id,end_station_id) VALUES('round','2026-11-01T09:00Z','2026-11-01T09:10Z','A','A')")
+        window=date_range(City.nyc,date(2026,11,1),date(2026,11,2))
+        with self.connect(True) as conn:
+            fact=analytics.routes(conn,City.nyc,window,None,None,20,0,True)
+            self.assertEqual(sum(r['trip_count'] for r in fact),2)
+        with self.connect() as conn:aggregates.refresh(conn)
+        with self.connect(True) as conn:
+            self.assertEqual(analytics.routes(conn,City.nyc,window,None,None,20,0,True),fact)

@@ -1,0 +1,34 @@
+{
+  "displayName": "RidePulse monthly USD 10",
+  "budgetFilter": {
+    "projects": [
+      "projects/42502534899"
+    ],
+    "calendarPeriod": "MONTH",
+    "creditTypesTreatment": "EXCLUDE_ALL_CREDITS"
+  },
+  "amount": {
+    "specifiedAmount": {
+      "currencyCode": "USD",
+      "units": "10"
+    }
+  },
+  "thresholdRules": [
+    {
+      "thresholdPercent": 0.5,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 0.9,
+      "spendBasis": "CURRENT_SPEND"
+    },
+    {
+      "thresholdPercent": 1.0,
+      "spendBasis": "CURRENT_SPEND"
+    }
+  ],
+  "notificationsRule": {
+    "disableDefaultIamRecipients": false,
+    "enableProjectLevelRecipients": true
+  }
+}

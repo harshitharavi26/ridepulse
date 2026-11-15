@@ -65,3 +65,9 @@ active. Apply the selected cost policy:
 Verify the completed SQL stop operation and activation policy `NEVER`, with Redis
 absent. The SQL Admin API may still label the instance `RUNNABLE`. Durable data
 and deployments remain; retained storage and raw collection can still incur cost.
+
+## Final recording polish
+
+The dashboard now displays a per-query Redis hit/miss/fallback label and measured API round-trip time. Refreshing the same historical query demonstrates cache reuse. `Hide round trips` creates a distinct route query/cache key and defaults off to preserve the full data view. Shortages default to the latest stored local date for the selected city/station and rank highest observed low-sample fractions before pagination; unknown fractions are last. The map uses observed bikes/(bikes+docks), with red empty, green higher fill and gray stale/unknown, and is collapsed by default with scroll zoom disabled. Tables show 10 returned rows initially with an explicit expansion control to avoid nested vertical scrolling. Some wide detail tables may still need horizontal scrolling.
+
+See PRESENTATION.md for the six-minute narration and required submission checks. Start the full SQL/Redis/ingestion session before recording, run `verify_serving.py --require-fresh`, and warm both the original and hidden-round-trip route queries. A warm cache does not prevent misses after committed data changes or TTL expiry. No new production latency benchmark is claimed for these UI changes.

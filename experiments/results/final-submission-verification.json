@@ -1,0 +1,78 @@
+{
+  "services": {
+    "api": {
+      "revision": "ridepulse-api-00010-mkm",
+      "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-api:final-submission-20261114-v2",
+      "health_status": 200,
+      "minimum_instances": "0",
+      "service_minimum": "0"
+    },
+    "dashboard": {
+      "revision": "ridepulse-dashboard-00007-2sn",
+      "image": "us-central1-docker.pkg.dev/ridepulse-dcs-2026/ridepulse-containers/ridepulse-dashboard:final-submission-20261114-v2",
+      "health_status": 200,
+      "minimum_instances": "0",
+      "service_minimum": "0"
+    }
+  },
+  "api_contract": {
+    "coverage_endpoint": true,
+    "hide_round_trips": true
+  },
+  "api_response_time_header": "8.0",
+  "sql": {
+    "state": "STOPPED",
+    "activation_policy": "NEVER"
+  },
+  "redis_instances": [],
+  "log_metrics": [
+    {
+      "name": "ridepulse_api_latency_ms",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_cache_hits",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_cache_lookups",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_sql_latency_ms",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_worker_commits",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_worker_errors",
+      "displayName": null,
+      "enabled": null
+    },
+    {
+      "name": "ridepulse_worker_tasks",
+      "displayName": null,
+      "enabled": null
+    }
+  ],
+  "alert_policies": [
+    {
+      "name": "projects/ridepulse-dcs-2026/alertPolicies/11572431152232200173",
+      "displayName": "RidePulse worker retryable errors above 5%",
+      "enabled": true
+    },
+    {
+      "name": "projects/ridepulse-dcs-2026/alertPolicies/9381569990122497946",
+      "displayName": "RidePulse API p95 above 1 second",
+      "enabled": true
+    }
+  ],
+  "budget": "Not created; explicitly skipped by Shivani"
+}

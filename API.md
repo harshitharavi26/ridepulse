@@ -188,3 +188,9 @@ names and counts; the sidebar's Show station IDs and details option exposes IDs,
 UTC timestamps and operating flags. Developer toolbar controls use Streamlit viewer
 mode. Low-availability results include an optional metadata station_name; its cache
 also depends on the metadata version, so renamed labels are invalidated correctly.
+
+## Final demo additions
+
+`GET /v1/availability/coverage?city=nyc&station_id=...` returns `meta.latest_collected_at` and `meta.latest_local_date` for the selected city/station, independent of the current page. With no observations they are null. The dashboard defaults shortage dates to that stored date. `/v1/availability/low` ranks all matching stations by low-sample fraction descending, known sample count descending, then station ID; unknown fractions are last. Ranking occurs before limit/offset.
+
+`/v1/trips/routes` accepts `hide_round_trips=true` (default false). Filtering happens in SQL before ranking/pagination in both fact and aligned-aggregate paths. The flag is included in versioned cache keys. Cache namespace v3 prevents old shortage ordering from being reused. `X-Response-Time-Ms` measures server request time; dashboard labels separately measure its full API round trip and show `meta.cache` status. These are not page-render time or worker benchmark measurements.

@@ -99,11 +99,13 @@ def leaderboards(conn, city, window, metric, station_id, limit, offset):
     return conn.execute(query, [*params, limit + 1, offset]).fetchall()
 
 
-def routes(conn, city, window, origin, destination, limit, offset):
+def routes(conn, city, window, origin, destination, limit, offset, hide_round_trips=False):
     if aggregates.available(conn, city):
         coverage = trip_coverage(conn,city)
         if coverage["first_event_at"] and window.start <= coverage["first_event_at"] and window.end > coverage["last_event_at"]:
             conditions, parameters = "city=%s AND trip_count>0", [city.value]
+            if hide_round_trips:
+                conditions += " AND start_station_id<>end_station_id"
             if origin:
                 conditions += " AND start_station_id=%s"
                 parameters.append(origin)
@@ -116,6 +118,8 @@ def routes(conn, city, window, origin, destination, limit, offset):
     if destination:
         where += sql.SQL(" AND end_station_id = %s")
         params.append(destination)
+    if hide_round_trips:
+        where += sql.SQL(" AND start_station_id <> end_station_id")
     # Avoid grouping hundreds of thousands of route-name strings. Rank narrow
     # ID/count groups, then look up names for just the returned routes using the
     # existing origin/time index. MAX names match aggregate and fact semantics.
@@ -248,13 +252,28 @@ def low_availability(conn, city, window, station_id, metric, threshold, limit, o
           FROM (
             SELECT *, is_installed IS TRUE AND {enabled} IS TRUE AS eligible
             FROM station_snapshots WHERE {conditions}
-          ) observations GROUP BY station_id ORDER BY station_id LIMIT %s OFFSET %s
+          ) observations GROUP BY station_id
+          ORDER BY (COUNT(*) FILTER (WHERE eligible AND {column} <= %s)::float
+                    / NULLIF(COUNT({column}) FILTER (WHERE eligible),0)) DESC NULLS LAST,
+                   COUNT({column}) FILTER (WHERE eligible) DESC, station_id
+          LIMIT %s OFFSET %s
         )
         SELECT summary.*,s.station_name FROM summary
         LEFT JOIN stations s ON s.city=%s AND s.station_id=summary.station_id
-        ORDER BY summary.station_id
+        ORDER BY (summary.low_samples::float / NULLIF(summary.eligible_samples,0)) DESC NULLS LAST,
+                 summary.eligible_samples DESC, summary.station_id
     """).format(column=column, enabled=sql.Identifier("is_renting" if metric == "bikes" else "is_returning"), conditions=conditions)
-    rows = conn.execute(query, [threshold, *params, limit + 1, offset,city.value]).fetchall()
+    rows = conn.execute(query, [threshold, *params, threshold, limit + 1, offset,city.value]).fetchall()
     for row in rows:
         row["low_sample_fraction"] = row["low_samples"] / row["eligible_samples"] if row["eligible_samples"] else None
     return rows
+
+
+def latest_observation(conn, city, station_id=None):
+    # Uses city/time or city/station/time index; independent of displayed page.
+    where, params = "city=%s", [city.value]
+    if station_id:
+        where += " AND station_id=%s"
+        params.append(station_id)
+    row = conn.execute(sql.SQL("SELECT collected_at FROM station_snapshots WHERE {} ORDER BY collected_at DESC LIMIT 1").format(sql.SQL(where)),params).fetchone()
+    return row["collected_at"] if row else None

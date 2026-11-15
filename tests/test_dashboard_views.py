@@ -5,7 +5,7 @@ import unittest
 import pandas as pd
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
-from dashboard_views import make_chart,table_view
+from dashboard_views import make_chart,table_view,availability_map
 
 
 class DashboardViewTests(unittest.TestCase):
@@ -46,3 +46,10 @@ class DashboardViewTests(unittest.TestCase):
         self.assertEqual(frame.iloc[0]['Low readings (%)'],25)
         self.assertTrue(pd.isna(frame.iloc[1]['Low readings (%)']))
         self.assertEqual(frame.iloc[1]['Station'],'B')
+
+    def test_map_empty_full_unknown_and_stale_are_distinct(self):
+        rows=[dict(station_id=str(i),station_name='Test',latitude=40+i*.001,longitude=-74,
+                   bikes_available=b,docks_available=d,is_stale=stale)
+              for i,(b,d,stale) in enumerate([(0,10,False),(10,0,False),(None,10,False),(10,0,True)])]
+        figure=availability_map(rows)
+        self.assertEqual(list(figure.data[0].marker.color),['rgb(220,38,38)','rgb(22,163,74)','#64748b','#64748b'])

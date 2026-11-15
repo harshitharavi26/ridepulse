@@ -103,7 +103,31 @@ def database_connection():
     return psycopg.connect(**connection_settings())
 
 
+class LocalFixtureBlob:
+    """Read-only fixture store for the credential-free local emulator profile."""
+    def __init__(self, task):
+        from pathlib import Path
+        if PROJECT_ID != "ridepulse-local" or EXPECTED_BUCKET != "ridepulse-local":
+            raise RuntimeError("Local object fixtures require the isolated ridepulse-local project/bucket")
+        if task.get("generation") is not None:
+            raise ValueError("Local fixtures do not emulate Storage generations")
+        root = Path(os.environ["RIDEPULSE_LOCAL_OBJECT_ROOT"]).resolve()
+        self.path = (root / task["object"]).resolve()
+        if not self.path.is_relative_to(root) or not self.path.is_file():
+            raise ValueError("Invalid local fixture object")
+
+    def open(self, mode, encoding=None):
+        if mode != "r":
+            raise ValueError("Fixture objects are read-only")
+        return self.path.open(mode, encoding=encoding)
+
+    def download_as_bytes(self):
+        return self.path.read_bytes()
+
+
 def storage_blob(task):
+    if os.getenv("RIDEPULSE_LOCAL_OBJECT_ROOT"):
+        return LocalFixtureBlob(task)
     generation = task.get("generation")
     if generation is not None:
         if isinstance(generation, bool) or not str(generation).isdigit() or int(generation) <= 0:

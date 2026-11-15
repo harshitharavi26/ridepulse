@@ -1,5 +1,6 @@
 """Streamlit presentation layer; all data access goes through the REST API."""
 import os
+import time
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
@@ -7,7 +8,7 @@ import pandas as pd
 import requests
 import streamlit as st
 from google.auth.exceptions import GoogleAuthError
-from dashboard_views import make_chart,table_view
+from dashboard_views import make_chart,table_view,availability_map
 
 st.set_option("client.toolbarMode", "viewer")
 st.set_page_config(page_title="RidePulse", page_icon="🚲", layout="wide")
@@ -25,12 +26,20 @@ def fetch(path, **params):
     try:
         audience = os.getenv("API_AUTH_AUDIENCE")
         headers = {"Authorization": "Bearer " + service_token(audience)} if audience else {}
+        started = time.perf_counter()
         result = requests.get(API + path, params=params, headers=headers, timeout=(3, 30))
         if result.status_code == 503:
             st.error("The data service is temporarily unavailable. The database may be paused; try again later.")
             return None
         result.raise_for_status()
-        return result.json()
+        payload = result.json()
+        cache = payload.get("meta", {}).get("cache")
+        if cache:
+            labels = {"hit":"Served from Redis cache", "miss":"Computed in SQL · cached for reuse",
+                      "fallback":"Redis unavailable · SQL fallback", "disabled":"Cache disabled · SQL",
+                      "unversioned":"SQL · cache version unavailable", "bypass":"SQL · cache bypass"}
+            st.caption(f"{labels.get(cache, cache)} · {(time.perf_counter()-started)*1000:,.0f} ms API round trip")
+        return payload
     except (requests.RequestException, ValueError, GoogleAuthError):
         st.error("Could not load this view. Check the API connection and try refreshing.")
         return None
@@ -40,7 +49,7 @@ def chart(rows,x,y,title,granularity=None):
     if not rows:
         st.info("No observations match these filters.")
         return
-    st.plotly_chart(make_chart(rows,x,y,title,granularity),use_container_width=True)
+    st.plotly_chart(make_chart(rows,x,y,title,granularity),use_container_width=True,config={"scrollZoom":False})
 
 
 def table(rows,kind):
@@ -49,7 +58,13 @@ def table(rows,kind):
     for name in ('Trips','Bikes','Docks','Low readings','Known eligible readings'):
         if name in frame:config[name]=st.column_config.NumberColumn(name,width="small",format="%d")
     if 'Low readings (%)' in frame:config['Low readings (%)']=st.column_config.NumberColumn('Low readings (%)',format='%.1f',width='small')
-    st.dataframe(frame,column_config=config,use_container_width=True,hide_index=True)
+    # Grow the table to fit the selected rows; avoid a nested vertical scrollbar.
+    show_all = st.checkbox("Show all returned rows", key="expand_"+kind) if len(frame)>10 else True
+    displayed = frame if show_all else frame.head(10)
+    st.dataframe(displayed,column_config=config,use_container_width=True,hide_index=True,
+                 height=38+35*len(displayed))
+    if not show_all:
+        st.caption(f"Showing 10 of {len(frame)} returned rows.")
 
 
 def local_date(value, timezone):
@@ -103,7 +118,8 @@ if view == "Trip history":
     route_params = {k: v for k, v in params.items() if k not in ("metric", "station_id")}
     if station:
         route_params["start_station_id"] = station
-    routes = fetch("/v1/trips/routes", **route_params, limit=20)
+    hide_round_trips = st.checkbox("Hide round trips",value=False)
+    routes = fetch("/v1/trips/routes", **route_params, limit=20,hide_round_trips=hide_round_trips)
     if routes:
         table(routes["data"],"routes")
         st.caption("Routes use departure dates and exclude trips with an unknown endpoint. The station filter selects the route origin.")
@@ -135,16 +151,22 @@ else:
             c.metric("Stale readings", stale)
             if stale:
                 st.warning("Some readings are stale. Check collected_at and last_reported before treating counts as current.")
-            df = pd.DataFrame(rows)
             table(rows,"availability")
-            st.caption("Station names are shown by default. Enable Show station IDs and details for identifiers, UTC timestamps and operating flags.")
-            coords = df.dropna(subset=["latitude", "longitude"])
-            if not coords.empty:
-                st.map(coords.rename(columns={"latitude": "lat", "longitude": "lon"})[["lat", "lon"]])
-            st.caption("The map locates stored stations; it does not imply the readings are fresh. Pages contain up to 200 stations.")
+            st.caption("Enable Show station IDs and details for identifiers, UTC timestamps and operating flags.")
+            with st.expander("Explore station map", expanded=False):
+                st.caption("Empty = red; more bikes relative to observed bikes + docks = green. Gray = stale/unknown. Opened maps support drag; scroll zoom is disabled.")
+                figure = availability_map(rows)
+                if figure is not None:
+                    st.plotly_chart(figure,use_container_width=True,config={"scrollZoom":False})
+            st.caption("The map locates stored stations; it does not imply readings are fresh. Pages contain up to 200 stations.")
     st.subheader("Observed low availability")
-    today = datetime.now(ZoneInfo(timezone)).date()
-    start = st.date_input("Observation date", value=today, key="low_date")
+    coverage = fetch("/v1/availability/coverage",city=city,**({"station_id":station} if station else {}))
+    newest = coverage.get("meta",{}).get("latest_local_date") if coverage else None
+    if not newest:
+        st.info("No stored observation date is available for this city and station selection.")
+        st.stop()
+    st.caption(f"Latest stored observation date: {newest} ({timezone}). Ranked by highest low-reading fraction, then known sample count; unknown fractions appear last.")
+    start = st.date_input("Observation date", value=date.fromisoformat(newest), key=f"low_date_{city}_{station}")
     metric = st.selectbox("Availability metric", ["bikes", "docks"])
     threshold = st.number_input("Low availability means count ≤", min_value=0, max_value=100, value=2)
     low_params = dict(city=city, start_date=start.isoformat(), end_date=(start+timedelta(days=1)).isoformat(), metric=metric, threshold=threshold, limit=200, offset=(page-1)*200)

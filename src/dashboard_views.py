@@ -70,3 +70,27 @@ def table_view(rows,kind,details=False):
         frame['low_percent']=frame['low_sample_fraction']*100
     columns=COMPACT[kind]+(DETAILS[kind] if details else [])
     return frame[[column for column in columns if column in frame]].rename(columns=LABELS)
+
+
+def availability_map(rows):
+    """Observed fill fraction, never guessed capacity or freshness."""
+    import plotly.graph_objects as go
+    frame=pd.DataFrame(rows)
+    frame=frame.dropna(subset=['latitude','longitude'])
+    if frame.empty:
+        return None
+    def colour(row):
+        bikes,docks=row.get('bikes_available'),row.get('docks_available')
+        if row.get('is_stale') or pd.isna(bikes) or pd.isna(docks) or bikes+docks<=0:
+            return '#64748b'
+        ratio=max(0,min(1,bikes/(bikes+docks)))
+        return f'rgb({round(220*(1-ratio)+22*ratio)},{round(38*(1-ratio)+163*ratio)},{round(38*(1-ratio)+74*ratio)})'
+    frame['colour']=frame.apply(colour,axis=1)
+    frame['name']=frame['station_name'].fillna(frame['station_id'])
+    figure=go.Figure(go.Scattermapbox(lat=frame.latitude,lon=frame.longitude,mode='markers',
+        marker=dict(size=12,color=frame.colour),text=frame['name'],
+        customdata=frame[['bikes_available','docks_available','is_stale']].to_numpy(),
+        hovertemplate='<b>%{text}</b><br>Bikes: %{customdata[0]} · Docks: %{customdata[1]}<br>Stale: %{customdata[2]}<extra></extra>'))
+    figure.update_layout(mapbox=dict(style='open-street-map',center=dict(lat=float(frame.latitude.mean()),lon=float(frame.longitude.mean())),zoom=11),
+                          height=420,margin=dict(l=0,r=0,t=0,b=0))
+    return figure

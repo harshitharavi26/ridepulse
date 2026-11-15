@@ -1,0 +1,3 @@
+ride_id,started_at,ended_at,start_station_id,end_station_id,start_station_name,end_station_name
+queue-one,2026-04-01 08:00:00,2026-04-01 08:10:00,A,B,Library,Campus
+queue-two,2026-04-01 08:05:00,2026-04-01 08:15:00,A,A,Library,Library

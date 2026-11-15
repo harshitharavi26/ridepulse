@@ -25,7 +25,7 @@ supplies availability observations, not imported historical trips.
 
 ## Measured results
 
-All 61 correctness tests passed. Across 12 cached API trials, 17,342 requests
+The current local suite passes 73 correctness tests plus a real emulator push/replay smoke check. GitHub Actions runs the correctness suite and a separate queue smoke job. Across 12 cached API trials, 17,342 requests
 completed with zero errors/mismatches; at 20 users median trial p95 was 220 ms.
 Repeated 160,000-row worker trials achieved 1.56x speedup at eight observed
 workers; a separate 800,000-row pilot slowed down as workers increased. These are
@@ -96,3 +96,23 @@ and timestamps when needed. Viewer mode hides developer controls. Low-availabili
 results include metadata-backed station names with cache invalidation after renames.
 The updated local suite passes 67 tests; the retained performance evaluation describes
 the earlier measured runtime. DEMO.md includes the pre-demo cache/freshness check.
+
+## Local queue pipeline (no cloud credentials)
+
+The optional queue profile runs Google's real Pub/Sub emulator and the normal worker against the disposable `queue_fixture` schema. A read-only fixture directory substitutes for GCS; this is deliberately not an emulation of Storage generations or IAM. It never writes production tables.
+
+```sh
+pip install -r requirements-test.txt
+docker compose --profile queue up -d --build --wait test-postgres pubsub local-worker
+python scripts/verify_local_queue.py
+# Stop local queue resources after use:
+docker compose --profile queue stop local-worker pubsub test-postgres
+```
+
+`POSTGRES_PASSWORD` must still be set in `.env` for Compose interpolation, even when the primary local PostgreSQL service is not selected. Local emulator ports bind loopback only. The verification publishes twice through an actual push subscription and checks exact inserted rows and unchanged cache versions after duplicate delivery.
+
+## Submission
+
+Team: **Harshitha Ravishankar and Shivani Dilipkumar Patel**. The owner should verify access for `elgoodm`, `rezwan09` and `VedMulik` in repository settings. Final report: [REPORT.md](REPORT.md); recording sequence: [PRESENTATION.md](PRESENTATION.md); proposal reconciliation and limitations are explicit in the report. The cloud stack is intentionally paused between work sessions; follow [RUNBOOK.md](RUNBOOK.md) to start it for a demo.
+
+The upload-ready PDF and editable presentation are in [submission/](submission/README.md). The presentation includes a live-demo segment; the team must record/upload the video and verify its accessibility.

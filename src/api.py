@@ -71,10 +71,11 @@ async def timing(request, call_next):
     try:
         response = await call_next(request)
         response.headers["X-Request-ID"] = request_id
+        response.headers["X-Response-Time-Ms"] = f"{(time.monotonic()-start)*1000:.1f}"
         return response
     finally:
         logger.info("request_completed", extra={"json_fields": {
-            "method": request.method,"path": request.url.path,"status": response.status_code if response else 500,
+            "method": request.method,"path": getattr(request.scope.get("route"),"path","unmatched"),"status": response.status_code if response else 500,
             "latency_ms": round((time.monotonic() - start) * 1000, 2)}})
         log_context.reset(context_token)
 
@@ -162,12 +163,12 @@ def leaderboard(request: Request, conn: Connection, city: City, start_date: date
 @cached(["trips"], 900)
 def routes(request: Request, conn: Connection, city: City, start_date: date, end_date: date,
            start_station_id: StationId = None, end_station_id: StationId = None,
-           limit: Limit = 20, offset: Offset = 0):
+           limit: Limit = 20, offset: Offset = 0, hide_round_trips: bool = False):
     require_trips(city)
     window = date_range(city, start_date, end_date)
-    return response(city, queries.routes(conn, city, window, start_station_id, end_station_id, limit, offset),
+    return response(city, queries.routes(conn, city, window, start_station_id, end_station_id, limit, offset, hide_round_trips),
                     limit=limit, offset=offset, window=window, event_time="started_at",
-                    excludes_incomplete_station_pairs=True, coverage=queries.trip_coverage(conn, city))
+                    excludes_incomplete_station_pairs=True, hide_round_trips=hide_round_trips, coverage=queries.trip_coverage(conn, city))
 
 
 @app.get("/v1/trips/patterns")
@@ -205,3 +206,11 @@ def low_availability(request: Request, conn: Connection, city: City, start_date:
     return response(city, queries.low_availability(conn, city, window, station_id, metric, threshold, limit, offset),
                     limit=limit, offset=offset, window=window, metric=metric, threshold=threshold,
                     description="Fraction of observed known-count samples at installed stations enabled for renting/returning. Gaps are not inferred shortage durations.")
+
+
+@app.get("/v1/availability/coverage")
+@cached(["availability"], 30)
+def availability_coverage(request: Request, conn: Connection, city: City, station_id: StationId = None):
+    latest = queries.latest_observation(conn, city, station_id)
+    return response(city, [], latest_collected_at=latest,
+                    latest_local_date=latest.astimezone(queries.ZoneInfo(TIMEZONES[city])).date() if latest else None)

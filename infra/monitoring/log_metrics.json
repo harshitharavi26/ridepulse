@@ -8,6 +8,10 @@
     "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-api\" AND (jsonPayload.message=\"cache_hit\" OR jsonPayload.message=\"cache_result\")"
   },
   {
+    "name": "ridepulse_worker_tasks",
+    "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-worker\" AND jsonPayload.message=\"task_completed\""
+  },
+  {
     "name": "ridepulse_worker_commits",
     "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"ridepulse-worker\" AND jsonPayload.message=\"task_completed\" AND jsonPayload.result=\"committed\""
   },
@@ -21,7 +25,14 @@
     "metricDescriptor": {
       "metricKind": "DELTA",
       "valueType": "DISTRIBUTION",
-      "unit": "ms"
+      "unit": "ms",
+      "labels": [
+        {
+          "key": "endpoint",
+          "valueType": "STRING",
+          "description": "Bounded API path"
+        }
+      ]
     },
     "valueExtractor": "EXTRACT(jsonPayload.latency_ms)",
     "bucketOptions": {
@@ -30,6 +41,9 @@
         "growthFactor": 1.8,
         "scale": 1
       }
+    },
+    "labelExtractors": {
+      "endpoint": "EXTRACT(jsonPayload.path)"
     }
   },
   {

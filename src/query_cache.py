@@ -55,7 +55,7 @@ class QueryCache:
                                          database={"host":conn.info.host,"database":conn.info.dbname,"user":conn.info.user,"schema":self.schema},
                                          endpoint=endpoint, params=params))
         digest = hashlib.sha256(json.dumps(identity, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
-        key = f"ridepulse:api-v2:{digest}"
+        key = f"ridepulse:api-v3:{digest}"
         state = "miss"
         try:
             cached = self.client.get(key)
