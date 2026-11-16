@@ -108,7 +108,7 @@ matches the durable trip version; other filters and stale aggregates fall back
 to fact queries. Trip insertion maintains aligned aggregates transactionally.
 Availability pages select station IDs before fetching each newest row to avoid
 reading discarded historical observations. Cloud reconciliation and correctness
-evidence are recorded in REPORT.md and experiments/results/.
+evidence are recorded in EXPERIMENTS.md and experiments/results/.
 
 ## Cache and version behavior
 

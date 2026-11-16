@@ -45,3 +45,9 @@ work/
 
 # Retain credential-free scientific benchmark terminal summaries
 !experiments/results/**/*.log
+
+# Canvas submission materials and local presentation/writeup drafts
+/submission/
+/REPORT.md
+/PRESENTATION.md
+/DEMO.md

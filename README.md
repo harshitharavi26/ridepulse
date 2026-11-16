@@ -12,9 +12,8 @@ implemented; see [API.md](API.md) for endpoints, date/freshness rules and comman
 The API, dashboard, worker and collector jobs are deployed in the project.
 The three web services require authenticated access; Redis is recreated for active sessions. Live authenticated Pub/Sub recovery, duplicate delivery and dead-letter
 forwarding have been verified. Owner migration `010` is applied and serving
-aggregates reconcile with all trip facts. See [REPORT.md](REPORT.md),
-[RUNBOOK.md](RUNBOOK.md), [DEMO.md](DEMO.md) and [EXPERIMENTS.md](EXPERIMENTS.md)
-for evidence, operations and evaluation.
+aggregates reconcile with all trip facts. See [RUNBOOK.md](RUNBOOK.md) for
+operations and [EXPERIMENTS.md](EXPERIMENTS.md) for reproducible evaluation.
 
 ## Verified data
 
@@ -25,16 +24,18 @@ supplies availability observations, not imported historical trips.
 
 ## Measured results
 
-[GitHub Actions](https://github.com/harshitharavi26/ridepulse/actions/runs/43691510923)
-passed **73 correctness tests** and the separate real Pub/Sub emulator push/replay
-smoke job for commit `ddaa06b`. Across 12 cached API trials, 17,342 requests
+The current local suite passes **77 correctness tests**, including four recording-
+preflight regressions, with real PostgreSQL and Redis. The separate real Pub/Sub
+emulator push/replay check also passed. [GitHub Actions](https://github.com/harshitharavi26/ridepulse/actions/workflows/tests.yml)
+runs both checks on each push. Across 12 cached API trials, 17,342 requests
 completed with zero errors/mismatches; at 20 users median trial p95 was 220 ms.
 Repeated 160,000-row worker trials achieved 1.56x speedup at eight observed
 workers; a separate 800,000-row pilot slowed down as workers increased. These are
 bounded measurements on the existing shared-core SQL tier, not general capacity
-claims. REPORT.md includes raw-evidence references, charts and limitations.
+claims. [EXPERIMENTS.md](EXPERIMENTS.md) describes the method and limitations;
+[experiments/results/](experiments/results/) retains raw evidence and charts.
 
-The final selected shutdown is verified: Cloud SQL stopped (`NEVER`), disposable
+The last verified shutdown state (November 15, 2026) was: Cloud SQL stopped (`NEVER`), disposable
 Redis deleted, private Cloud Run deployments retained with minimum instances zero.
 Raw archival collection stays scheduled. Use RUNBOOK.md before opening a cloud demo.
 
@@ -263,14 +264,19 @@ and pauses automatic ingestion using `scripts/session.py stop --delete-cache`.
 Do not enable delivery against a stopped database. GitHub never contains .env,
 passwords, service-account keys, downloaded datasets, or database dumps.
 
-## Demo presentation update
+## Dashboard features
 
 The dashboard now uses full-width categorical station bars, friendly time axes
 and compact name-first tables. Show station IDs and details exposes identifiers
 and timestamps when needed. Viewer mode hides developer controls. Low-availability
 results include metadata-backed station names with cache invalidation after renames.
 The retained performance evaluation describes the earlier measured runtime; UI
-changes are not new load measurements. DEMO.md includes the pre-demo cache/freshness check.
+changes are not new load measurements. Before recording, start the full session
+and run `python scripts/verify_serving.py --require-fresh`. This requires fresh
+readings for both cities and proves repeated Redis hits for pickup/dropoff rankings
+and both route variants. Shortage dates come from each city's latest stored coverage.
+Use `--require-cache` for an explicitly historical walkthrough that permits stale
+station readings. These checks do not start resources.
 
 ## Local queue pipeline (no cloud credentials)
 
@@ -286,8 +292,10 @@ docker compose --profile queue stop local-worker pubsub test-postgres
 
 `POSTGRES_PASSWORD` must still be set in `.env` for Compose interpolation, even when the primary local PostgreSQL service is not selected. Local emulator ports bind loopback only. The verification publishes twice through an actual push subscription and checks exact inserted rows and unchanged cache versions after duplicate delivery.
 
-## Submission
+## Team and grading access
 
-Team: **Harshitha Ravishankar and Shivani Dilipkumar Patel**. Required grader accounts: `elgoodm`, `rezwan09` and `VedMulik`. The code repository is public. Final report: [REPORT.md](REPORT.md); recording sequence: [PRESENTATION.md](PRESENTATION.md); proposal reconciliation and limitations are explicit in the report. The cloud stack is intentionally paused between work sessions; follow [RUNBOOK.md](RUNBOOK.md) to start it for a demo.
-
-The upload-ready PDF and editable presentation are in [submission/](submission/README.md). The presentation includes a live-demo segment; the team must record/upload the video and verify its accessibility.
+Team: **Harshitha Ravishankar and Shivani Dilipkumar Patel**. Required grader
+accounts: `elgoodm`, `rezwan09` and `VedMulik`. The code repository is public.
+The written report and presentation/video are submitted separately through the
+course submission process. This repository contains the implementation, deployment
+instructions, tests and reproducible experiment evidence.
